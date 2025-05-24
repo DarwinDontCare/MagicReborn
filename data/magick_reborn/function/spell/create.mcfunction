@@ -1,0 +1,1 @@
+$give @p minecraft:carrot_on_a_stick[item_name="$(name)",item_model="magick_reborn:wand",use_cooldown={seconds:1},custom_data={amplifier: $(amplifier), duration: $(duration), effect: "$(effect)", type: "wand"}]

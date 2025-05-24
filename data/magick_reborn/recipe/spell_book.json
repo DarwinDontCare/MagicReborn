@@ -1,0 +1,48 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "#L#",
+      "PPP",
+      "#L#"
+    ],
+    "key": {
+      "#": "minecraft:lapis_lazuli",
+      "L": "minecraft:leather",
+      "P": "minecraft:paper"
+    },
+    "result": {
+      "id": "minecraft:written_book",
+      "components": {
+        "minecraft:custom_name": "Magic Initiation",
+        "minecraft:lore": [
+          "A Guide to the arcane arts"
+        ],
+        "minecraft:rarity": "rare",
+        "minecraft:written_book_content": {
+          "pages": [
+            {
+              "text": "Create Wand",
+              "type": "text",
+              "color": "dark_aqua",
+              "bold": true,
+              "click_event": {
+                "action": "run_command",
+                "command": "/function magick_reborn:spell/spell_creation_ui"
+              },
+              "hover_event": {
+                "action": "show_text",
+                "value": "Menu for Magick Wand creation"
+              }
+            }
+          ],
+          "title": {
+            "raw": "Magic Initiation"
+          },
+          "author": "Lui Arnold",
+          "generation": 2
+        }
+      },
+      "count": 1
+    }
+  }
