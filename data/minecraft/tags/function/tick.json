@@ -1,6 +1,5 @@
 {
     "values": [
-        "magick_reborn:tick",
-        "magick_reborn:spell/projectile_hit"
+        "magick_reborn:tick"
     ]
 }

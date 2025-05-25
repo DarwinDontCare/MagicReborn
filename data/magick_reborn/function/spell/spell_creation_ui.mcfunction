@@ -12,10 +12,40 @@ dialog show @p {\
     "key":"effect",\
     "label":"Effect",\
     "options":[\
-      {"id":"minecraft:speed","display":"Speed","initial":true},\
-      {"id":"minecraft:jump_boost","display":"Jump","initial":false},\
-      {"id":"minecraft:strength","display":"Strength","initial":false},\
-      {"id":"minecraft:instant_health","display":"Instant Health","initial":false}\
+        {"id":"minecraft:speed","display":"Speed","initial":true},\
+        {"id":"minecraft:slowness","display":"Slowness","initial":false},\
+        {"id":"minecraft:haste","display":"Haste","initial":false},\
+        {"id":"minecraft:mining_fatigue","display":"Mining Fatigue","initial":false},\
+        {"id":"minecraft:strength","display":"Strength","initial":false},\
+        {"id":"minecraft:instant_health","display":"Instant Health","initial":false},\
+        {"id":"minecraft:instant_damage","display":"Instant Damage","initial":false},\
+        {"id":"minecraft:jump_boost","display":"Jump Boost","initial":false},\
+        {"id":"minecraft:nausea","display":"Nausea","initial":false},\
+        {"id":"minecraft:regeneration","display":"Regeneration","initial":false},\
+        {"id":"minecraft:resistance","display":"Resistance","initial":false},\
+        {"id":"minecraft:fire_resistance","display":"Fire Resistance","initial":false},\
+        {"id":"minecraft:water_breathing","display":"Water Breathing","initial":false},\
+        {"id":"minecraft:invisibility","display":"Invisibility","initial":false},\
+        {"id":"minecraft:blindness","display":"Blindness","initial":false},\
+        {"id":"minecraft:night_vision","display":"Night Vision","initial":false},\
+        {"id":"minecraft:hunger","display":"Hunger","initial":false},\
+        {"id":"minecraft:weakness","display":"Weakness","initial":false},\
+        {"id":"minecraft:poison","display":"Poison","initial":false},\
+        {"id":"minecraft:wither","display":"Wither","initial":false},\
+        {"id":"minecraft:health_boost","display":"Health Boost","initial":false},\
+        {"id":"minecraft:absorption","display":"Absorption","initial":false},\
+        {"id":"minecraft:saturation","display":"Saturation","initial":false},\
+        {"id":"minecraft:glowing","display":"Glowing","initial":false},\
+        {"id":"minecraft:levitation","display":"Levitation","initial":false},\
+        {"id":"minecraft:luck","display":"Luck","initial":false},\
+        {"id":"minecraft:unluck","display":"Unluck","initial":false},\
+        {"id":"minecraft:slow_falling","display":"Slow Falling","initial":false},\
+        {"id":"minecraft:conduit_power","display":"Conduit Power","initial":false},\
+        {"id":"minecraft:dolphins_grace","display":"Dolphin's Grace","initial":false},\
+        {"id":"minecraft:bad_omen","display":"Bad Omen","initial":false},\
+        {"id":"minecraft:hero_of_the_village","display":"Hero of the Village","initial":false},\
+        {"id":"minecraft:fireball","display":"Fire Ball","initial":false},\
+        {"id":"minecraft:darkness","display":"Darkness","initial":false}\
     ]\
   },\
   {\

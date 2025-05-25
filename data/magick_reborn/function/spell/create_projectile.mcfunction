@@ -1,6 +1,7 @@
 # Sumona a flecha como "projétil mágico"
 execute rotated as @s positioned 0.0 0.0 0.0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
-$execute at @s run summon minecraft:snowball ~ ~1.5 ~ {Tags: ["magic_projectile"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}, HasVisualFire:false, NoGravity:true}
+$execute at @s if score #Compare boolean matches 1 run summon minecraft:snowball ~ ~1.5 ~ {Tags: ["magic_projectile"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}, HasVisualFire:false, NoGravity:true}
+$execute at @s unless score #Compare boolean matches 1 run summon minecraft:small_fireball ~ ~1.5 ~ {Tags: ["magic_projectile", "fireball"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}}
 
 execute at @s as @e[tag=magic_projectile,distance=..1.5] run effect give @s invisibility infinite 1 true
 execute at @s as @e[tag=magic_projectile,distance=..1.5] run scoreboard players set @s projectileHealth 200

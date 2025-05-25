@@ -1,0 +1,1 @@
+$title @s actionbar "$(magick)/$(max_magick)"
