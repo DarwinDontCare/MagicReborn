@@ -15,6 +15,7 @@ scoreboard objectives add magick dummy Magick
 scoreboard objectives add maxMagick dummy
 scoreboard objectives add magickRegen dummy
 scoreboard objectives add spellCost dummy
+scoreboard objectives add baseCost dummy
 
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1
 execute as @e unless entity @s[scores={magickRegen=1..}] run scoreboard players set @s magickRegen 1
