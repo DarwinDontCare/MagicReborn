@@ -2,25 +2,26 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-      "  S",
+      "  C",
       " S ",
       "S  "
     ],
     "key": {
-      "S": "minecraft:stick"
+      "S": "minecraft:stick",
+      "C": "minecraft:cobblestone"
     },
     "result": {
       "id": "minecraft:carrot_on_a_stick",
       "components": {
-        "minecraft:custom_name": "Wooden Wand",
+        "minecraft:custom_name": "Stone Wand",
         "minecraft:rarity": "common",
         "minecraft:custom_data": {
           "type": "wand",
-          "tier": "wood",
           "enchanted": false,
-          "model": "magick_reborn:wand"
+          "tier": "stone",
+          "model": "magick_reborn:stone_wand"
         },
-        "minecraft:item_model": "magick_reborn:wand"
+        "minecraft:item_model": "magick_reborn:stone_wand"
       },
       "count": 1
     },

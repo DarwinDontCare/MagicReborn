@@ -2,25 +2,28 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-      "  S",
+      "  G",
       " S ",
       "S  "
     ],
     "key": {
-      "S": "minecraft:stick"
+      "S": "minecraft:stick",
+      "G": [
+        "minecraft:gold_ingot"
+      ]
     },
     "result": {
       "id": "minecraft:carrot_on_a_stick",
       "components": {
-        "minecraft:custom_name": "Wooden Wand",
+        "minecraft:custom_name": "Golden Wand",
         "minecraft:rarity": "common",
         "minecraft:custom_data": {
           "type": "wand",
-          "tier": "wood",
           "enchanted": false,
-          "model": "magick_reborn:wand"
+          "tier": "gold",
+          "model": "magick_reborn:golden_wand"
         },
-        "minecraft:item_model": "magick_reborn:wand"
+        "minecraft:item_model": "magick_reborn:golden_wand"
       },
       "count": 1
     },

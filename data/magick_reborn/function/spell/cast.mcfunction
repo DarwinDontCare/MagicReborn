@@ -1,5 +1,6 @@
 # Armazena os valores do item no storage
-data modify storage magick:data spell set from entity @s SelectedItem.components.minecraft:custom_data
+execute if entity @s[nbt={SelectedItem:{components:{"minecraft:custom_data":{type: "wand"}}}}] run data modify storage magick:data spell set from entity @s SelectedItem.components.minecraft:custom_data
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type: "wand"}}}}}] run data modify storage magick:data spell set from entity @s equipment.offhand.components.minecraft:custom_data
 
 # Armazena o UUID do caster em spell.caster_id
 data modify storage magick:data spell.caster_id set from entity @s UUID

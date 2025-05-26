@@ -4,4 +4,4 @@ item_model="magick_reborn:wand",use_cooldown={seconds:1}\
 lore=[[{"text":"Power: $(amplifier)","italic":false}],[{"text":"Duration: $(duration)","italic":false}]\
 ,[{"text":"Effect: $(effect)","italic":false}],[{"text":"Cost: $(cost)","italic":false}]],enchantment_glint_override=true]
 
-$execute unless entity @s[gamemode=creative] run experience add @s -$(experience_cost)
+execute unless entity @s[gamemode=creative] run experience add @s -2 levels

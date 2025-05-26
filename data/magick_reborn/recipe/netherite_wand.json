@@ -2,25 +2,26 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-      "  S",
+      "  N",
       " S ",
       "S  "
     ],
     "key": {
-      "S": "minecraft:stick"
+      "S": "minecraft:stick",
+      "N": "minecraft:netherite_ingot"
     },
     "result": {
       "id": "minecraft:carrot_on_a_stick",
       "components": {
-        "minecraft:custom_name": "Wooden Wand",
+        "minecraft:custom_name": "Netherite Wand",
         "minecraft:rarity": "common",
         "minecraft:custom_data": {
           "type": "wand",
-          "tier": "wood",
           "enchanted": false,
-          "model": "magick_reborn:wand"
+          "tier": "netherite",
+          "model": "magick_reborn:netherite_wand"
         },
-        "minecraft:item_model": "magick_reborn:wand"
+        "minecraft:item_model": "magick_reborn:netherite_wand"
       },
       "count": 1
     },

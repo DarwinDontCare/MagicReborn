@@ -1,4 +1,5 @@
 execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{type: "wand"}}}},scores={rightClick=1..}] run function magick_reborn:spell/cast
+execute as @a[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type: "wand"}}}}},scores={rightClick=1..}] run function magick_reborn:spell/cast
 
 execute as @e[tag=magic_projectile] unless entity @s[tag=fireball] run function magick_reborn:spell/projectile_hit
 

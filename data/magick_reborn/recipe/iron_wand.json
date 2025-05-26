@@ -2,25 +2,26 @@
     "type": "minecraft:crafting_shaped",
     "category": "misc",
     "pattern": [
-      "  S",
+      "  I",
       " S ",
       "S  "
     ],
     "key": {
-      "S": "minecraft:stick"
+      "S": "minecraft:stick",
+      "I": "minecraft:iron_ingot"
     },
     "result": {
       "id": "minecraft:carrot_on_a_stick",
       "components": {
-        "minecraft:custom_name": "Wooden Wand",
+        "minecraft:custom_name": "Iron Wand",
         "minecraft:rarity": "common",
         "minecraft:custom_data": {
           "type": "wand",
-          "tier": "wood",
           "enchanted": false,
-          "model": "magick_reborn:wand"
+          "tier": "iron",
+          "model": "magick_reborn:iron_wand"
         },
-        "minecraft:item_model": "magick_reborn:wand"
+        "minecraft:item_model": "magick_reborn:iron_wand"
       },
       "count": 1
     },
