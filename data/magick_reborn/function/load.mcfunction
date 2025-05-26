@@ -17,7 +17,20 @@ scoreboard objectives add magickRegen dummy
 scoreboard objectives add spellCost dummy
 scoreboard objectives add baseCost dummy
 scoreboard objectives add magickRegenDelay dummy
+scoreboard objectives add calculationResults dummy
+scoreboard objectives add currentLevel level
+scoreboard objectives add calculationValues dummy
+scoreboard objectives add calculationValues2 dummy
+scoreboard objectives add baseMaxMagick dummy
+scoreboard objectives add baseMagickRegen dummy
+scoreboard objectives add mageLevel dummy
+scoreboard objectives add maxMagickMod dummy
+scoreboard objectives add magickRegenMod dummy
 
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1
 execute as @e unless entity @s[scores={magickRegen=1..}] run scoreboard players set @s magickRegen 1
-execute as @e unless entity @s[scores={maxMagick=1..}] run scoreboard players set @s maxMagick 100
+execute as @e unless entity @s[scores={maxMagick=1..}] run scoreboard players set @s maxMagick 50
+execute as @e unless entity @s[scores={baseMaxMagick=1..}] run scoreboard players set @s baseMaxMagick 50
+execute as @e unless entity @s[scores={mageLevel=1..}] run scoreboard players set @s mageLevel 1
+execute as @e unless entity @s[scores={maxMagickMod=1..}] run scoreboard players set @s maxMagickMod 0
+execute as @e unless entity @s[scores={magickRegenMod=1..}] run scoreboard players set @s magickRegenMod 0

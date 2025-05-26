@@ -1,0 +1,1 @@
+$tell @s i need $(experience_cost) to create this spell :(

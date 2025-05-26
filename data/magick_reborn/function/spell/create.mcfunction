@@ -1,5 +1,3 @@
-$scoreboard players set @s spell_amplifier $(amplifier)
-$scoreboard players set @s spell_duration $(duration)
 $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {data:{effect: "$(effect)"}, Tags:["cost_calc"]}
 
 execute if entity @e[tag=cost_calc,predicate=magick_reborn:cost_base_5] run scoreboard players set @s baseCost 5
