@@ -42,8 +42,6 @@
             {"id":"minecraft:slow_falling","display":"Slow Falling","initial":false},
             {"id":"minecraft:conduit_power","display":"Conduit Power","initial":false},
             {"id":"minecraft:dolphins_grace","display":"Dolphin's Grace","initial":false},
-            {"id":"minecraft:bad_omen","display":"Bad Omen","initial":false},
-            {"id":"minecraft:hero_of_the_village","display":"Hero of the Village","initial":false},
             {"id":"minecraft:fireball","display":"Fire Ball","initial":false},
             {"id":"minecraft:darkness","display":"Darkness","initial":false}
         ]
@@ -62,7 +60,7 @@
         "key":"duration",
         "label":"Duration",
         "start":1,
-        "end":3600,
+        "end":300,
         "step":1,
         "initial":1
     }
