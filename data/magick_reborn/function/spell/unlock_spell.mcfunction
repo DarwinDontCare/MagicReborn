@@ -1,0 +1,1 @@
+$data modify storage magick:$(uuid).unlocked_effects merge value {"id":$(effect),"display":$(name),"initial":false}

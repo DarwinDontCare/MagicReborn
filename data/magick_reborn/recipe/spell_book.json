@@ -34,7 +34,7 @@
                 "bold": true,
                 "click_event": {
                 "action": "run_command",
-                "command": "/function magick_reborn:spell/spell_creation_ui"
+                "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_creation_menu/data_organizer\"}"
                 },
                 "hover_event": {
                 "action": "show_text",

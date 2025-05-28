@@ -27,6 +27,8 @@ scoreboard objectives add mageLevel dummy
 scoreboard objectives add maxMagickMod dummy
 scoreboard objectives add magickRegenMod dummy
 scoreboard objectives add spellDiscount dummy
+scoreboard objectives add ticksCount dummy
+scoreboard objectives add uuid dummy
 
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1
 execute as @e unless entity @s[scores={magickRegen=1..}] run scoreboard players set @s magickRegen 1
@@ -35,3 +37,4 @@ execute as @e unless entity @s[scores={baseMaxMagick=1..}] run scoreboard player
 execute as @e unless entity @s[scores={mageLevel=1..}] run scoreboard players set @s mageLevel 1
 execute as @e unless entity @s[scores={maxMagickMod=1..}] run scoreboard players set @s maxMagickMod 0
 execute as @e unless entity @s[scores={magickRegenMod=1..}] run scoreboard players set @s magickRegenMod 0
+execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid

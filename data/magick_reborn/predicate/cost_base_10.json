@@ -15,6 +15,16 @@
       "condition": "minecraft:entity_properties",
       "entity": "this",
       "predicate": { "nbt": "{data:{effect:\"minecraft:instant_damage\"}}" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "nbt": "{data:{effect:\"minecraft:fire_resistance\"}}" }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": { "nbt": "{data:{effect:\"minecraft:resistance\"}}" }
     }
   ]
 }
