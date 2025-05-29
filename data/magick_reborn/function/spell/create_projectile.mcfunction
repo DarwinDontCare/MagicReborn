@@ -1,8 +1,6 @@
 # Sumona a flecha como "projétil mágico"
 execute rotated as @s positioned 0.0 0.0 0.0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
-$execute at @s unless entity @e[tag=effect_comparer, predicate=magick_reborn:special_spell] run summon minecraft:snowball ~ ~1.5 ~ {Tags: ["magic_projectile"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}, HasVisualFire:false, NoGravity:true}
-$execute at @s if entity @e[tag=effect_comparer, predicate=magick_reborn:special_spell] if score @s spell_amplifier matches ..1 run summon minecraft:small_fireball ~ ~1.5 ~ {Tags: ["magic_projectile", "fireball"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}}
-$execute at @s if entity @e[tag=effect_comparer, predicate=magick_reborn:special_spell] if score @s spell_amplifier matches 2.. run summon fireball ~ ~1.5 ~ {Tags: ["magic_projectile", "fireball"], data: {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier), caster_id: $(caster_id)}, ExplosionPower: $(amplifier)b}
+$execute at @s run $(summon_cmd)
 
 execute at @s as @e[tag=magic_projectile,distance=..1.5] run effect give @s invisibility infinite 1 true
 execute at @s as @e[tag=magic_projectile,distance=..1.5] run scoreboard players set @s projectileHealth 200

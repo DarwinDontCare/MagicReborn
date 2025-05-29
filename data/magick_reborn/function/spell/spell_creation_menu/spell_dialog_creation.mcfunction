@@ -28,7 +28,7 @@ $dialog show @s {\
         }\
     ],\
     action:{\
-        label:"Create Spell",\
+        label:"Add Effect",\
         id:"create_spell",\
         on_submit: {\
             type:"minecraft:command_template",\

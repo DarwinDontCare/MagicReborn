@@ -1,4 +1,4 @@
-$data modify storage magick $(uuid_data) merge value {effect0: "None", effect1: "None", effect2: "None", effect3: "None", magick_cost: 0, xp_cost: 0}
+$data modify storage magick $(uuid_data) merge value {effect0: "None", effect1: "None", effect2: "None", effect3: "None", magick_cost: 0, xp_cost: 0, spell_name: ""}
 $data modify storage magick $(uuid_data).spell_effects set value [\
         {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0},\
         {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0},\

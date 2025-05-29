@@ -26,7 +26,8 @@ $execute if score @s mageLevel matches ..20 run dialog show @s {\
     {\
         type:"minecraft:text",\
         key:"name",\
-        label:"Name"\
+        label:"Name",\
+        initial: "$(spell_name)"\
     }\
   ],\
   actions: [\
@@ -43,7 +44,7 @@ $execute if score @s mageLevel matches ..20 run dialog show @s {\
       id: "create_spell",\
       on_submit: {\
         type: "minecraft:command_template",\
-        template: "function magick_reborn:spell/spell_creation_menu/prepare_spell_creation {$(main_on_submit), uuid: $(uuid)}"\
+        template: "function magick_reborn:spell/spell_creation_menu/check_creation_requirements {$(main_on_submit), uuid: $(uuid), xp_cost: $(xp_cost), effect0: \"$(effect0)\", effect1: \"$(effect1)\", effect2: \"$(effect2)\", effect3: \"$(effect3)\"}"\
       }\
     }\
   ]\
@@ -77,7 +78,8 @@ $execute if score @s mageLevel matches 21..40 run dialog show @s {\
     {\
         type:"minecraft:text",\
         key:"name",\
-        label:"Name"\
+        label:"Name",\
+        initial: "$(spell_name)"\
     }\
   ],\
   actions: [\
@@ -102,7 +104,7 @@ $execute if score @s mageLevel matches 21..40 run dialog show @s {\
       id: "create_spell",\
       on_submit: {\
         type: "minecraft:command_template",\
-        template: "function magick_reborn:spell/spell_creation_menu/prepare_spell_creation {$(main_on_submit), uuid: $(uuid)}"\
+        template: "function magick_reborn:spell/spell_creation_menu/check_creation_requirements {$(main_on_submit), uuid: $(uuid), xp_cost: $(xp_cost), effect0: \"$(effect0)\", effect1: \"$(effect1)\", effect2: \"$(effect2)\", effect3: \"$(effect3)\"}"\
       }\
     }\
   ]\
@@ -136,7 +138,8 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
     {\
         type:"minecraft:text",\
         key:"name",\
-        label:"Name"\
+        label:"Name",\
+        initial: "$(spell_name)"\
     }\
   ],\
   actions: [\
@@ -169,7 +172,7 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
       id: "create_spell",\
       on_submit: {\
         type: "minecraft:command_template",\
-        template: "function magick_reborn:spell/spell_creation_menu/prepare_spell_creation {$(main_on_submit), uuid: $(uuid)}"\
+        template: "function magick_reborn:spell/spell_creation_menu/check_creation_requirements {$(main_on_submit), uuid: $(uuid), xp_cost: $(xp_cost), effect0: \"$(effect0)\", effect1: \"$(effect1)\", effect2: \"$(effect2)\", effect3: \"$(effect3)\"}"\
       }\
     }\
   ]\
@@ -203,7 +206,8 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
     {\
         type:"minecraft:text",\
         key:"name",\
-        label:"Name"\
+        label:"Name",\
+        initial: "$(spell_name)"\
     }\
   ],\
   actions: [\
@@ -244,7 +248,7 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
       id: "create_spell",\
       on_submit: {\
         type: "minecraft:command_template",\
-        template: "function magick_reborn:spell/spell_creation_menu/prepare_spell_creation {$(main_on_submit), uuid: $(uuid)}"\
+        template: "function magick_reborn:spell/spell_creation_menu/check_creation_requirements {$(main_on_submit), uuid: $(uuid), xp_cost: $(xp_cost), effect0: \"$(effect0)\", effect1: \"$(effect1)\", effect2: \"$(effect2)\", effect3: \"$(effect3)\"}"\
       }\
     }\
   ]\
