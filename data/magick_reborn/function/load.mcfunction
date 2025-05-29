@@ -29,6 +29,7 @@ scoreboard objectives add magickRegenMod dummy
 scoreboard objectives add spellDiscount dummy
 scoreboard objectives add ticksCount dummy
 scoreboard objectives add uuid dummy
+scoreboard objectives add index dummy
 
 gamerule commandBlockOutput false
 #gamerule sendCommandFeedback false

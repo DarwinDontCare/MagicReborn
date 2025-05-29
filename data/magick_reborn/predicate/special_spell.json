@@ -4,7 +4,7 @@
       {
         "condition": "minecraft:entity_properties",
         "entity": "this",
-        "predicate": { "nbt": "{data:{effect:\"minecraft:fireball\"}}" }
+        "predicate": { "nbt": "{data:{effects:[{effect: \"minecraft:fireball\"}]}}" }
       }
     ]
   }

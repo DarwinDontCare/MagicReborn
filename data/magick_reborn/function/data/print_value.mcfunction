@@ -1,1 +1,1 @@
-$say $(value) 
+$data modify storage magick:data spell.summon_cmd set value "summon snowball ~ ~1.5 ~ {Tags: [\"magic_projectile\"], data: {caster_id: $(caster_id)}"
