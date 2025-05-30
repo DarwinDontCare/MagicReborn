@@ -30,5 +30,12 @@
     {"id":"minecraft:conduit_power","display":"Conduit Power","initial":false},
     {"id":"minecraft:dolphins_grace","display":"Dolphin's Grace","initial":false},
     {"id":"minecraft:fireball","display":"Fire Ball","initial":false},
+    {"id":"minecraft:summon_armor","display":"Summon Armor","initial":false},
+    {"id":"minecraft:summon_sword","display":"Summon Sword","initial":false},
+    {"id":"minecraft:summon_bow","display":"Summon Bow","initial":false},
+    {"id":"minecraft:summon_pickaxe","display":"Summon Pickaxe","initial":false},
+    {"id":"minecraft:summon_axe","display":"Summon Axe","initial":false},
+    {"id":"minecraft:summon_shovel","display":"Summon Shovel","initial":false},
+    {"id":"minecraft:summon_hoe","display":"Summon Hoe","initial":false},
     {"id":"minecraft:darkness","display":"Darkness","initial":false}
 ]
