@@ -7,9 +7,9 @@ execute as @a[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type
 execute as @e[tag=magic_projectile] run function magick_reborn:spell/projectile_hit with entity @s data
 
 execute as @a run function magick_reborn:magick/manage_mage_levels
-execute as @a run function magick_reborn:spell/equipment/summoned_items_lifetime
+execute if score #global ticksCount matches 120.. as @a run function magick_reborn:spell/equipment/summoned_items_lifetime
 execute as @e run function magick_reborn:magick/regen
 execute as @a run function magick_reborn:magick/get_magick_data
 
 scoreboard players reset @e sneaking
-execute if score #global ticksCount matches 10.. run scoreboard players reset #global ticksCount
+execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount

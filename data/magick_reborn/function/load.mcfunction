@@ -41,3 +41,4 @@ execute as @e unless entity @s[scores={mageLevel=1..}] run scoreboard players se
 execute as @e unless entity @s[scores={maxMagickMod=1..}] run scoreboard players set @s maxMagickMod 0
 execute as @e unless entity @s[scores={magickRegenMod=1..}] run scoreboard players set @s magickRegenMod 0
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
+scoreboard objectives setdisplay list mageLevel
