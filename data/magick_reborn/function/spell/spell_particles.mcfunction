@@ -34,3 +34,5 @@ execute if entity @s[nbt={data: {effects: [{effect: "minecraft:bad_omen"}]}}] ru
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:hero_of_the_village"}]}}] run return run particle minecraft:happy_villager ~ ~ ~ .1 .1 .1 0 5 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:fireball"}]}}] run return run particle minecraft:flame ~ ~ ~ .1 .1 .1 0.01 10 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:darkness"}]}}] run return run particle minecraft:dust{color:[0.1,0.1,0.1],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_armor"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+

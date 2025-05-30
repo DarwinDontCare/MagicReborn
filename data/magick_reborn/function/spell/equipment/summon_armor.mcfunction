@@ -5,3 +5,5 @@ $execute unless entity @s[nbt={equipment:{chest:{count:1}}}] run item replace en
 $execute unless entity @s[nbt={equipment:{legs:{count:1}}}] run item replace entity @s armor.legs with leather_leggings[equippable={slot:"legs", asset_id:"magick_reborn:summoned"},enchantment_glint_override=true,item_model="magick_reborn:summoned_leggings",enchantments={binding_curse:1,vanishing_curse:1,unbreaking:5},custom_data={summoned:true},max_damage=$(duration),attribute_modifiers=[{type:armor,amount:$(amplifier),operation:add_value,id:"1748357971243"}]]
 
 $execute unless entity @s[nbt={equipment:{feet:{count:1}}}] run item replace entity @s armor.feet with leather_boots[equippable={slot:"feet", asset_id:"magick_reborn:summoned"},enchantment_glint_override=true,item_model="magick_reborn:summoned_boots",enchantments={binding_curse:1,vanishing_curse:1,unbreaking:5},custom_data={summoned:true},max_damage=$(duration),attribute_modifiers=[{type:armor,amount:$(amplifier),operation:add_value,id:"1748357971244"}]]
+
+execute at @s run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~1 ~ .2 .2 .2 0 50 force

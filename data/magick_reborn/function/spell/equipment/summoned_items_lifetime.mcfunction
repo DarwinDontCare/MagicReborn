@@ -26,5 +26,7 @@ execute store result score @s calculationValues2 run data get entity @s equipmen
 
 execute if entity @s[nbt={equipment:{feet:{components:{"minecraft:custom_data":{summoned: true}}}}}] if score @s calculationValues = @s calculationValues2 run item replace entity @s armor.feet with air
 
+function magick_reborn:spell/equipment/check_slots {slot: 0, limit: 35}
+
 scoreboard players reset @s calculationValues
 scoreboard players reset @s calculationValues2
