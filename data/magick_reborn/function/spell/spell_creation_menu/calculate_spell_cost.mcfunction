@@ -11,7 +11,11 @@ $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_5] 
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_10] run scoreboard players set @s baseCost 10
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_20] run scoreboard players set @s baseCost 20
 
-scoreboard players set #Calculation calculationValues 6
+scoreboard players operation #Calculation calculationValues = @s spell_duration
+scoreboard players set #Calculation calculationValues2 10
+scoreboard players operation #Calculation calculationValues /= #Calculation calculationValues2
+execute if score #Calculation calculationValues matches ..0 run scoreboard players set #Calculation calculationValues 1
+
 execute store result score @s calculationResults run scoreboard players operation @s spell_amplifier *= @s spell_duration
 scoreboard players operation @s calculationResults /= #Calculation calculationValues
 
@@ -20,24 +24,14 @@ execute if score @s calculationResults < @s baseCost run scoreboard players oper
 $execute store result score #Calculation calculationValues run data get storage magick $(uuid).xp_cost
 $execute store result storage magick $(uuid).spell_effects[$(current_effect_slot)].experience_cost int 1 run scoreboard players get @s calculationResults
 
+scoreboard players set #Calculation calculationValues2 2
+scoreboard players operation @s calculationResults /= #Calculation calculationValues2
+execute if score @s calculationResults matches ..4 run scoreboard players set @s calculationResults 5
+scoreboard players operation @s spellCost = @s calculationResults
+
 scoreboard players operation @s calculationResults += #Calculation calculationValues
 
 $execute store result storage magick $(uuid).xp_cost int 1 run scoreboard players get @s calculationResults
-
-$scoreboard players set @s spell_amplifier $(amplifier)
-$scoreboard players set @s spell_duration $(duration)
-
-execute if score @s spell_amplifier matches 0 run scoreboard players set @s spell_amplifier 1
-execute if score @s spell_duration matches 0 run scoreboard players set @s spell_duration 1
-
-# Normaliza duração
-scoreboard players set #Scale spell_duration 10
-scoreboard players operation @s spell_duration /= #Scale spell_duration
-execute if score @s spell_duration matches ..0 run scoreboard players set @s spell_duration 1
-
-# Calcula custo base com amplificador e duração
-scoreboard players operation @s spellCost *= @s spell_amplifier
-scoreboard players operation @s spellCost *= @s spell_duration
 
 # Aplica custo base a spellCost
 execute if score @s spellCost < @s baseCost run scoreboard players operation @s spellCost = @s baseCost

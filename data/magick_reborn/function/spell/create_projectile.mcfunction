@@ -1,5 +1,4 @@
 # Sumona a flecha como "projétil mágico"
-say projectile
 
 execute rotated as @s positioned 0.0 0.0 0.0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
 $execute at @s run $(summon_cmd)

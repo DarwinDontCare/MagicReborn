@@ -3,4 +3,6 @@ $item replace entity Darwin_Dont_Care weapon.offhand with minecraft:carrot_on_a_
 lore=[[{"text":"Effect 1: $(effect0)","italic":false}],[{"text":"Effect 2: $(effect1)","italic":false}],[{"text":"Effect 3: $(effect2)","italic":false}],\
 [{"text":"Effect 4: $(effect3)","italic":false}],[{"text":"Cost: $(magick_cost)","italic":false}]],enchantment_glint_override=true]
 
+$data modify storage magick $(uuid).magick_cost set value 0
+
 execute unless entity @s[gamemode=creative] run experience add @s -2 levels
