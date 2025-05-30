@@ -7,18 +7,27 @@ $execute if score @s mageLevel matches ..20 run dialog show @s {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:experience_bottle",\
-        count: $(xp_cost)\
+        components: {\
+          "minecraft:item_name": "Xp cost"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "XP cost to create spell",\
+      description: "$(xp_cost)",\
       show_decorations: true\
     },\
     {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:redstone",\
-        count: $(magick_cost)\
+        components: {\
+          "minecraft:item_name": "Magick cost",\
+          "minecraft:rarity": "rare"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "Magick cost to cast",\
+      description: "$(magick_cost)",\
       show_decorations: true\
     }\
   ],\
@@ -59,18 +68,27 @@ $execute if score @s mageLevel matches 21..40 run dialog show @s {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:experience_bottle",\
-        count: $(xp_cost)\
+        components: {\
+          "minecraft:item_name": "Xp cost"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "XP cost to create spell",\
+      description: "$(xp_cost)",\
       show_decorations: true\
     },\
     {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:redstone",\
-        count: $(magick_cost)\
+        components: {\
+          "minecraft:item_name": "Magick cost",\
+          "minecraft:rarity": "rare"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "Magick cost to cast",\
+      description: "$(magick_cost)",\
       show_decorations: true\
     }\
   ],\
@@ -119,18 +137,27 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:experience_bottle",\
-        count: $(xp_cost)\
+        components: {\
+          "minecraft:item_name": "Xp cost"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "XP cost to create spell",\
+      description: "$(xp_cost)",\
       show_decorations: true\
     },\
     {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:redstone",\
-        count: $(magick_cost)\
+        components: {\
+          "minecraft:item_name": "Magick cost",\
+          "minecraft:rarity": "rare"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "Magick cost to cast",\
+      description: "$(magick_cost)",\
       show_decorations: true\
     }\
   ],\
@@ -187,18 +214,27 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:experience_bottle",\
-        count: $(xp_cost)\
+        components: {\
+          "minecraft:item_name": "Xp cost"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "XP cost to create spell",\
+      description: "$(xp_cost)",\
       show_decorations: true\
     },\
     {\
       type: "minecraft:item",\
       item: {\
         id: "minecraft:redstone",\
-        count: $(magick_cost)\
+        components: {\
+          "minecraft:item_name": "Magick cost",\
+          "minecraft:rarity": "rare"\
+        },\
+        show_tooltip: true,\
+        count: 1\
       },\
-      description: "Magick cost to cast",\
+      description: "$(magick_cost)",\
       show_decorations: true\
     }\
   ],\
