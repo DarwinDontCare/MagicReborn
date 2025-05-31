@@ -35,4 +35,9 @@ execute if entity @s[nbt={data: {effects: [{effect: "minecraft:hero_of_the_villa
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:fireball"}]}}] run return run particle minecraft:flame ~ ~ ~ .1 .1 .1 0.01 10 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:darkness"}]}}] run return run particle minecraft:dust{color:[0.1,0.1,0.1],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_armor"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
-
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_sword"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_pickaxe"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_axe"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_shovel"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_hoe"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_bow"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force

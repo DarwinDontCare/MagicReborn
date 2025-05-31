@@ -8,6 +8,7 @@ execute as @e[tag=magic_projectile] run function magick_reborn:spell/projectile_
 
 execute as @a run function magick_reborn:magick/manage_mage_levels
 execute if score #global ticksCount matches 120.. as @a run function magick_reborn:spell/equipment/summoned_items_lifetime
+execute as @a run function magick_reborn:spell/equipment/handle_summoned_arrow
 execute as @e run function magick_reborn:magick/regen
 execute as @a run function magick_reborn:magick/get_magick_data
 
