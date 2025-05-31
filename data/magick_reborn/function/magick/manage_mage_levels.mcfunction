@@ -78,3 +78,10 @@ execute as @s[scores={mageLevel=91..}, tag=!Supreme] run scoreboard players set 
 execute as @s[scores={mageLevel=91..}, tag=!Supreme] run scoreboard players set @s baseMagickRegen 11
 execute as @s[tag=Supreme] unless score @s mageLevel matches 91.. run tag @s remove Supreme
 execute as @s[scores={mageLevel=91..}] run tag @s add Supreme
+
+scoreboard players set #Calculation calculationValues 100
+scoreboard players set @s levelProgressBarMaxValue 1000
+scoreboard players operation @s levelProgressBarMaxValue *= @s mageLevel
+scoreboard players operation @s levelProgressBarMaxValue /= #Calculation calculationValues
+
+scoreboard players reset #Calculation calculationValues

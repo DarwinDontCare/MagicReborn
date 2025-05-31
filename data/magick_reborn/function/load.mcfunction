@@ -30,6 +30,10 @@ scoreboard objectives add spellDiscount dummy
 scoreboard objectives add ticksCount dummy
 scoreboard objectives add uuid dummy
 scoreboard objectives add index dummy
+scoreboard objectives add levelProgressBar dummy
+scoreboard objectives add levelProgressBarMaxValue dummy
+scoreboard objectives add enchant custom:enchant_item
+scoreboard objectives add readBook used:written_book
 
 gamerule commandBlockOutput false
 #gamerule sendCommandFeedback false
