@@ -795,7 +795,7 @@
                             "function": "minecraft:set_components",
                             "components": {
                               "minecraft:item_model": "magick_reborn:spell_book",    
-                                "lore": [{"text": "Wither", "initial": false }],
+                                "lore": [{"text": "Wither"}],
                                 "minecraft:custom_data": {
                                     "spell_book": true,
                                     "effects": [
