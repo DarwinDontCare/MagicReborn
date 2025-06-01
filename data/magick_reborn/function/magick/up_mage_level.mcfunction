@@ -7,6 +7,7 @@ if score @s readBook matches 1.. run function magick_reborn:magick/handle_spell_
 
 
 execute if score @s levelProgressBar >= @s levelProgressBarMaxValue run scoreboard players add @s mageLevel 1
+execute if score @s levelProgressBar >= @s levelProgressBarMaxValue run title @s title "Level Up"
 execute if score @s levelProgressBar >= @s levelProgressBarMaxValue run scoreboard players operation @s levelProgressBar -= @s levelProgressBarMaxValue
 
 scoreboard players reset @s enchant
