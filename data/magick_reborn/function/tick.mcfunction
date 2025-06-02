@@ -1,6 +1,8 @@
 scoreboard players add #global ticksCount 1
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 
+execute as @a[tag=!onboarded] run function magick_reborn:onboarding
+
 execute as @a run function magick_reborn:magick/up_mage_level
 
 execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{type: "wand"}}}},scores={rightClick=1..}] run function magick_reborn:spell/cast

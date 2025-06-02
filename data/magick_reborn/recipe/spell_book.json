@@ -21,56 +21,82 @@
         "minecraft:rarity": "rare",
         "minecraft:written_book_content": {
             "pages": [
-            {
-                "text": "Behold, the ancient guide to ascend as a TRUE Mage. The path is arduous and shrouded in mystery, yet in time thou shalt master its secrets."
-            },
-            {
-                "text": "First, thou must forge thine initial wand — for this sacred tool, gather thee three wooden rods."
-            },
-            {
-                "text": "Create Wand",
-                "type": "text",
-                "color": "dark_aqua",
-                "bold": true,
-                "click_event": {
-                "action": "run_command",
-                "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_creation_menu/check_for_wand\"}"
+                {
+                    "text": "Behold, the ancient guide to ascend as a TRUE Mage. The path is arduous and shrouded in mystery, yet in time thou shalt master its secrets."
                 },
-                "hover_event": {
-                "action": "show_text",
-                "value": "Menu for Magick Wand creation"
+                {
+                    "text": "First, thou must forge thine initial wand — for this sacred tool, gather thee three wooden rods."
+                },
+                {
+                    "text": "Create Wand",
+                    "type": "text",
+                    "color": "dark_aqua",
+                    "bold": true,
+                    "click_event": {
+                    "action": "run_command",
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_creation_menu/check_for_wand\"}"
+                    },
+                    "hover_event": {
+                    "action": "show_text",
+                    "value": "Menu for Magick Wand creation"
+                    }
+                },
+                {
+                    "text": "View Stats",
+                    "type": "text",
+                    "color": "gold",
+                    "bold": true,
+                    "click_event": {
+                    "action": "run_command",
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:data/stats_menu\"}"
+                    },
+                    "hover_event": {
+                    "action": "show_text",
+                    "value": "Menu for Magick Wand creation"
+                    }
+                },
+                {
+                    "text": "§l§6The Path of the Mage§r\n\nAscend as a TRUE Mage by mastering the arts of enchanting, spellcrafting, and discovery. With each step, thy magickal prowess shall grow."
+                },
+                {
+                    "text": "§l§6Gaining Mage Levels§r\n\nEnchanting items grants thee fixed magick experience. Learning new spells from spell books varies with the rarity: common spells grant little, while epic spells bestow great experience."
+                },
+                {
+                    "text": "§l§6Forging Spells§r\n\nCreating spells requires experience levels. The higher the cost to craft a spell, the greater the magick experience gained. Choose thy arcane path wisely."
+                },
+                {
+                    "text": "§l§6Wands: Tools of the Arcane§r\n\nSeven wands exist for crafting: wood, stone, iron, gold, diamond, emerald, and netherite. The rarer the material, the greater the discount when casting spells and the more powerful spells may be crafted."
+                },
+                {
+                    "text": "§l§7Wooden Wand§r — A simple beginning. High magick cost, limited power.\n\n§l§8Stone Wand§r — Modest upgrade, slight magick cost reduction."
+                },
+                {
+                    "text": "§l§fIron Wand§r — Balanced power and efficiency.\n\n§l§6Golden Wand§r — Fragile yet greatly reduces magick cost."
+                },
+                {
+                    "text": "§l§bDiamond Wand§r — Potent and efficient, ideal for experienced mages.\n\n§l§aEmerald Wand§r — Rare and versatile, enhancing spell potency further."
+                },
+                {
+                    "text": "§l§5Netherite Wand§r — Supreme among all wands: minimal magick cost and unmatched spell strength."
+                },
+                {
+                    "text": "§l§6Magick Enhancements§r\n\nEnchant thy gear with magickal upgrades: increase your maximum magick or enhance your magick regeneration. These enchantments are vital for mastering advanced spells."
+                },
+                {
+                    "text": "§l§6Spell Books§r\n\nDiscover spell books in dungeons, abandoned mineshafts, Nether fortresses, Bastions, End Cities, and the Deep Dark. The harder the place to reach, the rarer and more powerful the spell."
+                },
+                {
+                    "text": "§l§6Expanding Spellcraft§r\n\nAs thy Mage Level increases, thou canst weave more effects into a spell. Up to 4 effects may be bound into a single spell once thou reachest level 60."
+                },
+                {
+                    "text": "§l§6Casting Spells§r\n\nCrouch to cast a spell upon thyself. Otherwise, the spell becomes a projectile, delivering its power upon the target it strikes."
+                },
+                {
+                    "text": "§l§6Final Counsel§r\n\nBalance thy magick. Conserve energy for moments of dire need, and let wisdom guide thy incantations."
+                },
+                {
+                    "text": "§l§2May the Threads of Magick forever weave through thy soul, brave Mage.§r\n\n§oThis tome shall serve as thine guide on the mystic path..."
                 }
-            },
-            {
-                "text": "§l§6On the Path of Power§r\n\nTo rise in the ranks of Magehood, thou must gather experience. Slay beasts, perform rituals, and invoke spells to increase thine Mage Level."
-            },
-            {
-                "text": "§l§6The Art of Spellcraft§r\n\nSpells are woven through ancient rites. To forge a spell, thou requireth two things: a wand imbued with potential, and thy own experience levels to fuel the incantation."
-            },
-            {
-                "text": "§l§6Unlocking New Spells§r\n\nWith each ascended Mage Level, new and greater magicks shall be revealed unto thee. Seek hidden scrolls and experiment to unlock their might."
-            },
-            {
-                "text": "§l§6Essence of Creation§r\n\nTo create a spell, thou must invoke the crafting of the arcane. Be prepared: a portion of thine experience shall be consumed, alongside the charge of thy wand."
-            },
-            {
-                "text": "§l§6The Wands of Power§r\n\nWands are not mere sticks; they are vessels of arcane focus. There exist six known types, each with its own strength and rarity:"
-            },
-            {
-                "text": "§l§7Wooden Wand§r — The humble beginning. Least durable, most costly for spellwork.\n\n§l§8Stone Wand§r — A modest upgrade, slightly reducing magick cost."
-            },
-            {
-                "text": "§l§fIron Wand§r — A reliable conduit, offering balanced cost and power.\n\n§l§6Golden Wand§r — A fickle, fragile focus; yet its spells cost significantly less magick."
-            },
-            {
-                "text": "§l§bDiamond Wand§r — A rare and potent instrument, greatly reducing magickal expense.\n\n§l§5Netherite Wand§r — The pinnacle of arcane craft. Spells cast with this wand cost the least magick and possess unparalleled might."
-            },
-            {
-                "text": "§l§6Final Counsel§r\n\nWield thine wand with wisdom, for with greater power comes greater risk. Channel thy magick sparingly, lest thou find thyself depleted when most in need."
-            },
-            {
-                "text": "§l§2May the Threads of Magick forever weave through thy soul, brave Mage.§r\n\n§oThis tome shall serve as thine guide on the mystic path..."
-            }
             ],
             "title": {
             "raw": "Magic Initiation"

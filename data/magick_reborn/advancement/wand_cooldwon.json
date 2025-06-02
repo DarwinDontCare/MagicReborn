@@ -1,6 +1,0 @@
-{
-	"criteria": { "tick": {
-		"trigger": "minecraft:tick"
-	}},
-	"rewards": { "function": "magick_reborn:spell/cast/wand_cooldown" }
-}

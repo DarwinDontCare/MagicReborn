@@ -11,4 +11,12 @@ $execute unless data storage magick $(uuid).known_spells run data modify storage
 $data modify storage magick $(uuid).known_spells append value {spell_name: "$(spell_name)", custom_data: {cost: $(magick_cost), effects: $(spell_effects), type: "wand", enchanted: true, tier: $(tier), model: "$(model)"}, lore: [[{"text":"Effect 1: $(effect0)","italic":false}],[{"text":"Effect 2: $(effect1)","italic":false}],[{"text":"Effect 3: $(effect2)","italic":false}],\
 [{"text":"Effect 4: $(effect3)","italic":false}],[{"text":"Cost: $(magick_cost)","italic":false}]]}
 
+$scoreboard players set #Calculation calculationValues $(xp_cost)
+scoreboard players set #Calculation calculationValues2 2
+scoreboard players operation #Calculation calculationValues /= #Calculation calculationValues2
+scoreboard players operation @s levelProgressBar += #Calculation calculationValues
+
+scoreboard players reset #Calculation calculationValues
+scoreboard players reset #Calculation calculationValues2
+
 execute unless entity @s[gamemode=creative] run experience add @s -2 levels

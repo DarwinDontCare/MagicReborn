@@ -9,8 +9,12 @@ execute store result storage magick:data spell.caster_id int 1 run scoreboard pl
 # Executa a função apply_effect com os dados
 execute as @s unless score @s wandCooldown matches 1.. run function magick_reborn:spell/check_magick with storage magick:data spell
 
+execute store result score #Compare boolean run data get storage magick:data spell.is_burst
+
 data remove storage magick:data spell
 
-advancement revoke @s only magick_reborn:use_wand
-advancement revoke @s only magick_reborn:wand_cooldwon
+execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:use_wand
+execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_impulse
+
+execute if score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_burst
 scoreboard players set @s wandCooldown 10
