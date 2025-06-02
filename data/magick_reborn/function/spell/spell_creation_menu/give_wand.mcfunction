@@ -1,8 +1,14 @@
-$item replace entity Darwin_Dont_Care weapon.offhand with minecraft:carrot_on_a_stick[item_name="$(spell_name)",item_model="$(model)"\
+$item replace entity @s weapon.offhand with minecraft:clock[item_name="$(spell_name)",item_model="$(model)"\
 ,custom_data={cost: $(magick_cost), effects: $(spell_effects), type: "wand", enchanted: true, tier: $(tier), model: "$(model)"},\
 lore=[[{"text":"Effect 1: $(effect0)","italic":false}],[{"text":"Effect 2: $(effect1)","italic":false}],[{"text":"Effect 3: $(effect2)","italic":false}],\
-[{"text":"Effect 4: $(effect3)","italic":false}],[{"text":"Cost: $(magick_cost)","italic":false}]],enchantment_glint_override=true]
+[{"text":"Effect 4: $(effect3)","italic":false}],[{"text":"Cost: $(magick_cost)","italic":false}]],enchantment_glint_override=true,\
+consumable={animation:"bow",consume_seconds:2147483647,has_consume_particles:false,sound:"block.enchantment_table.use"},use_cooldown={seconds:2, cooldown_group:"minecraft:none"},\
+food={nutrition:0,saturation:0,can_always_eat:true},max_stack_size=1]
 
 $data modify storage magick $(uuid).magick_cost set value 0
+
+$execute unless data storage magick $(uuid).known_spells run data modify storage magick $(uuid).known_spells set value []
+$data modify storage magick $(uuid).known_spells append value {spell_name: "$(spell_name)", custom_data: {cost: $(magick_cost), effects: $(spell_effects), type: "wand", enchanted: true, tier: $(tier), model: "$(model)"}, lore: [[{"text":"Effect 1: $(effect0)","italic":false}],[{"text":"Effect 2: $(effect1)","italic":false}],[{"text":"Effect 3: $(effect2)","italic":false}],\
+[{"text":"Effect 4: $(effect3)","italic":false}],[{"text":"Cost: $(magick_cost)","italic":false}]]}
 
 execute unless entity @s[gamemode=creative] run experience add @s -2 levels

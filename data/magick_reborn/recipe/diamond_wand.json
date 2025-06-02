@@ -11,7 +11,7 @@
       "D": "minecraft:diamond"
     },
     "result": {
-      "id": "minecraft:carrot_on_a_stick",
+      "id": "minecraft:clock",
       "components": {
         "minecraft:custom_name": "Diamond Wand",
         "minecraft:rarity": "common",
@@ -21,7 +21,8 @@
           "tier": "diamond",
           "model": "magick_reborn:diamond_wand"
         },
-        "minecraft:item_model": "magick_reborn:diamond_wand"
+        "minecraft:item_model": "magick_reborn:diamond_wand",
+        "max_stack_size": 1
       },
       "count": 1
     },

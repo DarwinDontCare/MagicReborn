@@ -10,7 +10,7 @@
       "S": "minecraft:stick"
     },
     "result": {
-      "id": "minecraft:carrot_on_a_stick",
+      "id": "minecraft:clock",
       "components": {
         "minecraft:custom_name": "Wooden Wand",
         "minecraft:rarity": "common",
@@ -20,7 +20,8 @@
           "enchanted": false,
           "model": "magick_reborn:wand"
         },
-        "minecraft:item_model": "magick_reborn:wand"
+        "minecraft:item_model": "magick_reborn:wand",
+        "max_stack_size": 1
       },
       "count": 1
     },

@@ -34,6 +34,7 @@ scoreboard objectives add levelProgressBar dummy
 scoreboard objectives add levelProgressBarMaxValue dummy
 scoreboard objectives add enchant custom:enchant_item
 scoreboard objectives add readBook used:written_book
+scoreboard objectives add wandCooldown dummy
 
 gamerule commandBlockOutput false
 #gamerule sendCommandFeedback false

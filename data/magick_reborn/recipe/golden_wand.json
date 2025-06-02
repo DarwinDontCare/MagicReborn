@@ -13,7 +13,7 @@
       ]
     },
     "result": {
-      "id": "minecraft:carrot_on_a_stick",
+      "id": "minecraft:clock",
       "components": {
         "minecraft:custom_name": "Golden Wand",
         "minecraft:rarity": "common",
@@ -23,7 +23,8 @@
           "tier": "gold",
           "model": "magick_reborn:golden_wand"
         },
-        "minecraft:item_model": "magick_reborn:golden_wand"
+        "minecraft:item_model": "magick_reborn:golden_wand",
+        "max_stack_size": 1
       },
       "count": 1
     },

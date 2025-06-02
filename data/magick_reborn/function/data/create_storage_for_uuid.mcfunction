@@ -13,6 +13,7 @@ $data modify storage magick $(uuid_data) set value {\
         {id:"minecraft:speed",display:"Speed",initial:true},\
         {id:"minecraft:instant_health",display:"Instant Health",initial:false}\
     ],\
+    known_spells: [],\
     max_amplifier: 1,\
     max_duration: 1\
 }

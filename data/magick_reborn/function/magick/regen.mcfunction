@@ -1,7 +1,17 @@
-execute unless score @s maxMagickMod matches 0.. run scoreboard players set @s maxMagickMod 0
-execute unless score @s magickRegenMod matches 0.. run scoreboard players set @s magickRegenMod 0
+scoreboard players set @s maxMagickMod 0
+scoreboard players set @s magickRegenMod 0
 execute unless score @s baseMagickRegen matches 1.. run scoreboard players set @s baseMagickRegen 1
 execute unless score @s baseMaxMagick matches 1.. run scoreboard players set @s baseMaxMagick 1
+
+execute if predicate magick_reborn:has_boost_magick_head run function magick_reborn:magick/apply_modifiers {path: "equipment.head.components.\"minecraft:enchantments\".\"magick_reborn:boost_magick\"", score: "maxMagickMod", multiplier: 10}
+execute if predicate magick_reborn:has_boost_magick_chest run function magick_reborn:magick/apply_modifiers {path: "equipment.chest.components.\"minecraft:enchantments\".\"magick_reborn:boost_magick\"", score: "maxMagickMod", multiplier: 10}
+execute if predicate magick_reborn:has_boost_magick_legs run function magick_reborn:magick/apply_modifiers {path: "equipment.legs.components.\"minecraft:enchantments\".\"magick_reborn:boost_magick\"", score: "maxMagickMod", multiplier: 10}
+execute if predicate magick_reborn:has_boost_magick_feet run function magick_reborn:magick/apply_modifiers {path: "equipment.feet.components.\"minecraft:enchantments\".\"magick_reborn:boost_magick\"", score: "maxMagickMod", multiplier: 10}
+
+execute if predicate magick_reborn:has_magick_regen_head run function magick_reborn:magick/apply_modifiers {path: "equipment.head.components.\"minecraft:enchantments\".\"magick_reborn:magick_regen\"", score: "magickRegenMod", multiplier: 2}
+execute if predicate magick_reborn:has_magick_regen_chest run function magick_reborn:magick/apply_modifiers {path: "equipment.chest.components.\"minecraft:enchantments\".\"magick_reborn:magick_regen\"", score: "magickRegenMod", multiplier: 2}
+execute if predicate magick_reborn:has_magick_regen_legs run function magick_reborn:magick/apply_modifiers {path: "equipment.legs.components.\"minecraft:enchantments\".\"magick_reborn:magick_regen\"", score: "magickRegenMod", multiplier: 2}
+execute if predicate magick_reborn:has_magick_regen_feet run function magick_reborn:magick/apply_modifiers {path: "equipment.feet.components.\"minecraft:enchantments\".\"magick_reborn:magick_regen\"", score: "magickRegenMod", multiplier: 2}
 
 scoreboard players operation @s calculationValues = @s baseMaxMagick
 scoreboard players operation @s calculationValues += @s maxMagickMod

@@ -11,7 +11,7 @@
       "C": "minecraft:cobblestone"
     },
     "result": {
-      "id": "minecraft:carrot_on_a_stick",
+      "id": "minecraft:clock",
       "components": {
         "minecraft:custom_name": "Stone Wand",
         "minecraft:rarity": "common",
@@ -21,7 +21,8 @@
           "tier": "stone",
           "model": "magick_reborn:stone_wand"
         },
-        "minecraft:item_model": "magick_reborn:stone_wand"
+        "minecraft:item_model": "magick_reborn:stone_wand",
+        "max_stack_size": 1
       },
       "count": 1
     },

@@ -11,7 +11,7 @@
       "N": "minecraft:netherite_ingot"
     },
     "result": {
-      "id": "minecraft:carrot_on_a_stick",
+      "id": "minecraft:clock",
       "components": {
         "minecraft:custom_name": "Netherite Wand",
         "minecraft:rarity": "common",
@@ -21,7 +21,8 @@
           "tier": "netherite",
           "model": "magick_reborn:netherite_wand"
         },
-        "minecraft:item_model": "magick_reborn:netherite_wand"
+        "minecraft:item_model": "magick_reborn:netherite_wand",
+        "max_stack_size": 1
       },
       "count": 1
     },
