@@ -18,5 +18,4 @@ execute as @a run function magick_reborn:magick/get_magick_data
 
 kill @e[type=item, nbt={Item:{components:{"minecraft:custom_data":{summoned:true}}}}]
 
-scoreboard players reset @e sneaking
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
