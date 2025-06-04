@@ -35,6 +35,13 @@ scoreboard objectives add enchant custom:enchant_item
 scoreboard objectives add readBook used:written_book
 scoreboard objectives add wandCooldown dummy
 scoreboard objectives add dropedItem dropped:clock
+scoreboard objectives add x dummy
+scoreboard objectives add y dummy
+scoreboard objectives add z dummy
+
+scoreboard objectives add prev_x dummy
+scoreboard objectives add prev_y dummy
+scoreboard objectives add prev_z dummy
 
 gamerule commandBlockOutput false
 gamerule sendCommandFeedback false

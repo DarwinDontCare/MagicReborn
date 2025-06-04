@@ -9,7 +9,7 @@ $execute if entity @e[tag=effect_comparer,nbt={data:{caster_id: $(caster_id)}},p
 $execute at @s as @s run function magick_reborn:spell/spell_sounds {caster_id: $(caster_id)}
 
 # Projectile Logic
-$data modify storage magick:data spell.summon_cmd set value "summon snowball ~ ~1.5 ~ {Tags: [\"magic_projectile\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false}"
+$data modify storage magick:data spell.summon_cmd set value "summon item ~ ~1.5 ~ {Tags: [\"magic_projectile\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\"}}"
 
 $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}], caster_id: $(caster_id)}}] \
  run data modify storage magick:data spell.summon_cmd set value "summon fireball ~ ~1.5 ~ {Tags: [\"magic_projectile\", \"fireball\"], data: {caster_id: $(caster_id)}}"
