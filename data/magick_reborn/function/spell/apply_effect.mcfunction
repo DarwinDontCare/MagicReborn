@@ -28,5 +28,10 @@ data modify storage magick:data effectComparer set value "minecraft:summon_hoe"
 $execute store result score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/equipment/summon_tool {duration: $(duration), amplifier: $(amplifier), tool: "minecraft:wooden_hoe", model: "magick_reborn:summoned_hoe"}
 
+data modify storage magick:data effectComparer set value "minecraft:frostbite"
+$execute store result score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/frostbite {duration: $(duration), amplifier: $(amplifier)}
+
+
 #Vanilla Effects
 $function magick_reborn:spell/cast/apply_vanilla_effects {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier)}
