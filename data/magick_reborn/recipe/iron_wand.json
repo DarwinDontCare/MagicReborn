@@ -18,11 +18,19 @@
         "minecraft:custom_data": {
           "type": "wand",
           "enchanted": false,
-          "tier": "iron",
+          "tier": 3,
           "model": "magick_reborn:iron_wand"
         },
+        "repairable": {
+          "items": [
+            "lapis_lazuli"
+          ]
+        },
+        "repair_cost": 1,
         "minecraft:item_model": "magick_reborn:iron_wand",
-        "max_stack_size": 1
+        "max_stack_size": 1,
+        "max_damage": 200,
+        "damage": 0
       },
       "count": 1
     },

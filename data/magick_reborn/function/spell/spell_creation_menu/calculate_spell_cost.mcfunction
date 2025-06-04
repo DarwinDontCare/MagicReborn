@@ -12,12 +12,12 @@ $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {data:{effect
 scoreboard players set @s baseCost 1
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_5] run scoreboard players set @s baseCost 5
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_10] run scoreboard players set @s baseCost 10
+$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_15] run scoreboard players set @s baseCost 15
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_20] run scoreboard players set @s baseCost 20
+$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_25] run scoreboard players set @s baseCost 25
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_30] run scoreboard players set @s baseCost 30
+$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_35] run scoreboard players set @s baseCost 35
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_40] run scoreboard players set @s baseCost 40
-$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_50] run scoreboard players set @s baseCost 50
-$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_50] run scoreboard players set @s baseCost 60
-$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_70] run scoreboard players set @s baseCost 70
 
 scoreboard players set #Calculation calculationValues 80
 scoreboard players set #Calculation calculationValues2 10

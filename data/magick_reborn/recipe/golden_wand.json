@@ -20,11 +20,19 @@
         "minecraft:custom_data": {
           "type": "wand",
           "enchanted": false,
-          "tier": "gold",
+          "tier": 4,
           "model": "magick_reborn:golden_wand"
         },
+        "repairable": {
+          "items": [
+            "lapis_lazuli"
+          ]
+        },
+        "repair_cost": 1,
         "minecraft:item_model": "magick_reborn:golden_wand",
-        "max_stack_size": 1
+        "max_stack_size": 1,
+        "max_damage": 150,
+        "damage": 0
       },
       "count": 1
     },

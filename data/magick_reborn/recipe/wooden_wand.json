@@ -16,12 +16,20 @@
         "minecraft:rarity": "common",
         "minecraft:custom_data": {
           "type": "wand",
-          "tier": "wood",
+          "tier": 1,
           "enchanted": false,
           "model": "magick_reborn:wand"
         },
+        "repairable": {
+          "items": [
+            "lapis_lazuli"
+          ]
+        },
+        "repair_cost": 1,
         "minecraft:item_model": "magick_reborn:wand",
-        "max_stack_size": 1
+        "max_stack_size": 1,
+        "max_damage": 50,
+        "damage": 0
       },
       "count": 1
     },

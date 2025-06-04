@@ -18,11 +18,19 @@
         "minecraft:custom_data": {
           "type": "wand",
           "enchanted": false,
-          "tier": "netherite",
+          "tier": 7,
           "model": "magick_reborn:netherite_wand"
         },
+        "repairable": {
+          "items": [
+            "lapis_lazuli"
+          ]
+        },
+        "repair_cost": 2,
         "minecraft:item_model": "magick_reborn:netherite_wand",
-        "max_stack_size": 1
+        "max_stack_size": 1,
+        "max_damage": 1000,
+        "damage": 0
       },
       "count": 1
     },

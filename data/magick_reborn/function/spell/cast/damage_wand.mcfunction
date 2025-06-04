@@ -1,0 +1,2 @@
+execute if entity @s[nbt={equipment:{mainhand:{components:{"minecraft:custom_data":{type: "wand"}}}}}] run return run item modify entity @s weapon.mainhand magick_reborn:damage_item
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type: "wand"}}}}}] run return run item modify entity @s weapon.offhand magick_reborn:damage_item

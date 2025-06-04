@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:multi_action",
+    "title": "Actions Menu",
+    "pause": false,
+    "after_action": "close",
+    "body": [],
+    "inputs": [],
+    "actions": [
+      {
+        "label": "Quick Spells",
+        "tooltip": "Opeen Quick Spells Menu",
+        "id": "quick_spells",
+        "action": {
+          "type": "dynamic/run_command",
+          "template": "function magick_reborn:spell/spell_selection/quick_spells {text: \"$(text)\"}"
+        }
+      }
+    ]
+  }

@@ -1,4 +1,5 @@
 execute unless entity @s[gamemode=creative] run scoreboard players operation @s magick -= @s spellCost
+execute unless entity @s[gamemode=creative] run function magick_reborn:spell/cast/damage_wand
 
 $data modify storage magick:data spell.effects set value $(effects)
 $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effect_comparer"], data: {effects: $(effects), caster_id: $(caster_id)}}
