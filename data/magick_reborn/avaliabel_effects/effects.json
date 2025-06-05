@@ -38,5 +38,6 @@
     {"id":"minecraft:summon_shovel","display":"Summon Shovel","initial":false},
     {"id":"minecraft:summon_hoe","display":"Summon Hoe","initial":false},
     {"id":"minecraft:darkness","display":"Darkness","initial":false},
-    {"id":"minecraft:frostbite","display":"Frostbite","initial":false}
+    {"id":"minecraft:frostbite","display":"Frostbite","initial":false},
+    {"id":"minecraft:ice_wall","display":"Ice Wall","initial":false}
 ]

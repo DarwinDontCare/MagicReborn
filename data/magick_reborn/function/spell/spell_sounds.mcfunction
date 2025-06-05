@@ -40,3 +40,4 @@ $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minec
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:summon_hoe"}], caster_id: $(caster_id)}}] run return run playsound minecraft:item.armor.equip_diamond ambient @a[distance=..5] ~ ~ ~ 0.5 1 1
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:summon_bow"}], caster_id: $(caster_id)}}] run return run playsound minecraft:item.armor.equip_diamond ambient @a[distance=..5] ~ ~ ~ 0.5 1 1
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:frostbite"}], caster_id: $(caster_id)}}] run return run playsound block.powder_snow.break ambient @a[distance=..5] ~ ~ ~ 1 1 1
+$execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:ice_wall"}], caster_id: $(caster_id)}}] run return run playsound block.powder_snow.break ambient @a[distance=..5] ~ ~ ~ 1 1 1
