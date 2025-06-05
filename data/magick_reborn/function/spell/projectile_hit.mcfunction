@@ -22,10 +22,17 @@ execute store result score @s prev_x run data get entity @s Motion[0]
 execute store result score @s prev_y run data get entity @s Motion[1]
 execute store result score @s prev_z run data get entity @s Motion[2]
 
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_stop_sound
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_projectile_hit_sound
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_stop_sound
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_projectile_hit_sound
 
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
+
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ water run playsound minecraft:block.amethyst_cluster.place ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ water run fill ~1 ~ ~1 ~-1 ~ ~-1 frosted_ice replace water
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ #fire run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ #fire run fill ~ ~ ~ ~ ~ ~ air replace #fire
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
+execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run fill ~ ~ ~ ~ ~ ~ obsidian replace lava
 
 # Redução de vida do projétil ou remoção
 execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] run function magick_reborn:spell/cast/spell_stop_sound

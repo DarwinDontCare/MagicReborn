@@ -35,6 +35,9 @@ scoreboard objectives add enchant custom:enchant_item
 scoreboard objectives add readBook used:written_book
 scoreboard objectives add wandCooldown dummy
 scoreboard objectives add dropedItem dropped:clock
+scoreboard objectives add freezeTicks dummy
+scoreboard objectives add burnTicks dummy
+
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy
 scoreboard objectives add z dummy

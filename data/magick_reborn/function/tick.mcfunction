@@ -18,4 +18,10 @@ kill @e[type=item, nbt={Item:{components:{"minecraft:custom_data":{summoned:true
 
 scoreboard players reset @a dropedItem
 
+execute as @e[scores={freezeTicks=1..}] at @s run particle end_rod ~ ~1.5 ~ .02 -.02 .02 0.02 1 force
+execute as @e[scores={freezeTicks=1..},predicate=magick_reborn:on_fire] run function magick_reborn:magick/unfreeze
+execute as @e[scores={freezeTicks=..0}] run function magick_reborn:magick/unfreeze
+
+execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
+
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
