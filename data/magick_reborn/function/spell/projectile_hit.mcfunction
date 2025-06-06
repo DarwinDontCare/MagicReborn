@@ -9,20 +9,20 @@ execute store result score @s x run data get entity @s Motion[0]
 execute store result score @s y run data get entity @s Motion[1]
 execute store result score @s z run data get entity @s Motion[2]
 
-$execute if entity @s[tag=ice_wall] if score @s x matches ..0 if score @s x > @s prev_x at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
-$execute if entity @s[tag=ice_wall] if score @s x matches 0.. if score @s x < @s prev_x at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
+$execute if entity @s[tag=ice_wall] if score @s x matches ..0 if score @s x > @s prev_x at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
+$execute if entity @s[tag=ice_wall] if score @s x matches 0.. if score @s x < @s prev_x at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
 
 execute if score @s x matches ..0 if score @s x > @s prev_x run return run kill @s
 execute if score @s x matches 0.. if score @s x < @s prev_x run return run kill @s
 
-$execute if entity @s[tag=ice_wall] if score @s y matches ..0 if score @s y > @s prev_y at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
-$execute if entity @s[tag=ice_wall] if score @s y matches 0.. if score @s y < @s prev_y at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
+$execute if entity @s[tag=ice_wall] if score @s y matches ..0 if score @s y > @s prev_y at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
+$execute if entity @s[tag=ice_wall] if score @s y matches 0.. if score @s y < @s prev_y at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
 
 execute if score @s y matches ..0 if score @s y > @s prev_y run return run kill @s
 execute if score @s y matches 0.. if score @s y < @s prev_y run return run kill @s
 
-$execute if entity @s[tag=ice_wall] if score @s z matches ..0 if score @s z > @s prev_z at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
-$execute if entity @s[tag=ice_wall] if score @s z matches 0.. if score @s z < @s prev_z at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id)}
+$execute if entity @s[tag=ice_wall] if score @s z matches ..0 if score @s z > @s prev_z at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
+$execute if entity @s[tag=ice_wall] if score @s z matches 0.. if score @s z < @s prev_z at @s run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1}
 
 execute if score @s z matches ..0 if score @s z > @s prev_z run return run kill @s
 execute if score @s z matches 0.. if score @s z < @s prev_z run return run kill @s

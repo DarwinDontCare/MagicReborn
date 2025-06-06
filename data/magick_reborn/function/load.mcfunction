@@ -47,7 +47,7 @@ scoreboard objectives add prev_y dummy
 scoreboard objectives add prev_z dummy
 
 gamerule commandBlockOutput false
-gamerule sendCommandFeedback false
+#gamerule sendCommandFeedback false
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1
 execute as @e unless entity @s[scores={magickRegen=1..}] run scoreboard players set @s magickRegen 1
 execute as @e unless entity @s[scores={maxMagick=1..}] run scoreboard players set @s maxMagick 50

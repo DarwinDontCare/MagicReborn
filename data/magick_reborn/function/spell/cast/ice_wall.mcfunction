@@ -2,7 +2,9 @@ $scoreboard players set @s x $(amplifier)
 $scoreboard players set @s y $(amplifier)
 $scoreboard players set @s z $(amplifier)
 
-execute if entity @e[tag=ice_wall_marker,distance=..2] run return 0
+say arrow
+
+execute at @s if entity @e[tag=ice_wall_marker,distance=..2] run return 0
 
 scoreboard players set #Calculation calculationValues 2
 scoreboard players operation @s x /= #Calculation calculationValues
