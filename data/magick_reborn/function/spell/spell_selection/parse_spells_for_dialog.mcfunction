@@ -24,11 +24,8 @@ function magick_reborn:spell/spell_selection/generate_template with storage magi
 data modify storage magick:data current_spell.action.type set value "dynamic/run_command"
 
 data modify storage magick:data current_spell.tooltip set value []
-$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[0]
-$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[1]
-$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[2]
-$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[3]
-$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[4]
+$function magick_reborn:spell/spell_selection/generate_lore {uuid: $(uuid), index: $(index), effect_index: 0}
+$data modify storage magick:data current_spell.tooltip append from storage magick $(uuid).known_spells[$(index)].lore[4][0].text
 
 data modify storage magick:data spell_selection.spells append from storage magick:data current_spell
 

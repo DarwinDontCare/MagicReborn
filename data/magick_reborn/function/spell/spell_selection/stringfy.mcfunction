@@ -1,0 +1,1 @@
+$data modify storage magick:data string_value set value "$(string_value)"

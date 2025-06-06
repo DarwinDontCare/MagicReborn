@@ -19,7 +19,7 @@ $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecr
  run data modify storage magick:data spell.summon_cmd set value "summon fireball ~ ~1.5 ~ {Tags: [\"magic_projectile\", \"fireball\"], data: {caster_id: $(caster_id)}}"
 
 $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}], caster_id: $(caster_id)}}] \
- run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~1.5 ~ {Tags: [\"magic_projectile\", \"freeze\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
+ run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~1.5 ~ {Tags: [\"magic_projectile\", \"freeze\", \"frostbite\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
 
 $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:ice_wall"}], caster_id: $(caster_id)}}] \
  run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~1.5 ~ {Tags: [\"magic_projectile\", \"freeze\", \"ice_wall\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
