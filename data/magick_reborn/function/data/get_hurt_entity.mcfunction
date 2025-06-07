@@ -1,0 +1,1 @@
+$data modify storage magick:data summon_aggro.target_uuid set from entity @e[limit=1,nbt={last_hurt_by_mob:$(UUID)}] UUID

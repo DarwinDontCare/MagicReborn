@@ -1,0 +1,11 @@
+
+{
+    "criteria": {
+      "hit_by_mob": {
+        "trigger": "minecraft:entity_hurt_player"
+      }
+    },
+    "rewards": {
+      "function": "magick_reborn:data/hit_by_entity"
+    }
+}

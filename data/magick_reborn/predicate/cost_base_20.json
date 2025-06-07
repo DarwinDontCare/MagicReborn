@@ -6,7 +6,8 @@
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:resistance\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:invisibility\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:health_boost\"}}" } },
-      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:conduit_power\"}}" } }
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:conduit_power\"}}" } },
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_skeleton\"}}" } }
     ]
   }
   

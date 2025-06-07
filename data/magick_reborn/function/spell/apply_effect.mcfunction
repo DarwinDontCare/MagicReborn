@@ -44,7 +44,10 @@ data modify storage magick:data effectComparer set value "minecraft:glowing"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @s if score #Compare boolean matches 0 if score #BlockDetect boolean matches 1 run return run function magick_reborn:spell/cast/light {duration: $(duration), amplifier: $(amplifier)}
 
-execute if score #Compare boolean matches 0 run say glowing
+data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_skeleton {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1}
+
 
 execute if score #BlockDetect boolean matches 1 run return 0
 
