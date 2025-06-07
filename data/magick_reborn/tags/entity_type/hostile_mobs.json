@@ -1,0 +1,32 @@
+{
+    "replace": false,
+    "values": [
+        "#minecraft:undead",
+        "#minecraft:raiders",
+        "#minecraft:arthropod",
+        "#minecraft:illager",
+        "#minecraft:illager_friends",
+        "minecraft:blaze",
+        "minecraft:bogged",
+        "minecraft:breeze",
+        "minecraft:creeper",
+        "minecraft:elder_guardian",
+        "minecraft:endermite",
+        "minecraft:evoker",
+        "minecraft:ghast",
+        "minecraft:giant",
+        "minecraft:guardian",
+        "minecraft:hoglin",
+        "minecraft:magma_cube",
+        "minecraft:phantom",
+        "minecraft:piglin_brute",
+        "minecraft:shulker",
+        "minecraft:silverfish",
+        "minecraft:slime",
+        "minecraft:vex",
+        "minecraft:warden",
+        "minecraft:witch",
+        "minecraft:wither"
+    ]
+}
+  

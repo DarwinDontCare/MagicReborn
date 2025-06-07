@@ -1,15 +1,20 @@
 $scoreboard players set #Summon index $(index)
 $scoreboard players set #Summon calculationValues $(amplifier)
+scoreboard players set #Summon calculationValues2 2
+scoreboard players operation #Summon calculationValues2 /= #Summon calculationValues
+scoreboard players operation #Summon calculationValues2 -= #Summon index
+
+execute store result storage magick:data summoned_entity.x int 1 run scoreboard players get #Summon calculationValues2
 
 execute if score #Summon index > #Summon calculationValues run return 1
 
 particle ash ~ ~ ~ 1 1 1 0.2 15 force @a
 playsound entity.skeleton.converted_to_stray ambient @a[distance=..20] ~ ~ ~ 1 1 0.2
 
-execute at @s run summon skeleton ^ ^ ^ {equipment:{head:{id:leather_helmet},mainhand:{id:bow}},Tags:["summoned"]}
-$execute at @s run attribute @e[type=skeleton,tag=summoned,distance=..1,limit=1,team=!$(uuid)] max_health modifier add health_boost $(amplifier) add_value
-$execute at @s as @e[type=skeleton,tag=summoned,distance=..1,team=!$(uuid)] run scoreboard players set @s projectileHealth $(duration)
-$execute at @s as @e[type=skeleton,tag=summoned,distance=..1,team=!$(uuid)] run team join $(uuid)
+$execute at @s rotated as @a[scores={uuid=$(uuid)},limit=1] run summon skeleton ^$(x) ^ ^ {equipment:{head:{id:leather_helmet},mainhand:{id:bow}},Tags:["summoned"],data:{caster_id: $(uuid), range: 15}}
+$execute at @s unless entity @e[type=skeleton,tag=summoned,distance=..$(amplifier),limit=1,team=!$(uuid),scores={projectileHealth=0..}] run attribute @e[type=skeleton,tag=summoned,distance=..2,limit=1,team=!$(uuid)] max_health modifier add health_boost $(amplifier) add_value
+$execute at @s as @e[type=skeleton,tag=summoned,distance=..$(amplifier),team=!$(uuid)] unless score @s projectileHealth matches 0.. run team join $(uuid)
+$execute at @s as @e[type=skeleton,tag=summoned,distance=..$(amplifier),team=!$(uuid)] unless score @s projectileHealth matches 0.. run scoreboard players set @s projectileHealth $(duration)
 
 scoreboard players add #Summon index 1
 
