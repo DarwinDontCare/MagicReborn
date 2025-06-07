@@ -1,4 +1,4 @@
-$data modify storage magick $(uuid).magick_cost set from storage magick $(uuid).known_spells[$(index)].cost
+$data modify storage magick $(uuid).magick_cost set from storage magick $(uuid).known_spells[$(index)].custom_data.cost
 $data modify storage magick $(uuid).spell_effects set from storage magick $(uuid).known_spells[$(index)].custom_data.effects
 $data modify storage magick $(uuid).tier set from storage magick $(uuid).known_spells[$(index)].custom_data.tier
 $data modify storage magick $(uuid).model set from storage magick $(uuid).known_spells[$(index)].custom_data.model

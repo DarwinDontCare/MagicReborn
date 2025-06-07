@@ -27,5 +27,10 @@ $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecr
 execute as @s at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}]}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell
 execute as @s at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}]}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell
 
-$execute as @s if entity @s[predicate=magick_reborn:is_sneaking] run return run function magick_reborn:spell/cast/handle_effects {subject: "@s", nbt_path: "entity @s SelectedItem.components.\"minecraft:custom_data\".effects", caster_id: $(caster_id)}
+data modify storage magick:data effectIterator.index set value 0
+$data modify storage magick:data effectIterator.caster_id set value $(caster_id)
+data modify storage magick:data effectIterator.nbt_path set value "entity @s SelectedItem.components.\"minecraft:custom_data\".effects"
+data modify storage magick:data effectIterator.subject set value "@s"
+
+execute as @s if entity @s[predicate=magick_reborn:is_sneaking] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 execute as @s at @s unless entity @s[predicate=magick_reborn:is_sneaking] run return run function magick_reborn:spell/create_projectile with storage magick:data spell

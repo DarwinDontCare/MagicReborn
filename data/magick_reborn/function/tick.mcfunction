@@ -23,6 +23,7 @@ execute as @e[scores={freezeTicks=1..},predicate=magick_reborn:on_fire] run func
 execute as @e[scores={freezeTicks=..0}] run function magick_reborn:magick/unfreeze
 
 execute as @e[tag=ice_wall_marker] at @s run function magick_reborn:spell/cast/ice_wall_tick with entity @s data
+execute as @e[tag=light] at @s run function magick_reborn:spell/cast/light_tick
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 
