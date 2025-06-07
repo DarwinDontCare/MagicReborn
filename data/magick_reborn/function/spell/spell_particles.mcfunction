@@ -44,3 +44,4 @@ execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_bow"}]}}] 
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:frostbite"}]}}] run return run particle snowflake ~ ~ ~ .5 .5 .5 0 10 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:ice_wall"}]}}] run return run particle snowflake ~ ~ ~ .125 .125 .125 0 10 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_skeleton"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_zombie"}]}}] run return run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~ ~ .125 .125 .125 0 50 force

@@ -42,3 +42,4 @@ $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minec
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:frostbite"}], caster_id: $(caster_id)}}] run return run playsound block.powder_snow.break ambient @a[distance=..5] ~ ~ ~ 1 1 1
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:ice_wall"}], caster_id: $(caster_id)}}] run return run playsound block.powder_snow.break ambient @a[distance=..5] ~ ~ ~ 1 1 1
 $execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:summon_skeleton"}], caster_id: $(caster_id)}}] run return run playsound minecraft:ambient.soul_sand_valley.mood ambient @a[distance=..5] ~ ~ ~ 1 1 1
+$execute if entity @e[tag=effect_comparer, nbt={data: {effects: [{effect: "minecraft:summon_zombie"}], caster_id: $(caster_id)}}] run return run playsound minecraft:ambient.soul_sand_valley.mood ambient @a[distance=..5] ~ ~ ~ 1 1 1

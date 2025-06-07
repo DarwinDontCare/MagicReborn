@@ -8,8 +8,8 @@ execute store result storage magick:data summoned_entity.x int 1 run scoreboard 
 
 execute if score #Summon index > #Summon calculationValues run return 1
 
-particle ash ~ ~ ~ 1 1 1 0.2 15 force @a
-playsound entity.skeleton.converted_to_stray ambient @a[distance=..20] ~ ~ ~ 1 1 0.2
+$execute at @s positioned ^$(x) ^ ^ run particle cloud ~ ~ ~ .2 .2 .2 0.2 15 force @a
+$execute at @s positioned ^$(x) ^ ^ run playsound entity.skeleton.converted_to_stray ambient @a[distance=..20] ~ ~ ~ 1 1 0.2
 
 $execute at @s rotated as @a[scores={uuid=$(uuid)},limit=1] run summon skeleton ^$(x) ^ ^ {equipment:{head:{id:leather_helmet},mainhand:{id:bow}},Tags:["summoned"],data:{caster_id: $(uuid), range: 15}}
 $execute at @s unless entity @e[type=skeleton,tag=summoned,distance=..$(amplifier),limit=1,team=!$(uuid),scores={projectileHealth=0..}] run attribute @e[type=skeleton,tag=summoned,distance=..2,limit=1,team=!$(uuid)] max_health modifier add health_boost $(amplifier) add_value

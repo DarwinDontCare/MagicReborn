@@ -9,36 +9,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Strength"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:strength", "display": "Strength", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Strength"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:strength", "display": "Strength", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -50,36 +50,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Instant Health"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:instant_health", "display": "Instant Health", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Instant Health"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:instant_health", "display": "Instant Health", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -91,36 +91,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Instant Damage"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:instant_damage", "display": "Instant Damage", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Instant Damage"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:instant_damage", "display": "Instant Damage", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -132,36 +132,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Regeneration"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:regeneration", "display": "Regeneration", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Regeneration"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:regeneration", "display": "Regeneration", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -173,36 +173,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Resistance"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:resistance", "display": "Resistance", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Resistance"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:resistance", "display": "Resistance", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -214,36 +214,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Fire Resistance"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:fire_resistance", "display": "Fire Resistance", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Fire Resistance"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:fire_resistance", "display": "Fire Resistance", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -255,36 +255,36 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                    {
-                        "function": "minecraft:set_components",
-                        "components": {
-                            "minecraft:item_model": "magick_reborn:spell_book",
-                            "lore": [{"text": "Water Breathing"}],
-                            "minecraft:custom_data": {
-                                "spell_book": true,
-                                "effects": [
-                                    { "id": "minecraft:water_breathing", "display": "Water Breathing", "initial": false }
-                                ]
-                            },
-                            "minecraft:enchantment_glint_override": true,
-                            "minecraft:rarity": "uncommon",
-                            "minecraft:written_book_content": {
-                                "pages": [
-                                    {
-                                    "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
-                                    },
-                                    {
-                                    "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
-                                    },
-                                    {
-                                    "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
-                                    }
-                                ],
-                                "title": {
-                                    "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                        {
+                            "function": "minecraft:set_components",
+                            "components": {
+                                "minecraft:item_model": "magick_reborn:spell_book",
+                                "lore": [{"text": "Water Breathing"}],
+                                "minecraft:custom_data": {
+                                    "spell_book": true,
+                                    "effects": [
+                                        { "id": "minecraft:water_breathing", "display": "Water Breathing", "initial": false }
+                                    ]
                                 },
-                                "author": "§oUnknown Mage§r",
-                                "generation": 1
+                                "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "uncommon",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
                                 }
                             }
                         }
@@ -296,7 +296,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -326,8 +326,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
@@ -337,7 +337,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -367,8 +367,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
@@ -378,7 +378,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -408,8 +408,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
@@ -419,7 +419,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -449,8 +449,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
@@ -460,7 +460,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -489,8 +489,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
@@ -500,7 +500,7 @@
                     "name": "minecraft:written_book",
                     "weight": 1,
                     "functions": [
-                      {
+                        {
                         "function": "minecraft:set_components",
                         "components": {
                           "minecraft:item_model": "magick_reborn:spell_book",    
@@ -530,8 +530,8 @@
                                     },
                                     "author": "§oUnknown Mage§r",
                                     "generation": 1
-                                    }
-                            }
+                                }
+                        }
                         }
                     ],
                     "conditions": []
