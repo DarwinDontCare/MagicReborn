@@ -1,0 +1,8 @@
+{
+    "condition": "minecraft:any_of",
+    "terms": [
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_warden\"}}" } },
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_wither\"}}" } }
+    ]
+  }
+  

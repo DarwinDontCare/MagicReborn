@@ -84,15 +84,15 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 
 data modify storage magick:data effectComparer set value "minecraft:summon_warden"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: $(amplifier), mob: "warden", sound: "minecraft:entity.warden.spawn", equipment: "{}", range: 20, nbt: ""}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: 10, mob: "warden", sound: "minecraft:entity.warden.spawn", equipment: "{}", range: 0, nbt: ",Brain:{memories:{\"minecraft:dig_cooldown\":{value:{},ttl:1200L}}}"}
 
 data modify storage magick:data effectComparer set value "minecraft:summon_wither"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {  duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: $(amplifier), mob: "wither", sound: "minecraft:entity.wither.spawn", equipment: "{}", range: 30, nbt: ""}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {  duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: 10, mob: "wither", sound: "minecraft:entity.wither.spawn", equipment: "{}", range: 30, nbt: ""}
 
 data modify storage magick:data effectComparer set value "minecraft:summon_magma_cube"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {  duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: $(amplifier), mob: "magma_cube", sound: "minecraft:entity.magma_cube.squish", equipment: "{}", range: 30, nbt: ", Size:4"}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/summon_creature {  duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), index: 1, x: 0, proportion: 10, mob: "magma_cube", sound: "minecraft:entity.magma_cube.squish", equipment: "{}", range: 15, nbt: ", Size:4"}
 
 
 execute if score #BlockDetect boolean matches 1 run return 0
