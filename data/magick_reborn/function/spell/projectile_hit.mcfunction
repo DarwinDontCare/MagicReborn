@@ -22,11 +22,11 @@ execute store result score @s prev_x run data get entity @s Motion[0]
 execute store result score @s prev_y run data get entity @s Motion[1]
 execute store result score @s prev_z run data get entity @s Motion[2]
 
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_stop_sound
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_projectile_hit_sound
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_stop_sound
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_projectile_hit_sound
 
-$execute at @s as @e[distance=..1.5, tag=!magic_projectile,type=!item,tag=!frostbite] unless entity @s[tag=ice_wall_marker] unless entity @s[scores={uuid=$(caster_id)}] run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1.5, hit_block: 0}
-$execute at @s as @e[distance=..2.5, tag=!magic_projectile,type=!item,tag=frostbite] unless entity @s[tag=ice_wall_marker] unless entity @s[scores={uuid=$(caster_id)}] run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 2.5, hit_block: 0}
+$execute at @s as @e[distance=..1.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,tag=!frostbite] unless entity @s[tag=ice_wall_marker] unless entity @s[scores={uuid=$(caster_id)}] run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1.5, hit_block: 0}
+$execute at @s as @e[distance=..2.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,tag=frostbite] unless entity @s[tag=ice_wall_marker] unless entity @s[scores={uuid=$(caster_id)}] run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 2.5, hit_block: 0}
 
 execute at @s if entity @s[tag=freeze] if block ~ ~ ~ water run playsound minecraft:block.amethyst_cluster.place ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
 execute at @s if entity @s[tag=freeze] if block ~ ~ ~ water run fill ~1 ~ ~1 ~-1 ~ ~-1 frosted_ice replace water

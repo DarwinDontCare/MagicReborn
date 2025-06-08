@@ -1,0 +1,14 @@
+{
+    "values": [
+      "#minecraft:air",
+      "#minecraft:fire",
+      "#minecraft:all_signs",
+      "#minecraft:banners",
+      "#minecraft:buttons",
+      "#minecraft:crops",
+      "#minecraft:rails",
+      "#minecraft:pressure_plates",
+      "minecraft:water",
+      "minecraft:lava"
+    ]
+  }
