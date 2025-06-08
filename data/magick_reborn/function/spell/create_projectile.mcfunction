@@ -12,6 +12,6 @@ execute at @s positioned ~ ~1.5 ~ as @e[distance=..2,sort=nearest,tag=magic_proj
 
 kill @e[tag=aim]
 
-execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[0] double 0.001 run scoreboard players get @s MotionX
-execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[1] double 0.001 run scoreboard players get @s MotionY
-execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[2] double 0.001 run scoreboard players get @s MotionZ
+$execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[0] double $(speed) run scoreboard players get @s MotionX
+$execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[1] double $(speed) run scoreboard players get @s MotionY
+$execute at @s as @e[tag=magic_projectile, distance=..2,sort=nearest] store result entity @s Motion[2] double $(speed) run scoreboard players get @s MotionZ

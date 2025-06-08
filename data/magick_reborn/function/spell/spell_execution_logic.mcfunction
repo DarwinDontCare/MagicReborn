@@ -8,6 +8,11 @@ $execute if entity @e[tag=effect_comparer,nbt={data:{caster_id: $(caster_id)}},p
 
 $execute at @s as @s run function magick_reborn:spell/spell_sounds {caster_id: $(caster_id)}
 
+data modify storage magick:data spell.speed set value 0.001
+execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}]}}] run data modify storage magick:data spell.speed set value 0.002
+execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}]}}] run data modify storage magick:data spell.speed set value 0.002
+
+
 data modify storage magick:data spell.health set value 200
 execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}]}}] run data modify storage magick:data spell.health set value 10
 execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:ice_wall"}]}}] run data modify storage magick:data spell.health set value 10
