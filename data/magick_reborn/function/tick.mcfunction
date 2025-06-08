@@ -2,6 +2,8 @@ scoreboard players add #global ticksCount 1
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 execute as @a unless score @s maxActiveSummons matches 1.. run scoreboard players set @s maxActiveSummons 10
 
+execute as @a[tag=!savedName] run function magick_reborn:data/get_uuid {function: "magick_reborn:data/store_player_name"}
+
 execute as @a[tag=!onboarded] run function magick_reborn:onboarding
 
 execute as @a run function magick_reborn:magick/up_mage_level

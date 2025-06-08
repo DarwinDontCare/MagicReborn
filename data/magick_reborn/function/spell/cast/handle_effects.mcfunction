@@ -3,6 +3,7 @@ $scoreboard players set #IterateEffects index $(index)
 $execute unless data $(nbt_path)[$(index)] run return 0
 
 $data modify storage magick $(caster_id).cast_effect set from $(nbt_path)[$(index)]
+$data modify storage magick $(caster_id).cast_effect.caster_name set from storage magick $(caster_id).name
 $data modify storage magick $(caster_id).cast_effect.caster_id set value $(caster_id)
 $execute as $(subject) run function magick_reborn:spell/apply_effect with storage magick $(caster_id).cast_effect
 
