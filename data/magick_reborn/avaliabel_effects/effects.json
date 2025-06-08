@@ -41,5 +41,15 @@
     {"id":"minecraft:frostbite","display":"Frostbite","initial":false},
     {"id":"minecraft:ice_wall","display":"Ice Wall","initial":false},
     {"id":"minecraft:summon_skeleton","display":"Summon Skeleton","initial":false},
-    {"id":"minecraft:summon_zombie","display":"Summon Skeleton","initial":false}
+    {"id":"minecraft:summon_zombie","display":"Summon Zombie","initial":false},
+    {"id":"minecraft:summon_blaze","display":"Summon Blaze","initial":false},
+    {"id":"minecraft:summon_wither_skeleton","display":"Summon Wither Skeleton","initial":false},
+    {"id":"minecraft:summon_creeper","display":"Summon Creeper","initial":false},
+    {"id":"minecraft:summon_ghast","display":"Summon Ghast","initial":false},
+    {"id":"minecraft:summon_iron_golem","display":"Summon Iron Golem","initial":false},
+    {"id":"minecraft:summon_wolf","display":"Summon Wolf","initial":false},
+    {"id":"minecraft:summon_snow_golem","display":"Summon Snow Golem","initial":false},
+    {"id":"minecraft:summon_magma_cube","display":"Summon Magma Cube","initial":false},
+    {"id":"minecraft:summon_warden","display":"Summon Warden","initial":false},
+    {"id":"minecraft:summon_wither","display":"Summon Wither","initial":false}
 ]

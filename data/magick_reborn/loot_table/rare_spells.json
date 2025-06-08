@@ -7,7 +7,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                     {
                         "function": "minecraft:set_components",
@@ -48,7 +48,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -89,7 +89,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -130,7 +130,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -171,7 +171,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                     {
                         "function": "minecraft:set_components",
@@ -212,7 +212,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -253,7 +253,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -294,7 +294,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -335,7 +335,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -376,7 +376,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -387,6 +387,252 @@
                                 "spell_book": true,
                                 "effects": [
                                     { "id": "minecraft:summon_zombie", "display": "Summon Zombie", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 2,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Magma Cube"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_magma_cube", "display": "Summon Magma Cube", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 2,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Irom Golem"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_iron_golem", "display": "Summon Irom Golem", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 2,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Creeper"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_creeper", "display": "Summon Creeper", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 1,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Blaze"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_blaze", "display": "Summon Blaze", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 1,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Wither Skeleton"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_wither_skeleton", "display": "Summon Wither Skeleton", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "rare",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 1,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                        "minecraft:item_model": "magick_reborn:spell_book",
+                            "lore": [{"text": "Summon Ghast"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:summon_ghast", "display": "Summon Ghast", "initial": false }
                                 ]
                             },
                             "minecraft:enchantment_glint_override": true,

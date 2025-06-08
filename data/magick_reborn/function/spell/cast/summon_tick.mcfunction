@@ -1,5 +1,5 @@
 execute if score @s ticksCount matches 1.. run scoreboard players remove @s ticksCount 1
-execute if score @s projectileHealth matches 0 run kill @s
+execute if score @s projectileHealth matches ..0 run kill @s
 
 execute at @s run function magick_reborn:spell/cast/check_nerby_entities with entity @s data
 

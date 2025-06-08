@@ -37,6 +37,9 @@ scoreboard objectives add wandCooldown dummy
 scoreboard objectives add dropedItem dropped:clock
 scoreboard objectives add freezeTicks dummy
 scoreboard objectives add burnTicks dummy
+scoreboard objectives add activeSummons dummy
+scoreboard objectives add maxActiveSummons dummy
+scoreboard objectives add summonCheckTimer dummy
 
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

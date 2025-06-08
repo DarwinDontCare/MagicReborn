@@ -1,5 +1,6 @@
 scoreboard players add #global ticksCount 1
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
+execute as @a unless score @s maxActiveSummons matches 1.. run scoreboard players set @s maxActiveSummons 10
 
 execute as @a[tag=!onboarded] run function magick_reborn:onboarding
 
@@ -25,7 +26,10 @@ execute as @e[scores={freezeTicks=..0}] run function magick_reborn:magick/unfree
 execute as @e[tag=ice_wall_marker] at @s run function magick_reborn:spell/cast/ice_wall_tick with entity @s data
 execute as @e[tag=light] at @s run function magick_reborn:spell/cast/light_tick
 execute as @e[tag=summoned] at @s run function magick_reborn:spell/cast/summon_tick
+execute as @e[tag=summon_marker,type=marker] if score #global summonCheckTimer matches 20.. at @s run function magick_reborn:spell/cast/summon_marker with entity @s data
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
+execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer
+scoreboard players add #global summonCheckTimer 1
