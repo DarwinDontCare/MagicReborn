@@ -13,8 +13,8 @@ execute if score #Summon calculationValues matches 0 run scoreboard players set 
 
 $execute as @a[scores={uuid=$(uuid)},limit=1] run scoreboard players add @s activeSummons $(proportion)
 
-$execute as @a[scores={uuid=$(uuid)},limit=1] if score @s activeSummons >= @s maxActiveSummons run say "I can't summon more entities :("
-$execute as @a[scores={uuid=$(uuid)},limit=1] if score @s activeSummons = @s maxActiveSummons run return 0
+$execute as @a[scores={uuid=$(uuid)},limit=1] if score @s activeSummons > @s maxActiveSummons run tell @s "I can't summon more entities :("
+$execute as @a[scores={uuid=$(uuid)},limit=1] if score @s activeSummons > @s maxActiveSummons run return 0
 $execute as @a[scores={uuid=$(uuid)},limit=1] if score @s activeSummons > @s maxActiveSummons run return run scoreboard players remove @s activeSummons $(proportion)
 
 execute if score #Summon index > #Summon calculationValues run return 1
