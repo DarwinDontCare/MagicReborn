@@ -52,5 +52,6 @@
     {"id":"minecraft:summon_magma_cube","display":"Summon Magma Cube","initial":false},
     {"id":"minecraft:summon_warden","display":"Summon Warden","initial":false},
     {"id":"minecraft:summon_wither","display":"Summon Wither","initial":false},
-    {"id":"minecraft:teleport","display":"Teleport","initial":false}
+    {"id":"minecraft:teleport","display":"Teleport","initial":false},
+    {"id":"minecraft:lightning_bolt","display":"Lightning Bolt","initial":false}
 ]
