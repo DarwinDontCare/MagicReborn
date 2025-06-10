@@ -21,7 +21,7 @@ kill @e[type=item, nbt={Item:{components:{"minecraft:custom_data":{summoned:true
 
 scoreboard players reset @a dropedItem
 
-execute as @e[scores={freezeTicks=1..}] at @s run particle end_rod ~ ~1.5 ~ .02 -.02 .02 0.02 1 force
+execute as @e[scores={freezeTicks=1..}] at @s anchored eyes positioned ^ ^ ^ run particle end_rod ~ ~ ~ .02 -.02 .02 0.02 1 force
 execute as @e[scores={freezeTicks=1..},predicate=magick_reborn:on_fire] run function magick_reborn:magick/unfreeze
 execute as @e[scores={freezeTicks=..0}] run function magick_reborn:magick/unfreeze
 
@@ -29,6 +29,7 @@ execute as @e[tag=ice_wall_marker] at @s run function magick_reborn:spell/cast/i
 execute as @e[tag=light] at @s run function magick_reborn:spell/cast/light_tick
 execute as @e[tag=summoned] at @s run function magick_reborn:spell/cast/summon_tick
 execute as @e[tag=summon_marker,type=marker] if score #global summonCheckTimer matches 20.. at @s run function magick_reborn:spell/cast/summon_marker with entity @s data
+execute if score #global summonCheckTimer matches 20.. unless entity @e[tag=summon_marker,type=marker] as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/checkActiveSummons"}
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 

@@ -1,7 +1,7 @@
 $scoreboard players set @s calculationValues $(amplifier)
 
 $data modify storage magick $(uuid).frostbite.amplifier set value $(amplifier)
-$execute store result storage magick $(uuid).frostbite.damage double 1 run scoreboard players get @s calculationValues
+$execute store result storage magick $(uuid).frostbite.damage double .5 run scoreboard players get @s calculationValues
 $data modify storage magick $(uuid).frostbite.index set value 0.5
 $data modify storage magick $(uuid).frostbite.particle_amplitude set value 1
 $data modify storage magick $(uuid).frostbite.range set value $(range)
