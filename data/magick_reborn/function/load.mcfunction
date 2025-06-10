@@ -49,6 +49,10 @@ scoreboard objectives add prev_x dummy
 scoreboard objectives add prev_y dummy
 scoreboard objectives add prev_z dummy
 
+scoreboard objectives add distance dummy
+scoreboard objectives add baseDamage dummy
+scoreboard objectives add adjustedDamage dummy
+
 gamerule commandBlockOutput false
 #gamerule sendCommandFeedback false
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1

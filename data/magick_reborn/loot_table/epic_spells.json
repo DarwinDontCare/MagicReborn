@@ -48,7 +48,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -89,7 +89,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -130,7 +130,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -171,7 +171,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 3,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -212,7 +212,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 3,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -253,7 +253,7 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:written_book",
-                    "weight": 1,
+                    "weight": 2,
                     "functions": [
                       {
                         "function": "minecraft:set_components",
@@ -305,6 +305,47 @@
                                 "spell_book": true,
                                 "effects": [
                                     { "id": "minecraft:teleport", "display": "Teleport", "initial": false }
+                                ]
+                            },
+                            "minecraft:enchantment_glint_override": true,
+                                "minecraft:rarity": "epic",
+                                "minecraft:written_book_content": {
+                                    "pages": [
+                                        {
+                                        "raw": "§kᚠᛇᚻ§r §lᚦᚢᚱᛗ§r §nᛟᚾᛖ §oᛋᛏᚱᛁᚲᛖ§r\n\n§kᚨᛚᚠᚨ§r §lᛖᚾᚠᛖᚱᛁ§r\n\n§oᛋᚢᛗᛗᛟᚾᛋ §rᚨᚾᛞ §kᚹᛟᚱᚳ§r"
+                                        },
+                                        {
+                                        "raw": "§lᚺᛖᛚᛚ§r §nᚨᛒᛟᚢᛖ\n\n§oᛋᛁᛚᛖᚾᛏ §rᚲᚨᛚᛚ\n\n§kᚷᚱᛖᛖᛏ§r §lᚨᚾᛞ §r§nᚺᛖᛚᛚ§r"
+                                        },
+                                        {
+                                        "raw": "§oᚹᛖ §rᚲᚨᛚᛚ §nᚨᚨᚨᚨ\n\n§kᛋᚨᛏᛁᚱ§r §oᛏᚺᛖ §r§lᚠᛖᚨᚱ§r\n\n§kᚦᚱᛖᚨᛏ§r §oᚨᚾᛞ §rᚨᚢᚱᚨ"
+                                        }
+                                    ],
+                                    "title": {
+                                        "raw": "§l§kᚨᛊᚨᚱᛋᛁᚨ§r §oGrimoire§r"
+                                    },
+                                    "author": "§oUnknown Mage§r",
+                                    "generation": 1
+                                }
+                            }
+                        }
+                    ],
+                    "conditions": []
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:written_book",
+                    "weight": 2,
+                    "functions": [
+                      {
+                        "function": "minecraft:set_components",
+                        "components": {
+                          "minecraft:item_model": "magick_reborn:spell_book",    
+                            "lore": [{"text": "Sonic Boom"}],
+                            "minecraft:custom_data": {
+                                "spell_book": true,
+                                "effects": [
+                                    { "id": "minecraft:sonic_boom", "display": "Sonic Boom", "initial": false }
                                 ]
                             },
                             "minecraft:enchantment_glint_override": true,

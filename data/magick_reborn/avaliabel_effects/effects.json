@@ -53,5 +53,6 @@
     {"id":"minecraft:summon_warden","display":"Summon Warden","initial":false},
     {"id":"minecraft:summon_wither","display":"Summon Wither","initial":false},
     {"id":"minecraft:teleport","display":"Teleport","initial":false},
-    {"id":"minecraft:lightning_bolt","display":"Lightning Bolt","initial":false}
+    {"id":"minecraft:lightning_bolt","display":"Lightning Bolt","initial":false},
+    {"id":"minecraft:sonic_boom","display":"Sonic Boom","initial":false}
 ]
