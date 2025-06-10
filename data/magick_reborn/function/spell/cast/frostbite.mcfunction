@@ -1,5 +1,12 @@
-$effect give @s slowness $(duration) $(amplifier) true
-$execute if score #global ticksCount matches 20.. run damage @s $(amplifier) freeze by @a[scores={uuid=$(caster_id)},limit=1]
-$scoreboard players set @s freezeTicks $(duration)
+$scoreboard players set @s calculationValues $(amplifier)
 
-effect give @s minecraft:fire_resistance 1 0 true
+$data modify storage magick $(uuid).frostbite.amplifier set value $(amplifier)
+$execute store result storage magick $(uuid).frostbite.damage double 1 run scoreboard players get @s calculationValues
+$data modify storage magick $(uuid).frostbite.index set value 0.5
+$data modify storage magick $(uuid).frostbite.particle_amplitude set value 1
+$data modify storage magick $(uuid).frostbite.range set value $(range)
+$data modify storage magick $(uuid).frostbite.duration set value $(duration)
+$data modify storage magick $(uuid).frostbite.uuid set value $(uuid)
+$execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/frostbite_effect with storage magick $(uuid).frostbite
+
+$data remove storage magick $(uuid).frostbite
