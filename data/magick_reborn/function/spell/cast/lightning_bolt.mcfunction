@@ -1,10 +1,14 @@
-$execute at @s[predicate=!magick_reborn:is_sneaking] anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/raycast {distance: 40, index: 0.5, uuid: $(uuid)}
+$data modify storage magick $(uuid).raycast.distance set value 4000
+$data modify storage magick $(uuid).raycast.index set value 0.5
+$data modify storage magick $(uuid).raycast.uuid set value $(uuid)
+
+$execute at @s[predicate=!magick_reborn:is_sneaking] anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/raycast with storage magick $(uuid).raycast
 $execute at @s[predicate=magick_reborn:is_sneaking] run summon marker ~ ~ ~ {NoGravity:true,Invulnerable:true,Tags:["raycast_hit"],data:{caster_id: $(uuid)}}
 $data remove storage magick $(uuid).raycast
 
 $scoreboard players set #Lightning calculationValues $(amplifier)
 
-$execute at @e[tag=raycast_hit,nbt={data:{caster_id: $(uuid)}},limit=1] run summon lightning_bolt ~ ~-1 ~ {Damage: $(amplifier)}
-$execute if score #Lightning calculationValues matches 2.. at @e[tag=raycast_hit,nbt={data:{caster_id: $(uuid)}},limit=1] run damage @e[distance=..2,limit=1] $(amplifier) lightning_bolt by @s
+$execute at @e[tag=raycast_hit,nbt={data:{caster_id: $(uuid)}},limit=1] run summon lightning_bolt ~ ~ ~
+$execute if score #Lightning calculationValues matches 2.. at @e[tag=raycast_hit,nbt={data:{caster_id: $(uuid)}},limit=1] as @e[distance=..2] run damage @s $(amplifier) lightning_bolt by @a[scores={uuid=$(uuid)},limit=1]
 
 $kill @e[tag=raycast_hit,nbt={data:{caster_id: $(uuid)}},limit=1]
