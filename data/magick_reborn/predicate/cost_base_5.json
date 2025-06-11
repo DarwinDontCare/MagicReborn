@@ -8,6 +8,7 @@
     { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:hunger\"}}" } },
     { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:weakness\"}}" } },
     { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:frostbite\"}}" } },
+    { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:flames\"}}" } },
     { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:unluck\"}}" } }
   ]
 }

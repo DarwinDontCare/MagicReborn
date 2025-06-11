@@ -9,13 +9,14 @@ $execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,d
 $execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..3] unless score @s uuid matches $(uuid) run effect give @s slowness $(duration) $(amplifier) true
 
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ water run playsound minecraft:block.amethyst_cluster.place ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
-$execute positioned ^ ^ ^$(index) if block ~ ~ ~ water run fill ~1 ~ ~1 ~-1 ~ ~-1 frosted_ice replace water
+$execute positioned ^ ^ ^$(index) if block ~ ~ ~ water run fill ^.$(particle_amplitude) ^.$(particle_amplitude) ^.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) frosted_ice replace water
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #fire run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #fire run fill ~ ~ ~ ~ ~ ~ air replace #fire
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ lava run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ lava run fill ~ ~ ~ ~ ~ ~ obsidian replace lava
 
 $execute if score #Frostbite index matches $(range).. run return 1
+$execute positioned ^ ^ ^$(index) unless block ~ ~ ~ #magick_reborn:ignore_colision run return 1
 
 scoreboard players add #Frostbite index 5
 

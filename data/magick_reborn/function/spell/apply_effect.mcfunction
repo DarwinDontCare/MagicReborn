@@ -53,6 +53,10 @@ data modify storage magick:data effectComparer set value "minecraft:sonic_boom"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/sonic_boom {uuid: $(caster_id), amplifier: $(amplifier), range: 100}
 
+data modify storage magick:data effectComparer set value "minecraft:flames"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/flames {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
+
 #Summon Entities
 data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"

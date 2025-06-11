@@ -1,0 +1,33 @@
+{
+    "values": [
+        "#minecraft:logs_that_burn",
+        "#minecraft:planks",
+        "#minecraft:wooden_slabs",
+        "#minecraft:wooden_stairs",
+        "#minecraft:wooden_fences",
+        "#minecraft:fence_gates",
+        "#minecraft:wooden_doors",
+        "#minecraft:wooden_trapdoors",
+        "#minecraft:wooden_pressure_plates",
+        "#minecraft:wooden_buttons",
+        "#minecraft:signs",
+        "#minecraft:banners",
+        "#minecraft:wool",
+        "#minecraft:wool_carpets",
+        "#minecraft:beds",
+        "#minecraft:leaves",
+        "bookshelf",
+        "chiseled_bookshelf",
+        "#minecraft:bamboo_blocks",
+        "bamboo",
+        "scaffolding",
+        "ladder",
+        "#minecraft:campfires",
+        "#minecraft:flowers",
+        "#minecraft:crops",
+        "#infiniburn_end",
+        "#infiniburn_nether",
+        "#infiniburn_overworld"
+    ]
+}
+  

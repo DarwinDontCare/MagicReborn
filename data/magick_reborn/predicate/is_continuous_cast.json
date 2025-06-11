@@ -5,6 +5,11 @@
         "condition": "minecraft:entity_properties",
         "entity": "this",
         "predicate": { "nbt": "{data:{effects:[{effect: \"minecraft:frostbite\"}]}}" }
+      },
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": { "nbt": "{data:{effects:[{effect: \"minecraft:flames\"}]}}" }
       }
     ]
   }
