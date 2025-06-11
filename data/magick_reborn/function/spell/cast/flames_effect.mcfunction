@@ -15,7 +15,7 @@ $execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice unless entity @s[tag
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #ice unless block ~ ~ ~ packed_ice unless block ~ ~ ~ blue_ice unless block ~ ~ ~ packed_ice run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #ice unless block ~ ~ ~ packed_ice unless block ~ ~ ~ blue_ice unless block ~ ~ ~ packed_ice run particle cloud ~ ~ ~ 0.2 0.2 0.2 0.2 15 force @a 
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #ice unless block ~ ~ ~ packed_ice unless block ~ ~ ~ blue_ice unless block ~ ~ ~ packed_ice run fill ^.$(particle_amplitude) ^.$(particle_amplitude) ^.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) water replace #ice
-$execute positioned ^ ^ ^$(index) if block ~ ~ ~ #air unless block ~ ~-$(particle_amplitude) ~ #ice unless block ~ ~-$(particle_amplitude) ~ #magick_reborn:ignore_colision run fill ^.$(particle_amplitude) ^.$(particle_amplitude) ^.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) fire replace #air
+$execute positioned ^ ^ ^$(index) if block ~ ~$(particle_amplitude) ~ #air unless block ~ ~ ~ #ice unless block ~ ~ ~ #magick_reborn:ignore_colision run fill ^.$(particle_amplitude) ^.$(particle_amplitude) ^.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) fire replace #air
 
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #magick_reborn:flamable if block ~ ~1 ~ #air run fill ~ ~1 ~ ~ ~1 ~ fire replace #air
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ #magick_reborn:flamable if block ~ ~-1 ~ #air run fill ~ ~-1 ~ ~ ~-1 ~ fire replace #air
