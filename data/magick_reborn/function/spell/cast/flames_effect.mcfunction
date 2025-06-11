@@ -4,9 +4,10 @@ scoreboard players add #Flames ticksCount 1
 $execute positioned ^ ^ ^$(index) run playsound block.fire.ambient ambient @a[distance=..15] ~ ~ ~ 1 1 0.5
 $execute positioned ^ ^ ^$(index) run particle flame ~ ~ ~ .$(particle_amplitude) .$(particle_amplitude) .$(particle_amplitude) .05 2 force @a
 $execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..3] if score #global ticksCount matches 20.. unless score @s uuid matches $(uuid) run damage @s $(damage) in_fire by @a[scores={uuid=$(uuid)}, limit=1]
+$execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..3, type=!player] unless score @s uuid matches $(uuid) run data modify entity @s Fire set value $(duration)s
 
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice if score @s meltIce matches 20.. run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
-$execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice if score @s meltIce matches 20.. run particle cloud ~ ~ ~ 0 0.5 0 0.1 15 force @a 
+$execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice if score @s meltIce matches 20.. run particle cloud ~ ~ ~ 0 0.5 0 0.1 15 force @a
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice if score @s meltIce matches 20.. run fill ^.$(particle_amplitude) ^.$(particle_amplitude) ^.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) ^-.$(particle_amplitude) air replace packed_ice
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice if score @s meltIce matches 20.. run scoreboard players reset @s meltIce
 $execute positioned ^ ^ ^$(index) if block ~ ~ ~ packed_ice unless entity @s[tag=melting_ice] run scoreboard players add @s meltIce 1
