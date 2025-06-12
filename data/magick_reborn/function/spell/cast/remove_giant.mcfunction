@@ -2,7 +2,7 @@ scoreboard players reset @s giantEffectDuration
 bossbar remove minecraft:m
 
 playsound minecraft:block.beacon.deactivate ambient @a[distance=..20] ~ ~ ~ 1 1 0.5
-execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 1 0.5 0.1 20 force
+execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 -1 0.5 0.1 20 force
 
 attribute @s scale modifier remove giant
 attribute @s attack_damage modifier remove giant

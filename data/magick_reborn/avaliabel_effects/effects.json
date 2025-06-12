@@ -56,5 +56,6 @@
     {"id":"minecraft:lightning_bolt","display":"Lightning Bolt","initial":false},
     {"id":"minecraft:sonic_boom","display":"Sonic Boom","initial":false},
     {"id":"minecraft:flames","display":"Flames","initial":false},
-    {"id":"minecraft:giant","display":"Flames","initial":false}
+    {"id":"minecraft:giant","display":"Giant","initial":false},
+    {"id":"minecraft:dwarf","display":"Dwarf","initial":false}
 ]

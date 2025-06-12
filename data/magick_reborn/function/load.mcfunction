@@ -41,6 +41,7 @@ scoreboard objectives add activeSummons dummy
 scoreboard objectives add maxActiveSummons dummy
 scoreboard objectives add summonCheckTimer dummy
 scoreboard objectives add giantEffectDuration dummy
+scoreboard objectives add dwarfEffectDuration dummy
 
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

@@ -109,7 +109,11 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 #Alteration
 data modify storage magick:data effectComparer set value "minecraft:giant"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/giant {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/giant", scale: 0.5}
+
+data modify storage magick:data effectComparer set value "minecraft:dwarf"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/dwarf", scale: 0.2}
 
 #Movimentation
 data modify storage magick:data effectComparer set value "minecraft:teleport"

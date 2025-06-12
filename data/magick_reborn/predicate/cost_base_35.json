@@ -3,7 +3,8 @@
     "terms": [
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_sword\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_bow\"}}" } },
-      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:ice_wall\"}}" } }
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:ice_wall\"}}" } },
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:dwarf\"}}" } }
     ]
   }
   

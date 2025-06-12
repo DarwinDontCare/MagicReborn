@@ -6,6 +6,8 @@ execute if score #global summonCheckTimer matches 20.. run data modify storage m
 
 execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches 1.. run function magick_reborn:data/update_bossbar with storage magick:data giantEffect
 
+$execute if entity @s[gamemode=creative] run data modify storage magick $(uuid_data).giant_effect.mode set value ""
+$execute unless entity @s[gamemode=creative] run data modify storage magick $(uuid_data).giant_effect.mode set value " destroy"
 $execute at @e[tag=raycast_hit_break_block,nbt={data:{caster_id: $(uuid_data)}},limit=1] rotated as @s if block ~ ~ ~ #air run function magick_reborn:magick/mine_area with storage magick $(uuid_data).giant_effect
 $kill @e[tag=raycast_hit_break_block,nbt={data:{caster_id: $(uuid_data)}}]
 

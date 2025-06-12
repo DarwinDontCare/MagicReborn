@@ -3,14 +3,12 @@ bossbar set minecraft:m players @s
 $bossbar set minecraft:m max $(duration)
 $bossbar set minecraft:m value $(duration)
 
-$scoreboard players set #Giant calculationValues $(amplifier)
-
 playsound minecraft:entity.ender_dragon.growl ambient @a[distance=..20] ~ ~ ~ 1 1 0.5
 execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 1 0.5 0.1 20 force
 
-$execute store result storage magick $(uuid).giant_effect.x double .5 run scoreboard players get #Giant calculationValues
-$execute store result storage magick $(uuid).giant_effect.y double .5 run scoreboard players get #Giant calculationValues
-$execute store result storage magick $(uuid).giant_effect.z double .5 run scoreboard players get #Giant calculationValues
+$data modify storage magick $(uuid).giant_effect.x set value $(amplifier)
+$data modify storage magick $(uuid).giant_effect.y set value $(amplifier)
+$data modify storage magick $(uuid).giant_effect.z set value $(amplifier)
 
 $scoreboard players set @s giantEffectDuration $(duration)
 $attribute @s scale modifier add giant $(amplifier) add_value
