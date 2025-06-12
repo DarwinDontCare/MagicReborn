@@ -1,0 +1,2 @@
+execute if entity @s[type=falling_block] unless block ~ ~-.5 ~ #magick_reborn:ignore_colision if data entity @s {data: {container:true}} run return run function magick_reborn:spell/cast/place_container with entity @s data
+execute if entity @s[type=falling_block] if data entity @s {OnGround:true} run data modify entity @s Time set value 1s

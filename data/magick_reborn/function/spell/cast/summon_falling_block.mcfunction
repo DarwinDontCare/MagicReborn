@@ -1,0 +1,1 @@
+$summon falling_block ~ ~ ~ {Tags:["tk_bind","tk_$(uuid)"],BlockState:$(BlockState),NoGravity:true,data:$(data),Time:20s}

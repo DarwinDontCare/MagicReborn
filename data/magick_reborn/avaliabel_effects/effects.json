@@ -57,5 +57,6 @@
     {"id":"minecraft:sonic_boom","display":"Sonic Boom","initial":false},
     {"id":"minecraft:flames","display":"Flames","initial":false},
     {"id":"minecraft:giant","display":"Giant","initial":false},
-    {"id":"minecraft:dwarf","display":"Dwarf","initial":false}
+    {"id":"minecraft:dwarf","display":"Dwarf","initial":false},
+    {"id":"minecraft:teleknesis","display":"Teleknesis","initial":false}
 ]
