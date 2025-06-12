@@ -1,0 +1,1 @@
+$bossbar set $(bossbar) value $(value)

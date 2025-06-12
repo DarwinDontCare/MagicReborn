@@ -3,7 +3,8 @@
     "terms": [
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_armor\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:teleport\"}}" } },
-      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:sonic_boom\"}}" } }
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:sonic_boom\"}}" } },
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:giant\"}}" } }
     ]
   }
   

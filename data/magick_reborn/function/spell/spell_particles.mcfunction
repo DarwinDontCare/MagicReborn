@@ -54,3 +54,4 @@ execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_snow_golem
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_warden"}]}}] run return run particle minecraft:sculk_soul ~ ~ ~ 0.1 0.1 0.1 0 20 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_wither"}]}}] run return run particle minecraft:poof ~ ~ ~ 0.2 0.2 0.2 0.01 30 force
 execute if entity @s[nbt={data: {effects: [{effect: "minecraft:summon_magma_cube"}]}}] run return run particle minecraft:flame ~ ~ ~ 0.2 0.2 0.2 0.01 20 force
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:giant"}]}}] run return run particle minecraft:happy_villager ~ ~ ~ 0.2 0.2 0.2 0.01 20 force

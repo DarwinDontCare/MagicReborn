@@ -33,6 +33,10 @@ execute if score #global summonCheckTimer matches 20.. unless entity @e[tag=summ
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 
+execute as @e[scores={giantEffectDuration=0..}] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/giant_effect_tick"}
+
+execute as @a[scores={giantEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/remove_giant
+
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer
 scoreboard players add #global summonCheckTimer 1
