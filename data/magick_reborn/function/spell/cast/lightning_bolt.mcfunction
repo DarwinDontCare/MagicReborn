@@ -14,4 +14,4 @@ $scoreboard players set #Lightning calculationValues $(amplifier)
 $execute at @e[tag=raycast_hit_lightning,nbt={data:{caster_id: $(uuid)}},limit=1] run summon lightning_bolt ~ ~ ~
 $execute if score #Lightning calculationValues matches 2.. at @e[tag=raycast_hit_lightning,nbt={data:{caster_id: $(uuid)}},limit=1] as @e[distance=..2] run damage @s $(amplifier) lightning_bolt by @a[scores={uuid=$(uuid)},limit=1]
 
-$kill @e[tag=raycast_hit_lightning,nbt={data:{caster_id: $(uuid)}},limit=1]
+$kill @e[tag=raycast_hit_lightning,nbt={data:{caster_id: $(uuid)}}]

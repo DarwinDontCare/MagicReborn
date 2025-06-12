@@ -13,7 +13,7 @@ $execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/c
 $data remove storage magick $(uuid).raycast
 
 $execute at @e[tag=raycast_hit_teleport,nbt={data:{caster_id: $(uuid)}},limit=1] run tp @s ~ ~ ~
-$kill @e[tag=raycast_hit_teleport,nbt={data:{caster_id: $(uuid)}},limit=1]
+$kill @e[tag=raycast_hit_teleport,nbt={data:{caster_id: $(uuid)}}]
 
 execute at @s run particle minecraft:dust{color:[0.6,0.1,0.8],scale:1} ~ ~1 ~ .5 .5 .5 .2 20 force @a
 execute at @s run playsound minecraft:entity.enderman.teleport ambient @a[distance=..10] ~ ~ ~ 0.5 1 0.2

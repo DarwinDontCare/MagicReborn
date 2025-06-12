@@ -5,22 +5,7 @@ execute at @s run function magick_reborn:spell/spell_particles
 execute at @s if score @s projectileHealth matches 200 run function magick_reborn:spell/cast/spell_sound
 execute at @s if score @s projectileHealth matches 100 run function magick_reborn:spell/cast/spell_sound
 
-execute store result score @s x run data get entity @s Motion[0]
-execute store result score @s y run data get entity @s Motion[1]
-execute store result score @s z run data get entity @s Motion[2]
-
-$execute if score @s x matches ..0 if score @s x > @s prev_x as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-$execute if score @s x matches 0.. if score @s x < @s prev_x as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-
-$execute if score @s y matches ..0 if score @s y > @s prev_y as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-$execute if score @s y matches 0.. if score @s y < @s prev_y as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-
-$execute if score @s z matches ..0 if score @s z > @s prev_z as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-$execute if score @s z matches 0.. if score @s z < @s prev_z as @s at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
-
-execute store result score @s prev_x run data get entity @s Motion[0]
-execute store result score @s prev_y run data get entity @s Motion[1]
-execute store result score @s prev_z run data get entity @s Motion[2]
+$execute at @s unless block ^ ^ ^.5 #magick_reborn:ignore_colision run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
 
 $execute at @s as @e[distance=..1.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_stop_sound
 $execute at @s as @e[distance=..1.5, tag=!magic_projectile,predicate=!magick_reborn:ignore_entity,] unless entity @s[scores={uuid=$(caster_id)}] run function magick_reborn:spell/cast/spell_projectile_hit_sound
