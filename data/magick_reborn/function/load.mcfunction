@@ -43,6 +43,7 @@ scoreboard objectives add summonCheckTimer dummy
 scoreboard objectives add giantEffectDuration dummy
 scoreboard objectives add dwarfEffectDuration dummy
 scoreboard objectives add tkBind dummy
+scoreboard objectives add createdSpells dummy
 
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

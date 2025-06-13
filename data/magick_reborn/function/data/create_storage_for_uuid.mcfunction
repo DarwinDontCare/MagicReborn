@@ -14,6 +14,56 @@ $data modify storage magick $(uuid_data) set value {\
         {id:"minecraft:instant_health",display:"Instant Health",initial:false}\
     ],\
     known_spells: [],\
+    quick_spells: [\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        },\
+        {\
+            spell_name: "None",\
+            custom_data: {},\
+            lore: [],\
+            id: 0\
+        }\
+    ],\
     max_amplifier: 1,\
     max_duration: 1\
 }
