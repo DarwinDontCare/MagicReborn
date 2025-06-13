@@ -17,4 +17,5 @@ execute unless score #Compare boolean matches 1 run advancement revoke @s only m
 execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_impulse
 
 execute if score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_burst
-scoreboard players set @s wandCooldown 1
+execute unless score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 10
+execute if score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 1
