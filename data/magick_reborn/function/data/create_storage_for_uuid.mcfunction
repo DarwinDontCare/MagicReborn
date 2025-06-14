@@ -1,5 +1,5 @@
-$data modify storage magick $(uuid_data) set value {\
-    uuid: $(uuid_data),\
+$data modify storage magick $(uuid) set value {\
+    uuid: $(uuid),\
     xp_cost: 0,\
     magick_cost: 0,\
     spell_effects: [\

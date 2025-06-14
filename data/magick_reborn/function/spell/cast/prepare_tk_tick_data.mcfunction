@@ -1,1 +1,1 @@
-$execute as @e[tag=tk_bind] at @s run function magick_reborn:spell/cast/tk_tick {uuid: $(uuid_data)}
+$execute as @e[tag=tk_bind] at @s run function magick_reborn:spell/cast/tk_tick {uuid: $(uuid)}
