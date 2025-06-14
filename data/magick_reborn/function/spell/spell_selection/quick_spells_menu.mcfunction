@@ -5,5 +5,5 @@ $dialog show @s {\
   after_action: "close",\
   body: [],\
   inputs: [],\
-  actions: $(spells)\
+  actions: $(spells_select)\
 }

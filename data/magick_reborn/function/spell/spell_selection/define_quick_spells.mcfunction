@@ -1,13 +1,10 @@
-dialog show @s {\
-    title: "$(spell_name)",\
-    type: "multi_action",\
-    actions: $(quick_spells),\
-    exit_action: {\
-        label: "Back",\
-        tooltip: "back to spell info",\
-        action: {\
-            type: "run_command",\
-            command: "function magick_reborn:spell/spell_selection/spell_info"\
-        }\
-    }\
+$dialog show @s {\
+  type: "minecraft:multi_action",\
+  title: "Select Slot",\
+  pause: true,\
+  after_action: "close",\
+  body: [],\
+  inputs: [],\
+  actions: $(spells_define),\
+  exit_action: $(exit_action)\
 }
