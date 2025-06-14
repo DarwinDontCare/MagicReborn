@@ -1,0 +1,1 @@
+$data modify storage magick:data concatenated_string set value "$(str1)$(str2)"

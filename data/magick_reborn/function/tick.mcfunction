@@ -9,7 +9,7 @@ execute as @a[tag=!onboarded] run function magick_reborn:onboarding
 execute as @a run function magick_reborn:magick/up_mage_level
 
 execute as @e[tag=magic_projectile] run function magick_reborn:spell/projectile_hit with entity @s data
-execute as @a[scores={dropedItem=1..},predicate=magick_reborn:is_sneaking] at @s run function magick_reborn:spell/spell_selection/open_quick_spells
+execute as @a[scores={dropedItem=1..},predicate=magick_reborn:is_sneaking] at @s run function magick_reborn:spell/spell_selection/prepare_quick_spells_vars
 
 execute as @a run function magick_reborn:magick/manage_mage_levels
 execute if score #global ticksCount matches 120.. as @a run function magick_reborn:spell/equipment/summoned_items_lifetime

@@ -8,4 +8,4 @@ $data modify storage magick $(uuid).raycast.only_blocks set value 1
 $execute at @s anchored eyes positioned ^ ^ ^ rotated as @s run function magick_reborn:spell/cast/raycast with storage magick $(uuid).raycast
 
 $execute at @e[tag=raycast_hit_tk,nbt={data:{caster_id: $(uuid)}},limit=1] unless block ~ ~ ~ #magick_reborn:ignore_colision run return run function magick_reborn:spell/cast/instantiate_tk_block {uuid: $(uuid), amplifier: $(amplifier)}
-$execute at @e[tag=raycast_hit_tk,nbt={data:{caster_id: $(uuid)}},limit=1] as @e[predicate=!magick_reborn:ignore_entity,distance=..1,limit=1,tag=!raycast_hit_tk] run return run function magick_reborn:spell/cast/tk_entity {uuid: $(uuid), amplifier: $(amplifier)}
+$execute at @e[tag=raycast_hit_tk,nbt={data:{caster_id: $(uuid)}},limit=1] as @e[predicate=!magick_reborn:ignore_entity,distance=..1,limit=1,tag=!raycast_hit_tk,tag=!tk_target] run return run function magick_reborn:spell/cast/tk_entity {uuid: $(uuid), amplifier: $(amplifier)}

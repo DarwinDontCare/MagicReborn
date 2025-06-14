@@ -42,6 +42,20 @@
                     }
                 },
                 {
+                    "text": "Created Spells List",
+                    "type": "text",
+                    "color": "#6e3f81",
+                    "bold": true,
+                    "click_event": {
+                    "action": "run_command",
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_selection/open_known_spells\"}"
+                    },
+                    "hover_event": {
+                    "action": "show_text",
+                    "value": "Menu for Magick Wand creation"
+                    }
+                },
+                {
                     "text": "View Stats",
                     "type": "text",
                     "color": "gold",

@@ -1,0 +1,9 @@
+{
+    "condition": "entity_properties",
+    "predicate": {
+        "flags": {
+            "is_on_ground": true
+        }
+    },
+    "entity": "this"
+}

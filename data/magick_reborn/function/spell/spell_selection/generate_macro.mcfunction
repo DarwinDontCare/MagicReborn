@@ -1,0 +1,1 @@
+$data modify storage magick:data macroGenerator.template set value "function $(function) $(variables), $(var)}"

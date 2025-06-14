@@ -16,6 +16,9 @@ data remove storage magick:data spell
 execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:use_wand
 execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_impulse
 
+execute unless entity @e[tag=tk_bind] run kill @e[tag=tk_target,type=armor_stand]
+#execute unless entity @e[tag=tk_bind] run tag @e[tag=raycast_hit_tk] remove raycast_hit_tk
+
 execute if score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_burst
 execute unless score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 10
 execute if score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 1
