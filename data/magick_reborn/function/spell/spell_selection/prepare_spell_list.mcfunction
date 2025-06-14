@@ -17,11 +17,13 @@ data modify storage magick:data spellList.spells_display[-1].tooltip set from st
 data modify storage magick:data spellList.spells_display[-1].id set from storage magick:data spellObject.id
 
 $data modify storage magick:data macroVars.index set value $(index)
+data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 $data modify storage magick:data macroVars.uuid set value $(uuid)
+
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
 
-data modify storage magick:data macroGenerator.function set value "magick_reborn:spell/spell_selection/spell_info"
+data modify storage magick:data macroGenerator.function set value "magick_reborn:spell/spell_selection/open_spell_info"
 data modify storage magick:data macroGenerator.variables set string storage magick:data string_value 0 -2
 data modify storage magick:data macroGenerator.var set value "text: \\\"$(text)\\\""
 function magick_reborn:spell/spell_selection/generate_macro with storage magick:data macroGenerator
@@ -34,7 +36,7 @@ data modify storage magick:data spellList.spells_select[-1].label set from stora
 data modify storage magick:data spellList.spells_select[-1].tooltip set from storage magick:data spellObject.lore
 data modify storage magick:data spellList.spells_select[-1].id set from storage magick:data spellObject.id
 
-$data modify storage magick:data macroVars.index set value $(index)
+data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 $data modify storage magick:data macroVars.uuid set value $(uuid)
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
