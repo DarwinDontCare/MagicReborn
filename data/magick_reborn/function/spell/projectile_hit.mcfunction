@@ -1,9 +1,8 @@
-# Detecta se o projétil colidiu com uma entidade (excluindo o caster)
 $scoreboard players set @s uuid $(caster_id)
+execute if score @s ticksCount matches 1.. run scoreboard players remove @s ticksCount 1
 
-execute at @s run function magick_reborn:spell/spell_particles
-execute at @s if score @s projectileHealth matches 200 run function magick_reborn:spell/cast/spell_sound
-execute at @s if score @s projectileHealth matches 100 run function magick_reborn:spell/cast/spell_sound
+$execute at @s run particle $(particle) ~ ~ ~ .125 .125 .125 0 30 force
+$execute at @s unless score @s ticksCount matches 1.. run playsound $(sound) ambient @s ~ ~ ~ 0.8 1 0.3
 
 $execute at @s[tag=!fireball] unless block ^ ^ ^.5 #magick_reborn:ignore_colision run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
 $execute at @s[tag=!fireball] unless block ^ ^-.5 ^.5 #magick_reborn:ignore_colision run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1, hit_block: 1}
@@ -21,7 +20,8 @@ execute at @s if entity @s[tag=freeze] if block ~ ~ ~ #fire run fill ~ ~ ~ ~ ~ ~
 execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run playsound block.fire.extinguish ambient @a[distance=..5] ~ ~ ~ 0.5 1 0.2
 execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run fill ~ ~ ~ ~ ~ ~ obsidian replace lava
 
-# Redução de vida do projétil ou remoção
 execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] run function magick_reborn:spell/cast/spell_stop_sound
 execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] run return run kill @s
 execute as @s[tag=magic_projectile, scores={projectileHealth=1..}] run scoreboard players remove @s projectileHealth 1
+
+execute unless score @s ticksCount matches 1.. run scoreboard players set @s ticksCount 40

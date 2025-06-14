@@ -4,6 +4,9 @@ $data modify entity @e[nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=neare
 $execute at @e[tag=magic_projectile,distance=..1.5,nbt={data:{caster_id:$(caster_id)}}] run tp @e[nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] ^ ^ ^ facing entity @s feet
 $function magick_reborn:spell/cast/apply_fireball_amplifier {caster_id: $(caster_id), index: 0}
 
+$execute at @s as @e[tag=magic_projectile, nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] run function magick_reborn:spell/spell_sounds {caster_id: $(caster_id)}
+$execute at @s as @e[tag=magic_projectile, nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] run function magick_reborn:spell/spell_particles {caster_id: $(caster_id)}
+
 $execute at @s as @e[tag=magic_projectile,distance=..1.5,nbt={data:{caster_id:$(caster_id)}}] run scoreboard players set @s projectileHealth $(health)
 
 execute at @s positioned ~ ~1.5 ~ as @e[distance=..2,sort=nearest,tag=magic_projectile] positioned 0 0 0 store result score @s MotionX run data get entity @e[tag=aim,limit=1] Pos[0] 1000
