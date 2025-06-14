@@ -1,7 +1,8 @@
 $function magick_reborn:spell/spell_selection/prepare_spell_object {path: "storage magick $(uuid).known_spells[$(index)]"}
 
+data modify storage magick:data macroVars set value {}
 $data modify storage magick:data macroVars.uuid set value $(uuid)
-$data modify storage magick:data macroVars.id set value $(id)
+data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
@@ -32,9 +33,9 @@ data modify storage magick:data spellObject.actions set value [\
 
 data modify storage magick:data spellObject.actions[0].action.template set from storage magick:data macroGenerator.template
 
-
+data modify storage magick:data macroVars set value {}
 $data modify storage magick:data macroVars.uuid set value $(uuid)
-$data modify storage magick:data macroVars.id set value $(id)
+data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
@@ -56,8 +57,8 @@ data modify storage magick:data spellObject.exit_action set value {\
     }\
 }
 
+data modify storage magick:data macroVars set value {}
 $data modify storage magick:data macroVars.uuid set value $(uuid)
-
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
 

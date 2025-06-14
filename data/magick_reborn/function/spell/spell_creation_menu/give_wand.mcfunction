@@ -8,7 +8,7 @@ $item replace entity @s weapon.offhand with minecraft:clock[\
         enchanted: true,\
         tier: $(tier),\
         model: "$(model)",\
-        id: $(id)\
+        id: $(spell_id)\
     },\
     lore=[\
         [{"text":"$(effect0)\n","italic":false}],\
@@ -59,7 +59,7 @@ $data modify storage magick $(uuid).known_spells append value {\
         [{"text":"$(effect3)\n","italic":false}],\
         [{"text":"Cost: $(magick_cost)","italic":false}]\
     ],\
-    id: $(id)\
+    id: $(spell_id)\
 }
 
 $data modify storage magick $(uuid).magick_cost set value 0

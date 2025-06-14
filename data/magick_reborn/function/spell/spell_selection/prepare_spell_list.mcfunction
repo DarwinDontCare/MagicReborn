@@ -16,8 +16,8 @@ data modify storage magick:data spellList.spells_display[-1].label set from stor
 data modify storage magick:data spellList.spells_display[-1].tooltip set from storage magick:data spellObject.lore
 data modify storage magick:data spellList.spells_display[-1].id set from storage magick:data spellObject.id
 
+data modify storage magick:data macroVars set value {}
 $data modify storage magick:data macroVars.index set value $(index)
-data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 $data modify storage magick:data macroVars.uuid set value $(uuid)
 
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
@@ -36,6 +36,7 @@ data modify storage magick:data spellList.spells_select[-1].label set from stora
 data modify storage magick:data spellList.spells_select[-1].tooltip set from storage magick:data spellObject.lore
 data modify storage magick:data spellList.spells_select[-1].id set from storage magick:data spellObject.id
 
+data modify storage magick:data macroVars set value {}
 data modify storage magick:data macroVars.id set from storage magick:data spellObject.id
 $data modify storage magick:data macroVars.uuid set value $(uuid)
 data modify storage magick:data stringfy.string_value set from storage magick:data macroVars
