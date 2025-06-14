@@ -1,0 +1,1 @@
+$particle $(particle) ~ ~ ~ .15 .15 .15 $(area) 20 force @a
