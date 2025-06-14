@@ -126,5 +126,7 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 
 execute if score #BlockDetect boolean matches 1 run return 0
 
+say vanilla effect
+
 #Vanilla Effects
 $function magick_reborn:spell/cast/apply_vanilla_effects {effect: "$(effect)", duration: $(duration), amplifier: $(amplifier)}

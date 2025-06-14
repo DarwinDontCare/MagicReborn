@@ -7,6 +7,8 @@ $data modify storage magick:data spellObject.effects[-1].contents.text set from 
 
 data modify storage magick:data spellObject.effects[-1].contents.hover_event.action set value "show_text"
 
+data modify storage magick:data concatenated_string set value ""
+
 data modify storage magick:data effect_text.str1 set value "Amplifier: "
 $data modify storage magick:data effect_text.str2 set from $(path)[$(index)].amplifer
 function magick_reborn:data/concatenate_string with storage magick:data effect_text
@@ -22,8 +24,6 @@ $data modify storage magick:data effect_text.str2 set from $(path)[$(index)].dur
 function magick_reborn:data/concatenate_string with storage magick:data effect_text
 
 data modify storage magick:data spellObject.effects[-1].contents.hover_event.value append from storage magick:data concatenated_string 
-
-#$data modify storage magick:data spellObject.effects[-1].key set value $(index)
 
 scoreboard players add #ParseEffects index 1
 
