@@ -2,6 +2,8 @@
 $scoreboard players set #BlockDetect boolean $(hit_block)
 $scoreboard players set #SpellHit calculationValues $(area)
 
+function magick_reborn:spell/spell_hit_sound
+
 execute store result storage magick:data spellHit.area double .1 run scoreboard players get #SpellHit calculationValues
 $data modify storage magick:data spellHit.particle set value "$(particle)"
 function magick_reborn:spell/spell_explosion with storage magick:data spellHit

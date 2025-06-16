@@ -4,6 +4,7 @@ $tag @s remove tk_$(uuid)
 tag @s add tk_launch
 
 scoreboard players reset @s tkBind
+scoreboard players set @s TkLaunchEffect 10
 $scoreboard players set #TkLaunch calculationValues $(amplifier)
 
 execute store result storage magick:data tk_launch_entity.speed double .01 run scoreboard players get #TkLaunch calculationValues

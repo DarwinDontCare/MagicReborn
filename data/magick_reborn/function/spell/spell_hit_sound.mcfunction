@@ -1,0 +1,1 @@
+execute if entity @s[nbt={data: {effects: [{effect: "minecraft:shape_shift"}]}}] run return run playsound minecraft:entity.shulker.teleport ambient @a[distance=..5] ~ ~ ~ 0.2 1 1

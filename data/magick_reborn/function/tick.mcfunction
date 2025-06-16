@@ -39,6 +39,9 @@ execute as @a[scores={giantEffectDuration=0..}] unless data entity @s {DeathTime
 execute as @e[scores={dwarfEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/dwarf_effect_tick"}
 execute as @a[scores={dwarfEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/remove_dwarf
 
+execute as @a[scores={ShapeShiftEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/shape_shift_tick"}
+execute as @a[scores={ShapeShiftEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/remove_shape_shift
+
 execute as @a if entity @e[tag=tk_bind] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/prepare_tk_tick_data"}
 execute as @a if entity @e[tag=tk_launch] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/prepare_tk_launch_data"}
 

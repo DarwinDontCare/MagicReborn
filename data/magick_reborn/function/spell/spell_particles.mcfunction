@@ -54,4 +54,5 @@ $execute if entity @a[scores={uuid=$(caster_id)}, nbt={SelectedItem: { component
 $execute if entity @a[scores={uuid=$(caster_id)}, nbt={SelectedItem: { components: { "minecraft:custom_data": {effects: [{effect: "minecraft:summon_magma_cube"}]}}}},limit=1] run return run data modify entity @s data.particle set value "minecraft:flame"
 $execute if entity @a[scores={uuid=$(caster_id)}, nbt={SelectedItem: { components: { "minecraft:custom_data": {effects: [{effect: "minecraft:giant"}]}}}},limit=1] run return run data modify entity @s data.particle set value "minecraft:happy_villager"
 $execute if entity @a[scores={uuid=$(caster_id)}, nbt={SelectedItem: { components: { "minecraft:custom_data": {effects: [{effect: "minecraft:dwarf"}]}}}},limit=1] run return run data modify entity @s data.particle set value "minecraft:happy_villager"
+$execute if entity @a[scores={uuid=$(caster_id)}, nbt={SelectedItem: { components: { "minecraft:custom_data": {effects: [{effect: "minecraft:shape_shift"}]}}}},limit=1] run return run data modify entity @s data.particle set value "minecraft:witch"
 data modify entity @s data.particle set value "cloud"

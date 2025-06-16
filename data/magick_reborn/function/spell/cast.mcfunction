@@ -13,7 +13,7 @@ execute as @s unless score @s wandCooldown matches 1.. run function magick_rebor
 
 execute store result score #Compare boolean run data get storage magick:data spell.is_burst
 
-#data remove storage magick:data spell
+data remove storage magick:data spell
 
 execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:use_wand
 execute unless score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_impulse

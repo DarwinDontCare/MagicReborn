@@ -6,7 +6,7 @@ $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effec
 
 $execute if entity @e[tag=effect_comparer,nbt={data:{caster_id: $(caster_id)}},predicate=magick_reborn:is_continuous_cast] run data modify storage magick:data spell.is_burst set value 1
 
-$execute at @s run function magick_reborn:spell/cast/spell_sound {caster_id: $(caster_id)}
+$execute at @s run function magick_reborn:spell/spell_cast_sound {caster_id: $(caster_id)}
 
 data modify storage magick:data spell.speed set value 0.001
 execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}]}}] run data modify storage magick:data spell.speed set value 0.002
@@ -24,6 +24,7 @@ $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecr
  run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~ ~ {Tags: [\"magic_projectile\", \"freeze\", \"ice_wall\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
 
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell
+$execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:shape_shift"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell
 
 data modify storage magick:data effectIterator.index set value 0
 $data modify storage magick:data effectIterator.caster_id set value $(caster_id)
