@@ -8,16 +8,16 @@ execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 -1
 
 $scoreboard players set @s dwarfEffectDuration $(duration)
 $attribute @s scale modifier add dwarf -$(amplifier) add_multiplied_base
-$attribute @s gravity modifier add dwarf -$(amplifier) add_multiplied_base
+$attribute @s gravity modifier add dwarf -$(gravity) add_multiplied_base
 $attribute @s attack_damage modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s attack_knockback modifier add dwarf -$(amplifier) add_value
 $attribute @s entity_interaction_range modifier add dwarf -$(amplifier) add_multiplied_base
-$attribute @s jump_strength modifier add dwarf -$(amplifier) add_multiplied_base
+$attribute @s jump_strength modifier add dwarf -$(jump) add_multiplied_base
 $attribute @s knockback_resistance modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s block_interaction_range modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s max_health modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s attack_speed modifier add dwarf $(amplifier) add_multiplied_base
-$attribute @s movement_speed modifier add dwarf -$(amplifier) add_multiplied_base
+$attribute @s movement_speed modifier add dwarf -$(speed) add_multiplied_base
 $attribute @s step_height modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s safe_fall_distance modifier add dwarf -$(amplifier)0 add_multiplied_base
 $attribute @s block_break_speed modifier add dwarf -$(amplifier) add_multiplied_base
