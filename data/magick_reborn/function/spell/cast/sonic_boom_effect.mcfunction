@@ -3,7 +3,7 @@ scoreboard players add #SonicBoom ticksCount 1
 
 $execute positioned ^ ^ ^$(index) run particle sonic_boom ~ ~ ~
 $execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..2,tag=!sonic_boom_$(uuid)] unless score @s uuid matches $(uuid) run damage @s $(current_damage) sonic_boom by @a[scores={uuid=$(uuid)}, limit=1]
-$execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..2,tag=!sonic_boom_$(uuid)] at @s rotated as @a[scores={uuid=$(uuid)}, limit=1] anchored eyes unless score @s uuid matches $(uuid) run function magick_reborn:spell/cast/push {uuid: $(uuid)}
+$execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..2,tag=!sonic_boom_$(uuid)] at @s rotated as @a[scores={uuid=$(uuid)}, limit=1] anchored eyes unless score @s uuid matches $(uuid) run function magick_reborn:spell/cast/telekinesis/push {uuid: $(uuid)}
 $execute positioned ^ ^ ^$(index) as @e[predicate=!magick_reborn:ignore_entity,distance=..2,tag=!sonic_boom_$(uuid)] unless score @s uuid matches $(uuid) run tag @s add sonic_boom_$(uuid)
 
 $execute if score #SonicBoom index matches $(range).. run return 1

@@ -8,7 +8,7 @@ $data modify storage magick $(uuid).flames.particle_amplitude set value 1
 $data modify storage magick $(uuid).flames.range set value $(range)
 $execute store result storage magick $(uuid).flames.duration double 20 run scoreboard players get @s calculationValues2
 $data modify storage magick $(uuid).flames.uuid set value $(uuid)
-$execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/flames_effect with storage magick $(uuid).flames
+$execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/flames/flames/flames_effect with storage magick $(uuid).flames
 
 $data remove storage magick $(uuid).flames
 

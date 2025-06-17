@@ -55,7 +55,7 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 
 data modify storage magick:data effectComparer set value "minecraft:flames"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/flames {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/flames/flames {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
 
 #Summon Entities
 data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
@@ -117,11 +117,11 @@ $execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run re
 
 data modify storage magick:data effectComparer set value "minecraft:teleknesis"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/telekinesis {amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/telekinesis/telekinesis {amplifier: $(amplifier), uuid: $(caster_id)}
 
 data modify storage magick:data effectComparer set value "minecraft:shape_shift"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
 
 #Movimentation
 data modify storage magick:data effectComparer set value "minecraft:teleport"

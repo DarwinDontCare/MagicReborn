@@ -1,5 +1,5 @@
 $kill @e[tag=raycast_hit_tk,nbt={data:{caster_id: $(uuid)}}]
-$execute unless entity @e[tag=tk_$(uuid)] run function magick_reborn:spell/cast/pick_tk_entity {uuid: $(uuid), amplifier: $(amplifier)}
+$execute unless entity @e[tag=tk_$(uuid)] run function magick_reborn:spell/cast/telekinesis/pick_tk_entity {uuid: $(uuid), amplifier: $(amplifier)}
 
 $execute unless entity @e[type=armor_stand, tag=tk_target, nbt={data:{caster_id: $(uuid)}}] anchored eyes positioned ^ ^ ^2 run summon armor_stand ~ ~ ~ {Tags:["tk_target"], data: {caster_id: $(uuid)},Invisible:true,Invulnerable:true,attributes:[{id:scale,modifiers:[{id:samll,amount:0.7,operation:"add_multiplied_base"}]}]}
 $execute anchored eyes positioned ^ ^ ^ run tp @e[type=armor_stand, tag=tk_target, nbt={data:{caster_id: $(uuid)}},limit=1] ^ ^ ^2

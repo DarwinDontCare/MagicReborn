@@ -1,0 +1,1 @@
+$execute as @e[tag=tk_bind] at @s run function magick_reborn:spell/cast/telekinesis/tk_tick {uuid: $(uuid)}

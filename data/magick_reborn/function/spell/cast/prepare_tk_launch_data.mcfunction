@@ -1,1 +1,0 @@
-$execute as @e[tag=tk_launch] at @s run function magick_reborn:spell/cast/launch_tk_tick {uuid: $(uuid)}

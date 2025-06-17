@@ -35,4 +35,4 @@ scoreboard players add #Flames calculationValues 1
 
 $execute store result storage magick $(uuid).flames.particle_amplitude double 1 run scoreboard players get #Flames calculationValues
 $execute store result storage magick $(uuid).flames.index double .1 run scoreboard players get #Flames index
-$function magick_reborn:spell/cast/flames_effect with storage magick $(uuid).flames
+$function magick_reborn:spell/cast/flames/flames/flames_effect with storage magick $(uuid).flames
