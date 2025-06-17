@@ -1,3 +1,5 @@
+function magick_reborn:spell/cast/dwarf/remove_dwarf
+
 bossbar add minecraft:m "Giant Effect"
 bossbar set minecraft:m players @s
 $bossbar set minecraft:m max $(duration)
@@ -14,13 +16,13 @@ $scoreboard players set @s giantEffectDuration $(duration)
 $attribute @s scale modifier add giant $(amplifier) add_value
 $attribute @s attack_damage modifier add giant $(amplifier) add_multiplied_base
 $attribute @s attack_knockback modifier add giant $(amplifier) add_value
-$attribute @s entity_interaction_range modifier add giant $(amplifier) add_multiplied_base
+$attribute @s entity_interaction_range modifier add giant $(interaction) add_multiplied_base
 $attribute @s jump_strength modifier add giant $(amplifier) add_multiplied_base
 $attribute @s knockback_resistance modifier add giant $(amplifier) add_multiplied_base
-$attribute @s block_interaction_range modifier add giant $(amplifier) add_multiplied_base
+$attribute @s block_interaction_range modifier add giant $(interaction) add_multiplied_base
 $attribute @s max_health modifier add giant $(amplifier)0 add_value
 $attribute @s attack_speed modifier add giant -$(amplifier) add_multiplied_base
 $attribute @s movement_speed modifier add giant $(amplifier) add_multiplied_base
 $attribute @s step_height modifier add giant $(amplifier) add_multiplied_base
-$attribute @s safe_fall_distance modifier add giant $(amplifier)0 add_multiplied_base
-$attribute @s block_break_speed modifier add giant $(amplifier) add_multiplied_base
+$attribute @s safe_fall_distance modifier add giant $(fallHeight)0 add_multiplied_base
+$attribute @s block_break_speed modifier add giant $(break_speed) add_multiplied_base

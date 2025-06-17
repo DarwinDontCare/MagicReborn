@@ -4,9 +4,6 @@ scoreboard objectives add spell_effect dummy
 scoreboard objectives add spell_duration dummy
 scoreboard objectives add spell_amplifier dummy
 scoreboard objectives add rightClick minecraft.used:carrot_on_a_stick
-scoreboard objectives add MotionX dummy
-scoreboard objectives add MotionY dummy
-scoreboard objectives add MotionZ dummy
 scoreboard objectives add boolean dummy
 scoreboard objectives add projectileHealth dummy
 scoreboard objectives add hit_by_projectile dummy
@@ -55,9 +52,21 @@ scoreboard objectives add prev_x dummy
 scoreboard objectives add prev_y dummy
 scoreboard objectives add prev_z dummy
 
+scoreboard objectives add squared_x dummy
+scoreboard objectives add squared_y dummy
+scoreboard objectives add squared_z dummy
+
+scoreboard objectives add MotionX dummy
+scoreboard objectives add MotionY dummy
+scoreboard objectives add MotionZ dummy
+
+scoreboard objectives add length_sq dummy
 scoreboard objectives add distance dummy
 scoreboard objectives add baseDamage dummy
 scoreboard objectives add adjustedDamage dummy
+
+scoreboard objectives add sqrt dummy
+scoreboard players set 2 sqrt 2
 
 scoreboard objectives add meltIce dummy
 

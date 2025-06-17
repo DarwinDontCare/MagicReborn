@@ -1,4 +1,4 @@
-execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches ..0 run return run function magick_reborn:spell/cast/remove_giant
+execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches ..0 run return run function magick_reborn:spell/cast/giant/remove_giant
 
 execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches 1.. run scoreboard players remove @s giantEffectDuration 1
 execute if score #global summonCheckTimer matches 20.. store result storage magick:data giantEffect.value int 1 run scoreboard players get @s giantEffectDuration

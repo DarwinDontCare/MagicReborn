@@ -21,7 +21,7 @@ execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run playsound block.f
 execute at @s if entity @s[tag=freeze] if block ~ ~ ~ lava run fill ~ ~ ~ ~ ~ ~ obsidian replace lava
 
 execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] run function magick_reborn:spell/cast/spell_stop_sound
-execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] run return run kill @s
+$execute as @s[tag=magic_projectile, scores={projectileHealth=..0}] at @s run return run function magick_reborn:spell/apply_projectile_effect {caster_id: $(caster_id), range: 1.5, hit_block: 0, particle: "$(particle)", area: 2}
 execute as @s[tag=magic_projectile, scores={projectileHealth=1..}] run scoreboard players remove @s projectileHealth 1
 
 execute unless score @s ticksCount matches 1.. run scoreboard players set @s ticksCount 40
