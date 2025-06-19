@@ -29,7 +29,7 @@ execute as @e[tag=ice_wall_marker] at @s run function magick_reborn:spell/cast/i
 execute as @e[tag=light] at @s run function magick_reborn:spell/cast/light_tick
 execute as @e[tag=summoned] at @s run function magick_reborn:spell/cast/summon_tick
 execute as @e[tag=summon_marker,type=marker] if score #global summonCheckTimer matches 20.. at @s run function magick_reborn:spell/cast/summon_marker with entity @s data
-execute if score #global summonCheckTimer matches 20.. unless entity @e[tag=summon_marker,type=marker] as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/checkActiveSummons"}
+execute if score #global summonCheckTimer matches 20.. if entity @e[tag=summon_marker,type=marker] as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/check_active_summons"}
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 

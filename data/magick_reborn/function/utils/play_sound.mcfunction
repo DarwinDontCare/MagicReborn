@@ -1,0 +1,1 @@
+$playsound $(sound) ambient @s ~ ~ ~ 0.8 1 0.3

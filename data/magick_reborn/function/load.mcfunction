@@ -70,6 +70,8 @@ scoreboard players set 2 sqrt 2
 
 scoreboard objectives add meltIce dummy
 
+function magick_reborn:data/effects
+
 gamerule commandBlockOutput false
 #gamerule sendCommandFeedback false
 execute as @e unless entity @s[scores={magick=1..}] run scoreboard players set @s magick 1

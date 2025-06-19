@@ -1,0 +1,2 @@
+$execute unless entity @e[tag=summoned,nbt={data:{caster_id: $(uuid)}}] run scoreboard players reset @s activeSummons
+$execute unless entity @e[tag=summoned,nbt={data:{caster_id: $(uuid)}}] run kill @e[type=marker,tag=summon_marker,nbt={data:{caster_id: $(uuid)}}]

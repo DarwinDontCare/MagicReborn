@@ -8,15 +8,15 @@ $item replace entity @s weapon.offhand with minecraft:clock[\
         enchanted: true,\
         tier: $(tier),\
         model: "$(model)",\
+        idle_sound: "$(idle_sound)",\
+        cast_sound: "$(cast_sound)",\
+        hit_sound: "$(hit_sound)",\
+        use_duration: $(use_duration),\
+        use_area: $(use_area),\
+        use_amplifier: $(use_amplifier),\
         id: $(spell_id)\
     },\
-    lore=[\
-        [{"text":"$(effect0)\n","italic":false}],\
-        [{"text":"$(effect1)\n","italic":false}],\
-        [{"text":"$(effect2)\n","italic":false}],\
-        [{"text":"$(effect3)\n","italic":false}],\
-        [{"text":"Cost: $(magick_cost)","italic":false}]\
-    ],\
+    lore=$(lore),\
     enchantment_glint_override=true,\
     consumable={\
         animation:"bow",\
@@ -50,15 +50,16 @@ $data modify storage magick $(uuid).known_spells append value {\
         type: "wand",\
         enchanted: true,\
         tier: $(tier),\
-        model: "$(model)"\
+        model: "$(model)",\
+        idle_sound: "$(idle_sound)",\
+        cast_sound: "$(cast_sound)",\
+        hit_sound: "$(hit_sound)",\
+        use_duration: $(use_duration),\
+        use_area: $(use_area),\
+        use_amplifier: $(use_amplifier),\
+        id: $(spell_id)\
     },\
-    lore: [\
-        [{"text":"$(effect0)\n","italic":false}],\
-        [{"text":"$(effect1)\n","italic":false}],\
-        [{"text":"$(effect2)\n","italic":false}],\
-        [{"text":"$(effect3)\n","italic":false}],\
-        [{"text":"Cost: $(magick_cost)","italic":false}]\
-    ],\
+    lore: $(lore),\
     id: $(spell_id)\
 }
 
