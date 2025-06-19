@@ -6,7 +6,7 @@ $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effec
 
 $execute if entity @e[tag=effect_comparer,nbt={data:{caster_id: $(caster_id)}},predicate=magick_reborn:is_continuous_cast] run data modify storage magick:data spell.is_burst set value 1
 
-$execute at @s run function magick_reborn:spell/spell_cast_sound {sound: $(cast_sound)}
+$execute at @s run function magick_reborn:spell/spell_cast_sound {sound: "$(cast_sound)"}
 
 data modify storage magick:data spell.speed set value 0.001
 execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}]}}] run data modify storage magick:data spell.speed set value 0.002

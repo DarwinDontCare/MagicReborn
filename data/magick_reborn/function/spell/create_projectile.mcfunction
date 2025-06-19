@@ -1,11 +1,13 @@
 execute rotated as @s positioned 0.0 0.0 0.0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
 $execute at @s anchored eyes positioned ^ ^ ^ run $(summon_cmd)
-$data modify entity @e[nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.effects set value $(effects)
-$execute at @e[tag=magic_projectile,distance=..1.5,nbt={data:{caster_id:$(caster_id)}}] run tp @e[nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] ^ ^ ^ facing entity @s feet
+$data modify entity @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.effects set value $(effects)
+$execute at @e[tag=magic_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run tp @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] ^ ^ ^ facing entity @s feet
 $function magick_reborn:spell/cast/apply_fireball_amplifier {caster_id: $(caster_id), index: 0}
 
-$execute at @s as @e[tag=magic_projectile, nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] run function magick_reborn:spell/spell_sounds with entity @s data.effects[0]
-$execute at @s as @e[tag=magic_projectile, nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] run function magick_reborn:spell/spell_particles with entity @s data.effects[0]
+$data modify entity @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.cast_sound set value "$(cast_sound)"
+$data modify entity @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.idle_sound set value "$(idle_sound)"
+$data modify entity @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.hit_sound set value "$(hit_sound)"
+$data modify entity @e[tag=magic_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.particle set value "$(particle)"
 
 $execute at @s as @e[tag=magic_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run scoreboard players set @s projectileHealth $(health)
 

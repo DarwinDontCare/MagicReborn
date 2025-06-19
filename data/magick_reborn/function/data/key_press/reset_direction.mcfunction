@@ -1,1 +1,1 @@
-$data modify storage magick $(uuid).motion_keys set value [0.0, 0.0, 0.0]
+$data modify storage magick $(uuid).motion_keys set value [0.0, 0.0, 0.0, 1.0]

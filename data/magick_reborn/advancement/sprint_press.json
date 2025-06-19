@@ -1,0 +1,21 @@
+{
+    "criteria": {
+      "sprint_press": {
+        "trigger": "minecraft:tick",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player",
+            "type_specific": {
+              "type": "minecraft:player",
+              "input": {
+                "sprint": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+        "function": "magick_reborn:data/key_press/sprint"
+    }
+  }
