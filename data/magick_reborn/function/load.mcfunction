@@ -70,6 +70,9 @@ scoreboard players set 2 sqrt 2
 
 scoreboard objectives add meltIce dummy
 
+scoreboard objectives add speed dummy
+scoreboard objectives add jump_strenght dummy
+
 function magick_reborn:data/effects
 
 gamerule commandBlockOutput false

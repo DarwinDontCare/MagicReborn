@@ -34,7 +34,7 @@
                     "bold": true,
                     "click_event": {
                     "action": "run_command",
-                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_creation_menu/check_for_wand\"}"
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_creation_menu/check_for_wand\", params: {}}"
                     },
                     "hover_event": {
                     "action": "show_text",
@@ -48,7 +48,7 @@
                     "bold": true,
                     "click_event": {
                     "action": "run_command",
-                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_selection/open_known_spells\"}"
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:spell/spell_selection/open_known_spells\", params: {}}"
                     },
                     "hover_event": {
                     "action": "show_text",
@@ -62,7 +62,7 @@
                     "bold": true,
                     "click_event": {
                     "action": "run_command",
-                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:data/stats_menu\"}"
+                    "command": "/function magick_reborn:data/get_uuid {function: \"magick_reborn:data/stats_menu\", params: {}}"
                     },
                     "hover_event": {
                     "action": "show_text",

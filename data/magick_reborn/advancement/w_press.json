@@ -1,0 +1,21 @@
+{
+    "criteria": {
+      "w_press": {
+        "trigger": "minecraft:tick",
+        "conditions": {
+          "player": {
+            "type": "minecraft:player",
+            "type_specific": {
+              "type": "minecraft:player",
+              "input": {
+                "forward": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+        "function": "magick_reborn:data/key_press/w"
+    }
+  }

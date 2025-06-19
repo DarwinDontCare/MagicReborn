@@ -2,7 +2,7 @@ scoreboard players add #global ticksCount 1
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 execute as @a unless score @s maxActiveSummons matches 1.. run scoreboard players set @s maxActiveSummons 10
 
-execute as @a[tag=!savedName] run function magick_reborn:data/get_uuid {function: "magick_reborn:data/store_player_name"}
+execute as @a[tag=!savedName] run function magick_reborn:data/get_uuid {function: "magick_reborn:data/store_player_name", params: {}}
 
 execute as @a[tag=!onboarded] run function magick_reborn:onboarding
 
@@ -29,21 +29,23 @@ execute as @e[tag=ice_wall_marker] at @s run function magick_reborn:spell/cast/i
 execute as @e[tag=light] at @s run function magick_reborn:spell/cast/light_tick
 execute as @e[tag=summoned] at @s run function magick_reborn:spell/cast/summon_tick
 execute as @e[tag=summon_marker,type=marker] if score #global summonCheckTimer matches 20.. at @s run function magick_reborn:spell/cast/summon_marker with entity @s data
-execute if score #global summonCheckTimer matches 20.. if entity @e[tag=summon_marker,type=marker] as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/check_active_summons"}
+execute if score #global summonCheckTimer matches 20.. if entity @e[tag=summon_marker,type=marker] as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/check_active_summons", params: {}}
 
 execute if score #global ticksCount matches 120.. as @e[scores={freezeTicks=1..}] run scoreboard players remove @s freezeTicks 1
 
-execute as @e[scores={giantEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/giant/giant_effect_tick"}
+execute as @e[scores={giantEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/giant/giant_effect_tick", params: {}}
 execute as @a[scores={giantEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/giant/remove_giant
 
-execute as @e[scores={dwarfEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/dwarf/dwarf_effect_tick"}
+execute as @e[scores={dwarfEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/dwarf/dwarf_effect_tick", params: {}}
 execute as @a[scores={dwarfEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/dwarf/remove_dwarf
 
-execute as @a[scores={ShapeShiftEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/shape_shift/shape_shift_tick"}
+execute as @a[scores={ShapeShiftEffectDuration=0..}] at @s run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/shape_shift/shape_shift_tick", params: {}}
 execute as @a[scores={ShapeShiftEffectDuration=0..}] unless data entity @s {DeathTime:0s} run function magick_reborn:spell/cast/shape_shift/remove_shape_shift
 
-execute as @a if entity @e[tag=tk_bind] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_tick_data"}
-execute as @a if entity @e[tag=tk_launch] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_launch_data"}
+execute as @a if entity @e[tag=tk_bind] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_tick_data", params: {}}
+execute as @a if entity @e[tag=tk_launch] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_launch_data", params: {}}
+
+execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer
