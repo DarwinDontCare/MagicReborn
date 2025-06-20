@@ -1,0 +1,2 @@
+$execute if entity @s[type=#magick_reborn:flying_mobs] run attribute @s flying_speed modifier add speed $(value) add_multiplied_base
+$execute unless entity @s[type=#magick_reborn:flying_mobs] run attribute @s movement_speed modifier add speed $(value) add_multiplied_base
