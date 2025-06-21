@@ -1,4 +1,5 @@
 $scoreboard players set #SizeMod calculationValues $(amplifier)
+execute store result storage magick:data sizeManipulation.raw_amplifier int 0.5 run scoreboard players get #SizeMod calculationValues
 $execute store result storage magick:data sizeManipulation.amplifier double $(scale) run scoreboard players get #SizeMod calculationValues
 $execute store result storage magick:data sizeManipulation.gravity double $(scale) run scoreboard players get #SizeMod calculationValues
 $execute store result storage magick:data sizeManipulation.speed double $(scale) run scoreboard players get #SizeMod calculationValues

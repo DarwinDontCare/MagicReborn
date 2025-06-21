@@ -25,4 +25,4 @@ scoreboard players add #Frostbite calculationValues 1
 
 $execute store result storage magick $(uuid).frostbite.particle_amplitude double 1 run scoreboard players get #Frostbite calculationValues
 $execute store result storage magick $(uuid).frostbite.index double .1 run scoreboard players get #Frostbite index
-$function magick_reborn:spell/cast/frostbite_effect with storage magick $(uuid).frostbite
+$function magick_reborn:spell/cast/frostbite/frostbite_effect with storage magick $(uuid).frostbite

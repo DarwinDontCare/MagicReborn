@@ -19,4 +19,4 @@ $data modify storage magick $(caster_id).ice_wall.duration set value $(duration)
 $data modify storage magick $(caster_id).ice_wall.caster_id set value $(caster_id)
 
 $execute at @s run function magick_reborn:spell/cast/place_ice_wall with storage magick $(caster_id).ice_wall
-$execute at @s run function magick_reborn:spell/cast/frostbite {amplifier: $(amplifier), duration: $(duration), caster_id: $(caster_id)}
+$execute at @s run function magick_reborn:spell/cast/frostbite/frostbite {amplifier: $(amplifier), duration: $(duration), caster_id: $(caster_id)}

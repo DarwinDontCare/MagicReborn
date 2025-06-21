@@ -7,6 +7,6 @@ $data modify storage magick $(uuid).frostbite.particle_amplitude set value 1
 $data modify storage magick $(uuid).frostbite.range set value $(range)
 $data modify storage magick $(uuid).frostbite.duration set value $(duration)
 $data modify storage magick $(uuid).frostbite.uuid set value $(uuid)
-$execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/frostbite_effect with storage magick $(uuid).frostbite
+$execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/cast/frostbite/frostbite_effect with storage magick $(uuid).frostbite
 
 $data remove storage magick $(uuid).frostbite

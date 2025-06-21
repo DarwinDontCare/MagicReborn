@@ -35,7 +35,7 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 #Destruction Spells
 data modify storage magick:data effectComparer set value "minecraft:frostbite"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/frostbite {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/frostbite/frostbite {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
 
 data modify storage magick:data effectComparer set value "minecraft:ice_wall"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"

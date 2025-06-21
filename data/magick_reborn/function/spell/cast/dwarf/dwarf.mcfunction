@@ -23,3 +23,7 @@ $attribute @s movement_speed modifier add dwarf -$(speed) add_multiplied_base
 $attribute @s step_height modifier add dwarf -$(amplifier) add_multiplied_base
 $attribute @s safe_fall_distance modifier add dwarf -$(fallHeight)0 add_multiplied_base
 $attribute @s block_break_speed modifier add dwarf -$(break_speed) add_multiplied_base
+
+execute if entity @s[type=creeper] store result score @s calculationValues run data get entity @s ExplosionRadius
+$execute if entity @s[type=creeper] run scoreboard players remove @s calculationValues $(raw_amplifier)
+execute if entity @s[type=creeper] store result entity @s ExplosionRadius int 1 run scoreboard players get @s calculationValues

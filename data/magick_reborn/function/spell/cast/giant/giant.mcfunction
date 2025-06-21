@@ -26,3 +26,7 @@ $attribute @s movement_speed modifier add giant $(amplifier) add_multiplied_base
 $attribute @s step_height modifier add giant $(amplifier) add_multiplied_base
 $attribute @s safe_fall_distance modifier add giant $(fallHeight)0 add_multiplied_base
 $attribute @s block_break_speed modifier add giant $(break_speed) add_multiplied_base
+
+execute if entity @s[type=creeper] store result score @s calculationValues run data get entity @s ExplosionRadius
+$execute if entity @s[type=creeper] run scoreboard players add @s calculationValues $(raw_amplifier)
+execute if entity @s[type=creeper] store result entity @s ExplosionRadius int 1 run scoreboard players get @s calculationValues

@@ -9,6 +9,8 @@
       "#minecraft:rails",
       "#minecraft:pressure_plates",
       "minecraft:water",
-      "minecraft:lava"
+      "minecraft:lava",
+      "light",
+      "structure_void"
     ]
   }
