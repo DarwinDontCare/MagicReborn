@@ -2,7 +2,7 @@ execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDu
 
 execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches 1.. run scoreboard players remove @s giantEffectDuration 1
 execute if score #global summonCheckTimer matches 20.. store result storage magick:data giantEffect.value int 1 run scoreboard players get @s giantEffectDuration
-execute if score #global summonCheckTimer matches 20.. run data modify storage magick:data giantEffect.bossbar set value "minecraft:m"
+execute if score #global summonCheckTimer matches 20.. run data modify storage magick:data giantEffect.bossbar set value "minecraft:giant"
 
 execute if score #global summonCheckTimer matches 20.. if score @s giantEffectDuration matches 1.. run function magick_reborn:data/update_bossbar with storage magick:data giantEffect
 

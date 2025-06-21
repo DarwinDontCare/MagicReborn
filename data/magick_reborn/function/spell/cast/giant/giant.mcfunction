@@ -1,9 +1,9 @@
 function magick_reborn:spell/cast/dwarf/remove_dwarf
 
-bossbar add minecraft:m "Giant Effect"
-bossbar set minecraft:m players @s
-$bossbar set minecraft:m max $(duration)
-$bossbar set minecraft:m value $(duration)
+bossbar add minecraft:giant "Giant Effect"
+bossbar set minecraft:giant players @s
+$bossbar set minecraft:giant max $(duration)
+$bossbar set minecraft:giant value $(duration)
 
 playsound minecraft:entity.ender_dragon.growl ambient @a[distance=..20] ~ ~ ~ 1 1 0.5
 execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 1 0.5 0.1 20 force

@@ -1,5 +1,5 @@
 scoreboard players reset @s dwarfEffectDuration
-bossbar remove minecraft:m
+bossbar remove minecraft:dwarf
 
 playsound minecraft:entity.ender_dragon.growl ambient @a[distance=..20] ~ ~ ~ 1 1 0.5
 execute anchored eyes positioned ^ ^ ^ run particle minecraft:cloud ~ ~ ~ 0.5 1 0.5 0.1 20 force

@@ -6,7 +6,7 @@ $execute unless entity @e[tag=shape_shifted_$(uuid)] run function magick_reborn:
 
 execute if score #global summonCheckTimer matches 20.. if score @s ShapeShiftEffectDuration matches 1.. run scoreboard players remove @s ShapeShiftEffectDuration 1
 execute if score #global summonCheckTimer matches 20.. store result storage magick:data shape_shift.value int 1 run scoreboard players get @s ShapeShiftEffectDuration
-execute if score #global summonCheckTimer matches 20.. run data modify storage magick:data shape_shift.bossbar set value "minecraft:m"
+execute if score #global summonCheckTimer matches 20.. run data modify storage magick:data shape_shift.bossbar set value "minecraft:shape_shift"
 
 $data modify storage magick $(uuid).shape_shift.x set from storage magick $(uuid).motion_keys[0]
 $data modify storage magick $(uuid).shape_shift.y set from storage magick $(uuid).motion_keys[1]

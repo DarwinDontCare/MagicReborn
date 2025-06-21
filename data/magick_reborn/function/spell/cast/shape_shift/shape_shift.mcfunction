@@ -1,7 +1,7 @@
-bossbar add minecraft:m "Shape Shift Effect"
-$bossbar set minecraft:m players @a[scores={uuid=$(uuid)}, limit=1]
-$bossbar set minecraft:m max $(duration)
-$bossbar set minecraft:m value $(duration)
+bossbar add minecraft:shape_shift "Shape Shift Effect"
+$bossbar set minecraft:shape_shift players @a[scores={uuid=$(uuid)}, limit=1]
+$bossbar set minecraft:shape_shift max $(duration)
+$bossbar set minecraft:shape_shift value $(duration)
 
 $data modify storage magick $(uuid).shape_shift.gamemode set from entity @a[scores={uuid=$(uuid)}, limit=1] playerGameType
 $tag @s add shape_shifted_$(uuid)

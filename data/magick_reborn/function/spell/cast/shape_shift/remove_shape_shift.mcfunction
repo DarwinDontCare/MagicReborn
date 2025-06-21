@@ -1,5 +1,5 @@
 scoreboard players reset @s ShapeShiftEffectDuration
-bossbar remove minecraft:m
+bossbar remove minecraft:shape_shift
 
 $tag @e[tag=shape_shifted_$(uuid)] remove shape_shifted_$(uuid)
 
