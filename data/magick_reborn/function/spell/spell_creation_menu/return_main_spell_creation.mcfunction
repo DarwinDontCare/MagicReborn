@@ -1,0 +1,1 @@
+$function magick_reborn:spell/spell_creation_menu/main_spell_creation_menu with storage magick $(uuid).spell_creation

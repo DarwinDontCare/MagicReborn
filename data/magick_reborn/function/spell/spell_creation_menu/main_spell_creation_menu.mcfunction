@@ -42,6 +42,7 @@ $execute if score @s mageLevel matches ..20 run dialog show @s {\
   actions: [\
     {\
       label: "$(effect0)",\
+      tooltip: "$(tooltip0)",\
       id: "The first effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -103,6 +104,7 @@ $execute if score @s mageLevel matches 21..40 run dialog show @s {\
   actions: [\
     {\
       label: "$(effect0)",\
+      tooltip: "$(tooltip0)",\
       id: "The first effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -111,6 +113,7 @@ $execute if score @s mageLevel matches 21..40 run dialog show @s {\
     },\
     {\
       label: "$(effect1)",\
+      tooltip: "$(tooltip1)",\
       id: "The second effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -172,6 +175,7 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
   actions: [\
     {\
       label: "$(effect0)",\
+      tooltip: "$(tooltip0)",\
       id: "The first effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -180,6 +184,7 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
     },\
     {\
       label: "$(effect1)",\
+      tooltip: "$(tooltip1)",\
       id: "The second effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -188,6 +193,7 @@ $execute if score @s mageLevel matches 41..60 run dialog show @s {\
     },\
     {\
       label: "$(effect2)",\
+      tooltip: "$(tooltip2)",\
       id: "The third effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -251,6 +257,7 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
   actions: [\
     {\
       label: "$(effect0)",\
+      tooltip: "$(tooltip0)",\
       id: "The first effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -259,6 +266,7 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
     },\
     {\
       label: "$(effect1)",\
+      tooltip: "$(tooltip1)",\
       id: "The second effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -267,6 +275,7 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
     },\
     {\
       label: "$(effect2)",\
+      tooltip: "$(tooltip2)",\
       id: "The third effect of the spell",\
       action: {\
         type: "dynamic/run_command",\
@@ -275,6 +284,7 @@ $execute if score @s mageLevel matches 60.. run dialog show @s {\
     },\
     {\
       label: "$(effect3)",\
+      tooltip: "$(tooltip3)",\
       id: "The fourth effect of the spell",\
       action: {\
         type: "dynamic/run_command",\

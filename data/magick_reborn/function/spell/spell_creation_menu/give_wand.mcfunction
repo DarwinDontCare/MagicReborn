@@ -63,7 +63,7 @@ $data modify storage magick $(uuid).known_spells append value {\
     id: $(spell_id)\
 }
 
-$data modify storage magick $(uuid).magick_cost set value 0
+$data modify storage magick $(uuid).spell_creation.magick_cost set value 0
 
 $scoreboard players set #Calculation calculationValues $(xp_cost)
 scoreboard players set #Calculation calculationValues2 2

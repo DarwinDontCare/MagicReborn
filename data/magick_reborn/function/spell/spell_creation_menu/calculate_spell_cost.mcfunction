@@ -20,19 +20,23 @@ $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_35]
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_40] run scoreboard players set @s baseCost 40
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_45] run scoreboard players set @s baseCost 45
 
-scoreboard players set #Calculation calculationValues 80
+scoreboard players set #Calculation calculationValues 40
 scoreboard players set #Calculation calculationValues2 10
 scoreboard players operation @s spell_amplifier *= #Calculation calculationValues
 scoreboard players operation @s spell_duration *= #Calculation calculationValues2
+scoreboard players operation @s spell_area *= #Calculation calculationValues
 
 scoreboard players operation @s spell_amplifier *= @s baseCost
 scoreboard players operation @s spell_duration *= @s baseCost
+scoreboard players operation @s spell_area *= @s baseCost
 
 scoreboard players operation @s spell_amplifier /= #Calculation calculationValues
 scoreboard players operation @s spell_duration /= #Calculation calculationValues
+scoreboard players operation @s spell_area /= #Calculation calculationValues
 
 scoreboard players operation @s spellCost += @s spell_amplifier
 scoreboard players operation @s spellCost += @s spell_duration
+scoreboard players operation @s spellCost += @s spell_area
 
 execute if score #Calculation spellCost matches ..0 run scoreboard players set #Calculation spellCost 1
 
@@ -44,12 +48,12 @@ scoreboard players operation #Calculation calculationResults /= #Calculation cal
 
 execute if score #Calculation calculationResults matches ..4 run scoreboard players set #Calculation calculationResults 5
 
-$execute store result score #Calculation calculationValues run data get storage magick $(uuid).xp_cost
-$execute store result storage magick $(uuid).spell_effects[$(current_effect_slot)].experience_cost int 1 run scoreboard players get #Calculation calculationResults
+$execute store result score #Calculation calculationValues run data get storage magick $(uuid).spell_creation.xp_cost
+$execute store result storage magick $(uuid).spell_creation.spell_effects[$(current_effect_slot)].experience_cost int 1 run scoreboard players get #Calculation calculationResults
 
 scoreboard players operation #Calculation calculationResults += #Calculation calculationValues
 
-$execute store result storage magick $(uuid).xp_cost int 1 run scoreboard players get #Calculation calculationResults
+$execute store result storage magick $(uuid).spell_creation.xp_cost int 1 run scoreboard players get #Calculation calculationResults
 
 # Aplica custo base a spellCost
 execute if score @s spellCost < @s baseCost run scoreboard players operation @s spellCost = @s baseCost
@@ -73,11 +77,11 @@ scoreboard players operation @s spellCost /= #Divisor calculationValues
 # Garante que nunca será 0
 execute if score @s spellCost matches ..0 run scoreboard players set @s spellCost 1
 
-$execute store result score #Calculation spellCost run data get storage magick $(uuid).magick_cost
+$execute store result score #Calculation spellCost run data get storage magick $(uuid).spell_creation.magick_cost
 
 # Armazena resultado no storage
-$execute store result storage magick $(uuid).spell_effects[$(current_effect_slot)].magick_cost int 1 run scoreboard players get @s spellCost
+$execute store result storage magick $(uuid).spell_creation.spell_effects[$(current_effect_slot)].magick_cost int 1 run scoreboard players get @s spellCost
 scoreboard players operation @s spellCost += #Calculation spellCost
-$execute store result storage magick $(uuid).magick_cost int 1 run scoreboard players get @s spellCost
+$execute store result storage magick $(uuid).spell_creation.magick_cost int 1 run scoreboard players get @s spellCost
 
 $kill @e[tag=cost_calc$(uuid)]

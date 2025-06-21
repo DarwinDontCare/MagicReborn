@@ -13,14 +13,19 @@ data modify storage magick:data effect_text.str1 set value "Amplifier: "
 $data modify storage magick:data effect_text.str2 set from $(path)[$(index)].amplifer
 function magick_reborn:data/concatenate_string with storage magick:data effect_text
 data modify storage magick:data effect_text.str1 set from storage magick:data concatenated_string
-data modify storage magick:data effect_text.str2 set value "\n"
-function magick_reborn:data/concatenate_string with storage magick:data effect_text
 
 data modify storage magick:data effect_text.str1 set from storage magick:data concatenated_string
-data modify storage magick:data effect_text.str2 set value "Duration: "
+data modify storage magick:data effect_text.str2 set value "\nDuration: "
 function magick_reborn:data/concatenate_string with storage magick:data effect_text
 data modify storage magick:data effect_text.str1 set from storage magick:data concatenated_string
 $data modify storage magick:data effect_text.str2 set from $(path)[$(index)].duration
+function magick_reborn:data/concatenate_string with storage magick:data effect_text
+
+data modify storage magick:data effect_text.str1 set from storage magick:data concatenated_string
+data modify storage magick:data effect_text.str2 set value "\nArea: "
+function magick_reborn:data/concatenate_string with storage magick:data effect_text
+data modify storage magick:data effect_text.str1 set from storage magick:data concatenated_string
+$data modify storage magick:data effect_text.str2 set from $(path)[$(index)].area
 function magick_reborn:data/concatenate_string with storage magick:data effect_text
 
 data modify storage magick:data spellObject.effects[-1].contents.hover_event.value append from storage magick:data concatenated_string 
