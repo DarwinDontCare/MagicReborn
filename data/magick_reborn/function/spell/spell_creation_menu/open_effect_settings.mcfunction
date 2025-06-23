@@ -28,10 +28,10 @@ $execute if data storage magick:data {spell_effect_info: {use_area: true}} run d
     type: "minecraft:number_range",\
     key: "area",\
     label: "Area",\
-    start: 1,\
+    start: 0,\
     end: $(max_area),\
     step: 1,\
-    initial: 1\
+    initial: 0\
 }
 
 data modify storage magick:data spell_creation.effect_settings.exit_action set value {\
