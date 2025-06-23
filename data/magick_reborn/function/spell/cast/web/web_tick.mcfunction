@@ -1,0 +1,2 @@
+execute unless score @s webHealth matches 1.. run function magick_reborn:spell/cast/web/remove_web with entity @s data
+execute if score #global summonCheckTimer matches 20.. run scoreboard players remove @s webHealth 1

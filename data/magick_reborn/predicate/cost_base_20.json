@@ -11,7 +11,8 @@
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_horse\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_donkey\"}}" } },
       { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_mule\"}}" } },
-      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_camel\"}}" } }
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:summon_camel\"}}" } },
+      { "condition": "minecraft:entity_properties", "entity": "this", "predicate": { "nbt": "{data:{effect:\"minecraft:web\"}}" } }
     ]
   }
   

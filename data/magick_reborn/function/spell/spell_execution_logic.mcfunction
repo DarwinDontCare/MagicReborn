@@ -15,13 +15,13 @@ data modify storage magick:data spell.health set value 200
 execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:ice_wall"}]}}] run data modify storage magick:data spell.health set value 10
 
 # Projectile Logic
-$data modify storage magick:data spell.summon_cmd set value "summon item ~ ~ ~ {Tags: [\"magic_projectile\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
+$data modify storage magick:data spell.summon_cmd set value "summon item ~ ~ ~ {Tags: [\"magick_projectile\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
 
 $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}], caster_id: $(caster_id)}}] \
- run data modify storage magick:data spell.summon_cmd set value "summon fireball ~ ~ ~ {Tags: [\"magic_projectile\", \"fireball\"], data: {caster_id: $(caster_id)}}"
+ run data modify storage magick:data spell.summon_cmd set value "summon fireball ~ ~ ~ {Tags: [\"magick_projectile\", \"fireball\"], data: {caster_id: $(caster_id)}}"
 
 $execute if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:ice_wall"}], caster_id: $(caster_id)}}] \
- run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~ ~ {Tags: [\"magic_projectile\", \"freeze\", \"ice_wall\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
+ run data modify storage magick:data spell.summon_cmd set value "summon item ~ ~ ~ {Tags: [\"magick_projectile\", \"freeze\", \"ice_wall\"], data: {caster_id: $(caster_id)}, NoGravity:true, HasVisualFire:false, Invulnerable:true, PickupDelay:100000, Item:{id:\"stone_button\",components:{\"minecraft:item_model\":air}}}"
 
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fireball"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:shape_shift"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/create_projectile with storage magick:data spell

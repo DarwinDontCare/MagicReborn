@@ -57,6 +57,11 @@ data modify storage magick:data effectComparer set value "minecraft:flames"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/flames/flames {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), range: 100}
 
+#Conjuration
+data modify storage magick:data effectComparer set value "minecraft:web"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute as @s if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/web/web {duration: $(duration), amplifier: $(amplifier)}
+
 #Summon Entities
 data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
@@ -133,24 +138,24 @@ $execute as @s if score #Compare boolean matches 0 run return run function magic
 #Alteration
 data modify storage magick:data effectComparer set value "minecraft:giant"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/giant/giant", scale: 0.5}
+$execute as @s[tag=!magick_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/giant/giant", scale: 0.5}
 
 data modify storage magick:data effectComparer set value "minecraft:dwarf"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/dwarf/dwarf", scale: 0.2}
+$execute as @s[tag=!magick_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/prepare_size_data {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id), function: "magick_reborn:spell/cast/dwarf/dwarf", scale: 0.2}
 
 data modify storage magick:data effectComparer set value "minecraft:teleknesis"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/telekinesis/telekinesis {amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @s[tag=!magick_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/telekinesis/telekinesis {amplifier: $(amplifier), uuid: $(caster_id)}
 
 data modify storage magick:data effectComparer set value "minecraft:shape_shift"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @s[tag=!magick_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
 
 #Movimentation
 data modify storage magick:data effectComparer set value "minecraft:teleport"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
-$execute as @s[tag=!magic_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/teleport {uuid: $(caster_id), amplifier: $(amplifier)}
+$execute as @s[tag=!magick_projectile] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/teleport {uuid: $(caster_id), amplifier: $(amplifier)}
 
 execute if score #BlockDetect boolean matches 1 run return 0
 

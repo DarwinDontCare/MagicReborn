@@ -44,6 +44,7 @@ scoreboard objectives add tkBind dummy
 scoreboard objectives add createdSpells dummy
 scoreboard objectives add ShapeShiftEffectDuration dummy
 scoreboard objectives add TkLaunchEffect dummy
+scoreboard objectives add webHealth dummy
 
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy
