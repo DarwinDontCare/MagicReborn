@@ -1,2 +1,2 @@
-$execute unless data storage magick $(uuid).motion_keys run data modify storage magick $(uuid).motion_keys set value [0.0, 0.0, 0.0, 1.0]
+$execute unless data storage magick $(uuid).motion_keys run data modify storage magick $(uuid).motion_keys set value [0.0, 0.0, 0.0, 0.0]
 $data modify storage magick $(uuid).motion_keys[$(index)] set value $(value)
