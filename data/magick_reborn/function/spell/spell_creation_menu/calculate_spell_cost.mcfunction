@@ -38,8 +38,6 @@ scoreboard players operation @s spellCost += @s spell_amplifier
 scoreboard players operation @s spellCost += @s spell_duration
 scoreboard players operation @s spellCost += @s spell_area
 
-execute if score #Calculation spellCost matches ..0 run scoreboard players set #Calculation spellCost 1
-
 execute if score @s spellCost < @s baseCost run scoreboard players operation @s spellCost = @s baseCost
 
 scoreboard players set #Calculation calculationValues 4
@@ -55,17 +53,14 @@ scoreboard players operation #Calculation calculationResults += #Calculation cal
 
 $execute store result storage magick $(uuid).spell_creation.xp_cost int 1 run scoreboard players get #Calculation calculationResults
 
-# Aplica custo base a spellCost
-execute if score @s spellCost < @s baseCost run scoreboard players operation @s spellCost = @s baseCost
-
 # Detecta redução conforme a tier da varinha
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 1}}}}}] run scoreboard players set #Calculation calculationValues 0
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 2}}}}}] run scoreboard players set #Calculation calculationValues 5
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 3}}}}}] run scoreboard players set #Calculation calculationValues 10
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 4}}}}}] run scoreboard players set #Calculation calculationValues 15
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 5}}}}}] run scoreboard players set #Calculation calculationValues 20
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 6}}}}}] run scoreboard players set #Calculation calculationValues 30
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 7}}}}}] run scoreboard players set #Calculation calculationValues 50
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 1b}}}}}] run scoreboard players set #Calculation calculationValues 0
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 2b}}}}}] run scoreboard players set #Calculation calculationValues 5
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 3b}}}}}] run scoreboard players set #Calculation calculationValues 10
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 4b}}}}}] run scoreboard players set #Calculation calculationValues 15
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 5b}}}}}] run scoreboard players set #Calculation calculationValues 20
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 6b}}}}}] run scoreboard players set #Calculation calculationValues 30
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 7b}}}}}] run scoreboard players set #Calculation calculationValues 50
 
 # spellCost = rawSpellCost * #Percent
 scoreboard players operation @s spellCost *= #Calculation calculationValues
