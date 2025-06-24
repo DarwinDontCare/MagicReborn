@@ -12,6 +12,7 @@ scoreboard objectives add magick dummy Magick
 scoreboard objectives add maxMagick dummy
 scoreboard objectives add magickRegen dummy
 scoreboard objectives add spellCost dummy
+scoreboard objectives add xpCost dummy
 scoreboard objectives add baseCost dummy
 scoreboard objectives add magickRegenDelay dummy
 scoreboard objectives add calculationResults dummy

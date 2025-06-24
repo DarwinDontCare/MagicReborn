@@ -1,1 +1,1 @@
-$tell @s i need $(experience_cost) to create this spell :(
+$tell @s i need $(xp_cost) to create this spell :(
