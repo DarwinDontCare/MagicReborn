@@ -1,5 +1,5 @@
-execute unless entity @s[gamemode=creative] run scoreboard players operation @s magick -= @s spellCost
-execute unless entity @s[gamemode=creative] run function magick_reborn:spell/cast/damage_wand
+execute unless entity @s[gamemode=creative] unless score @s magickDrainTick matches 1.. run scoreboard players operation @s magick -= @s spellCost
+execute unless entity @s[gamemode=creative] unless score @s magickDrainTick matches 1.. run function magick_reborn:spell/cast/damage_wand
 
 $data modify storage magick:data spell.effects set value $(effects)
 $execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effect_comparer"], data: {effects: $(effects), caster_id: $(caster_id)}}
@@ -30,8 +30,6 @@ data modify storage magick:data effectIterator.index set value 0
 $data modify storage magick:data effectIterator.caster_id set value $(caster_id)
 data modify storage magick:data effectIterator.nbt_path set value "entity @s SelectedItem.components.\"minecraft:custom_data\".effects"
 data modify storage magick:data effectIterator.subject set value "@s"
-
-#function magick_reborn:data/print_value with storage magick:data spell
 
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:teleknesis"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator

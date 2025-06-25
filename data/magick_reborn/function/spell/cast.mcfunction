@@ -26,3 +26,4 @@ execute unless entity @e[tag=tk_bind] run kill @e[tag=tk_target,type=armor_stand
 execute if score #Compare boolean matches 1 run advancement revoke @s only magick_reborn:wand_cooldown_burst
 execute unless score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 10
 execute if score #Compare boolean matches 1 run scoreboard players set @s wandCooldown 1
+execute if score #Compare boolean matches 1 unless score @s magickDrainTick matches 1.. run scoreboard players set @s magickDrainTick 22

@@ -51,4 +51,5 @@ execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer
+execute as @a[scores={magickDrainTick=1..}] run scoreboard players remove @s magickDrainTick 1
 scoreboard players add #global summonCheckTimer 1
