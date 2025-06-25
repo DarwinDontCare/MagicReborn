@@ -41,7 +41,7 @@ scoreboard players operation @s spellCost += @s spell_area
 
 execute if score @s spellCost < @s baseCost run scoreboard players operation @s spellCost = @s baseCost
 
-# Detecta redução conforme a tier da varinha
+# Apply wand discount
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 1b}}}}}] run scoreboard players set #Calculation calculationValues 0
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 2b}}}}}] run scoreboard players set #Calculation calculationValues 5
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 3b}}}}}] run scoreboard players set #Calculation calculationValues 10
@@ -50,52 +50,34 @@ execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 6b}}}}}] run scoreboard players set #Calculation calculationValues 30
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{tier: 7b}}}}}] run scoreboard players set #Calculation calculationValues 50
 
-# XP Cost Calculation
-scoreboard players set #Calculation calculationValues2 6
+# spellCost = rawSpellCost * #Percent
+scoreboard players operation @s spellCost *= #Calculation calculationValues
+
+# spellCost = spellCost / 100
+scoreboard players set #Divisor calculationValues 100
+scoreboard players operation @s spellCost /= #Divisor calculationValues
+
+execute if score @s spellCost matches ..0 run scoreboard players set @s spellCost 1
 scoreboard players operation @s xpCost = @s spellCost
-scoreboard players operation @s xpCost /= #Calculation calculationValues2
 
-# xpCost = rawXpCost * #Percent
-scoreboard players operation @s xpCost *= #Calculation calculationValues
-
-# xpCost = xpCost / 100
-scoreboard players set #Divisor calculationValues 100
-scoreboard players operation @s xpCost /= #Divisor calculationValues
-
-execute if score @s xpCost matches ..4 run scoreboard players set @s xpCost 5
-
-$execute store result score #Calculation calculationValues2 run data get storage magick $(uuid).spell_creation.xp_cost
-$execute store result storage magick $(uuid).spell_creation.spell_effects[$(current_effect_slot)].experience_cost int 1 run scoreboard players get @s xpCost
-
-scoreboard players operation @s xpCost += #Calculation calculationValues2
-
-$execute store result storage magick $(uuid).spell_creation.xp_cost int 1 run scoreboard players get @s xpCost
-
-# spellCost = rawSpellCost * #Percent
-scoreboard players operation @s spellCost *= #Calculation calculationValues
-
-# spellCost = spellCost / 100
-scoreboard players set #Divisor calculationValues 100
-scoreboard players operation @s spellCost /= #Divisor calculationValues
-
-# Garante que nunca será 0
-execute if score @s spellCost matches ..0 run scoreboard players set @s spellCost 1
-
-# spellCost = rawSpellCost * #Percent
-scoreboard players operation @s spellCost *= #Calculation calculationValues
-
-# spellCost = spellCost / 100
-scoreboard players set #Divisor calculationValues 100
-scoreboard players operation @s spellCost /= #Divisor calculationValues
-
-# Garante que nunca será 0
-execute if score @s spellCost matches ..0 run scoreboard players set @s spellCost 1
-
+# Store magick cost
 $execute store result score #Calculation spellCost run data get storage magick $(uuid).spell_creation.magick_cost
 
-# Armazena resultado no storage
 $execute store result storage magick $(uuid).spell_creation.spell_effects[$(current_effect_slot)].magick_cost int 1 run scoreboard players get @s spellCost
 scoreboard players operation @s spellCost += #Calculation spellCost
 $execute store result storage magick $(uuid).spell_creation.magick_cost int 1 run scoreboard players get @s spellCost
+
+# Calculate XP Cost
+scoreboard players set #Calculation calculationValues2 2
+scoreboard players operation @s xpCost /= #Calculation calculationValues2
+
+execute if score @s xpCost matches ..4 run scoreboard players set @s xpCost 5
+
+$execute store result score #Calculation xpCost run data get storage magick $(uuid).spell_creation.xp_cost
+$execute store result storage magick $(uuid).spell_creation.spell_effects[$(current_effect_slot)].xp_cost int 1 run scoreboard players get @s xpCost
+
+scoreboard players operation @s xpCost += #Calculation xpCost
+
+$execute store result storage magick $(uuid).spell_creation.xp_cost int 1 run scoreboard players get @s xpCost
 
 $kill @e[tag=cost_calc$(uuid)]

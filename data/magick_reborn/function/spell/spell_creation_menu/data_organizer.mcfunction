@@ -12,10 +12,10 @@ $data modify storage magick $(uuid).spell_creation merge value {\
     spell_name: ""\
 }
 $data modify storage magick $(uuid).spell_creation.spell_effects set value [\
-        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0},\
-        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0},\
-        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0},\
-        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, experience_cost: 0}\
+        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, xp_cost: 0},\
+        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, xp_cost: 0},\
+        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, xp_cost: 0},\
+        {effect: "none", amplifier: 1, duration: 1, magick_cost: 0, xp_cost: 0}\
     ]
 data modify storage magick:data on_submit set value "duration:$(duration), amplifier:$(amplifier), effect:\\\"$(effect)\\\""
 data modify storage magick:data main_on_submit set value "name:\\\"$(name)\\\""

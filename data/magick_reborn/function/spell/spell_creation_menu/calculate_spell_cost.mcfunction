@@ -3,6 +3,7 @@ $execute if score #SpellCost index matches 0 run data modify storage magick $(uu
 $execute if score #SpellCost index matches 0 run data modify storage magick $(uuid).spell_creation.xp_cost set value 0
 $execute unless data storage magick $(uuid).spell_creation.spell_effects[$(index)] run return 1
 
+data modify storage magick:data effectCost set value {}
 $data modify storage magick:data effectCost merge from storage magick $(uuid).spell_creation.spell_effects[$(index)]
 $data modify storage magick:data effectCost.uuid set value $(uuid)
 $data modify storage magick:data effectCost.current_effect_slot set value $(index)
