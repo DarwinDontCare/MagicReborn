@@ -5,9 +5,7 @@ execute if block ~ ~ ~ water run return 0
 execute if block ~ ~ ~ lava run return 0
 
 # Common
-execute if block ~ ~ ~ chest run data modify storage magick:data loot_rarity set value "common"
-execute if block ~ ~ ~ barrel run data modify storage magick:data loot_rarity set value "common"
-execute if block ~ ~ ~ #shulker_boxes run data modify storage magick:data loot_rarity set value "common"
+execute if block ~ ~ ~ #magick_reborn:containers run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:coal_ore run return run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:deepslate_coal_ore run return run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:copper_ore run return run data modify storage magick:data loot_rarity set value "common"

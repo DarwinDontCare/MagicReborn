@@ -31,6 +31,7 @@ $data modify storage magick:data effectIterator.caster_id set value $(caster_id)
 data modify storage magick:data effectIterator.nbt_path set value "entity @s SelectedItem.components.\"minecraft:custom_data\".effects"
 data modify storage magick:data effectIterator.subject set value "@s"
 
+$execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:detect_treasure"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:teleknesis"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:frostbite"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:flames"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator

@@ -14,6 +14,18 @@ data modify storage magick:data spell_creation.effect_selection.unlocked_effects
 
 $data modify storage magick:data spell_creation.effect_selection.macroVars set value {uuid: $(uuid), current_effect_slot: $(current_effect_slot), max_amplifier: $(max_amplifier), max_duration: $(max_duration), max_area: $(max_area)}
 
+$scoreboard players set #ParseEffects calculationValues $(max_amplifier)
+execute store result score #ParseEffects calculationValues2 run data get storage magick:data spell_effect_info.max_amplifier
+execute if score #ParseEffects calculationValues > #ParseEffects calculationValues2 run data modify storage magick:data spell_creation.effect_selection.macroVars.max_amplifier set from storage magick:data spell_effect_info.max_amplifier
+
+$scoreboard players set #ParseEffects calculationValues $(max_duration)
+execute store result score #ParseEffects calculationValues2 run data get storage magick:data spell_effect_info.max_duration
+execute if score #ParseEffects calculationValues > #ParseEffects calculationValues2 run data modify storage magick:data spell_creation.effect_selection.macroVars.max_duration set from storage magick:data spell_effect_info.max_duration
+
+$scoreboard players set #ParseEffects calculationValues $(max_area)
+execute store result score #ParseEffects calculationValues2 run data get storage magick:data spell_effect_info.max_area
+execute if score #ParseEffects calculationValues > #ParseEffects calculationValues2 run data modify storage magick:data spell_creation.effect_selection.macroVars.max_area set from storage magick:data spell_effect_info.max_area
+
 data modify storage magick:data stringfy.string_value set from storage magick:data spell_creation.effect_selection.macroVars
 function magick_reborn:spell/spell_selection/stringfy with storage magick:data stringfy
 
