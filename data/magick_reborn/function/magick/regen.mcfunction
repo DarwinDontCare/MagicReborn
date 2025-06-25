@@ -1,5 +1,6 @@
 scoreboard players set @s maxMagickMod 0
 scoreboard players set @s magickRegenMod 0
+execute unless score @s magick matches 1.. run scoreboard players set @s magick 0
 execute unless score @s baseMagickRegen matches 1.. run scoreboard players set @s baseMagickRegen 1
 execute unless score @s baseMaxMagick matches 1.. run scoreboard players set @s baseMaxMagick 1
 

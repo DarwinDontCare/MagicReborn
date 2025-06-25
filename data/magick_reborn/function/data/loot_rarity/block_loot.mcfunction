@@ -1,6 +1,8 @@
 data modify storage magick:data loot_rarity set value "ignore"
 
-execute if block ~ ~ ~ #magick_reborn:ignore_colision run return 0
+execute if block ~ ~ ~ #air run return 0
+execute if block ~ ~ ~ water run return 0
+execute if block ~ ~ ~ lava run return 0
 
 # Common
 execute if data block ~ ~ ~ {LootTable: "chests/village/village_weaponsmith"} run return run data modify storage magick:data loot_rarity set value "common"
