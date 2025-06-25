@@ -90,3 +90,15 @@ execute as @e unless entity @s[scores={maxMagickMod=1..}] run scoreboard players
 execute as @e unless entity @s[scores={magickRegenMod=1..}] run scoreboard players set @s magickRegenMod 0
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 scoreboard objectives setdisplay list mageLevel
+
+team add common_loot "Common Loot"
+team modify common_loot color white
+
+team add uncommon_loot "Uncommon Loot"
+team modify uncommon_loot color green
+
+team add rare_loot "Rare Loot"
+team modify rare_loot color gold
+
+team add epic_loot "Epic Loot"
+team modify epic_loot color dark_purple

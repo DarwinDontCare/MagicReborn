@@ -45,6 +45,8 @@ execute as @a[scores={ShapeShiftEffectDuration=0..}] unless data entity @s {Deat
 execute as @a if entity @e[tag=tk_bind] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_tick_data", params: {}}
 execute as @a if entity @e[tag=tk_launch] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/telekinesis/prepare_tk_launch_data", params: {}}
 
+execute as @e[tag=treasure_marker] run function magick_reborn:spell/cast/detect_treasure/treasure_marker_tick
+
 execute as @e[tag=web_placer] at @s run function magick_reborn:spell/cast/web/web_tick
 
 execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
