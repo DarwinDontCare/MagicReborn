@@ -5,21 +5,9 @@ execute if block ~ ~ ~ water run return 0
 execute if block ~ ~ ~ lava run return 0
 
 # Common
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_weaponsmith"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_toolsmith"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_armorer"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_cartographer"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_mason"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_butcher"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_shepherd"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_tannery"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_temple"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_plains_house"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_savanna_house"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_snowy_house"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_taiga_house"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/village/village_desert_house"} run return run data modify storage magick:data loot_rarity set value "common"
-execute if data block ~ ~ ~ {LootTable: "chests/pillager_outpost"} run return run data modify storage magick:data loot_rarity set value "common"
+execute if block ~ ~ ~ chest run data modify storage magick:data loot_rarity set value "common"
+execute if block ~ ~ ~ barrel run data modify storage magick:data loot_rarity set value "common"
+execute if block ~ ~ ~ #shulker_boxes run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:coal_ore run return run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:deepslate_coal_ore run return run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:copper_ore run return run data modify storage magick:data loot_rarity set value "common"
@@ -27,21 +15,11 @@ execute if block ~ ~ ~ minecraft:deepslate_copper_ore run return run data modify
 
 
 # Uncommon
-execute if data block ~ ~ ~ {LootTable: "chests/simple_dungeon"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/shipwreck_map"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/shipwreck_treasure"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/shipwreck_supply"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/jungle_temple"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/desert_pyramid"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/bastion_bridge"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/bastion_stable"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/underwater_ruin_big"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/underwater_ruin_small"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/buried_treasure"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/nether_bridge"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/igloo_chest"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/ruined_portal"} run return run data modify storage magick:data loot_rarity set value "uncommon"
-execute if data block ~ ~ ~ {LootTable: "chests/trial_chambers/reward_common"} run return run data modify storage magick:data loot_rarity set value "uncommon"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:iron_ingot"}]} run data modify storage magick:data loot_rarity set value "uncommon"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:redstone"}]} run data modify storage magick:data loot_rarity set value "uncommon"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:cooked_beef"}]} run data modify storage magick:data loot_rarity set value "uncommon"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:cooked_porkchop"}]} run data modify storage magick:data loot_rarity set value "uncommon"
+
 execute if block ~ ~ ~ minecraft:iron_ore run return run data modify storage magick:data loot_rarity set value "uncommon"
 execute if block ~ ~ ~ minecraft:deepslate_iron_ore run return run data modify storage magick:data loot_rarity set value "uncommon"
 execute if block ~ ~ ~ minecraft:redstone_ore run return run data modify storage magick:data loot_rarity set value "uncommon"
@@ -49,12 +27,13 @@ execute if block ~ ~ ~ minecraft:deepslate_redstone_ore run return run data modi
 
 
 # Rare
-execute if data block ~ ~ ~ {LootTable: "chests/woodland_mansion"} run return run data modify storage magick:data loot_rarity set value "rare"
-execute if data block ~ ~ ~ {LootTable: "chests/stronghold_corridor"} run return run data modify storage magick:data loot_rarity set value "rare"
-execute if data block ~ ~ ~ {LootTable: "chests/stronghold_crossing"} run return run data modify storage magick:data loot_rarity set value "rare"
-execute if data block ~ ~ ~ {LootTable: "chests/stronghold_library"} run return run data modify storage magick:data loot_rarity set value "rare"
-execute if data block ~ ~ ~ {LootTable: "chests/bastion_treasure"} run return run data modify storage magick:data loot_rarity set value "rare"
-execute if data block ~ ~ ~ {LootTable: "chests/end_city_treasure"} run return run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:diamond"}]} run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:emerald"}]} run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:heart_of_the_sea"}]} run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:totem_of_undying"}]} run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:golden_apple"}]} run data modify storage magick:data loot_rarity set value "rare"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:saddle"}]} run data modify storage magick:data loot_rarity set value "rare"
+
 execute if block ~ ~ ~ minecraft:gold_ore run return run data modify storage magick:data loot_rarity set value "rare"
 execute if block ~ ~ ~ minecraft:deepslate_gold_ore run return run data modify storage magick:data loot_rarity set value "rare"
 execute if block ~ ~ ~ minecraft:lapis_ore run return run data modify storage magick:data loot_rarity set value "rare"
@@ -64,8 +43,11 @@ execute if block ~ ~ ~ minecraft:deepslate_diamond_ore run return run data modif
 
 
 # Epic
-execute if data block ~ ~ ~ {LootTable: "chests/ancient_city"} run return run data modify storage magick:data loot_rarity set value "epic"
-execute if data block ~ ~ ~ {LootTable: "chests/trial_chambers/reward_rare"} run return run data modify storage magick:data loot_rarity set value "epic"
-execute if data block ~ ~ ~ {LootTable: "chests/trial_chambers/reward_epic"} run return run data modify storage magick:data loot_rarity set value "epic"
-execute if data block ~ ~ ~ {LootTable: "chests/trial_chambers/dispenser_pottery"} run return run data modify storage magick:data loot_rarity set value "epic"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:nether_star"}]} run data modify storage magick:data loot_rarity set value "epic"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:elytra"}]} run data modify storage magick:data loot_rarity set value "epic"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:enchanted_golden_apple"}]} run data modify storage magick:data loot_rarity set value "epic"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:dragon_egg"}]} run data modify storage magick:data loot_rarity set value "epic"
+execute if block ~ ~ ~ #magick_reborn:containers if data block ~ ~ ~ {Items:[{id:"minecraft:ancient_debris"}]} run data modify storage magick:data loot_rarity set value "epic"
+
+execute if block ~ ~ ~ ender_chest run data modify storage magick:data loot_rarity set value "common"
 execute if block ~ ~ ~ minecraft:ancient_debris run return run data modify storage magick:data loot_rarity set value "epic"

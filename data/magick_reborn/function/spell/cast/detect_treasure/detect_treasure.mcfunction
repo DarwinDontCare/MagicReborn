@@ -10,15 +10,20 @@ execute store result score #DetectTreasure x run data get entity @s Pos[0]
 execute store result score #DetectTreasure y run data get entity @s Pos[1]
 execute store result score #DetectTreasure z run data get entity @s Pos[2]
 
-$scoreboard players remove #DetectTreasure x $(amplifier)
-$scoreboard players remove #DetectTreasure y $(amplifier)
-$scoreboard players remove #DetectTreasure z $(amplifier)
+scoreboard players set #DetectTreasure calculationValues 10
+
+scoreboard players operation #DetectTreasure x *= #DetectTreasure calculationValues
+scoreboard players operation #DetectTreasure y *= #DetectTreasure calculationValues
+scoreboard players operation #DetectTreasure z *= #DetectTreasure calculationValues
+
+scoreboard players add #DetectTreasure x 5
+scoreboard players add #DetectTreasure z 5
 
 summon marker ~ ~ ~ {Tags:["detect_treasure_center"]}
 
-execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[0] int 1 run scoreboard players get #DetectTreasure x
-execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[1] int 1 run scoreboard players get #DetectTreasure y
-execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[2] int 1 run scoreboard players get #DetectTreasure z
+execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[0] double .1 run scoreboard players get #DetectTreasure x
+execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[1] double .1 run scoreboard players get #DetectTreasure y
+execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[2] double .1 run scoreboard players get #DetectTreasure z
 
 scoreboard players reset #DetectTreasure x
 scoreboard players reset #DetectTreasure y
