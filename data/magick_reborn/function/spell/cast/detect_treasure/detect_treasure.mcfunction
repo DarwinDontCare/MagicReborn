@@ -5,17 +5,21 @@ data modify storage magick:data detect_treasure.y set value 0
 data modify storage magick:data detect_treasure.z set value 0
 
 $scoreboard players set #DetectTreasure calculationValues2 $(amplifier)
-scoreboard players add #DetectTreasure calculationValues2 1
+scoreboard players add #DetectTreasure calculationValues2 3
 execute store result storage magick:data detect_treasure.amplifier int 2 run scoreboard players get #DetectTreasure calculationValues2
+execute store result storage magick:data detect_treasure.max_y int 1.5 run scoreboard players get #DetectTreasure calculationValues2
 $data modify storage magick:data detect_treasure.duration set value $(duration)
 
-$summon marker ~-$(amplifier) ~-$(amplifier) ~-$(amplifier) {Tags:["detect_treasure_center"]}
+$execute rotated 0.0 0.0 run summon marker ~-$(amplifier) ~-$(amplifier) ~-$(amplifier) {Tags:["detect_treasure_center"]}
+
 
 execute store result score #DetectTreasure x run data get entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[0]
 execute store result score #DetectTreasure y run data get entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[1]
 execute store result score #DetectTreasure z run data get entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[2]
 
 scoreboard players set #DetectTreasure calculationValues 10
+execute store result score #DetectTreasure calculationValues2 run data get storage magick:data detect_treasure.max_y 0.15
+scoreboard players operation #DetectTreasure y += #DetectTreasure calculationValues2
 
 scoreboard players operation #DetectTreasure x *= #DetectTreasure calculationValues
 scoreboard players operation #DetectTreasure y *= #DetectTreasure calculationValues
@@ -28,11 +32,11 @@ execute store result entity @e[type=marker,tag=detect_treasure_center,sort=neare
 execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[1] double .1 run scoreboard players get #DetectTreasure y
 execute store result entity @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] Pos[2] double .1 run scoreboard players get #DetectTreasure z
 
-execute as @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] at @s run tp @s ~-1 ~-1 ~-1
+#execute as @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] at @s rotated 0.0 0.0 run tp @s ~ ~-1 ~
 
 scoreboard players reset #DetectTreasure x
 scoreboard players reset #DetectTreasure y
 scoreboard players reset #DetectTreasure z
 
-execute at @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] run function magick_reborn:spell/cast/detect_treasure/loop_blocks with storage magick:data detect_treasure
-kill @e[type=marker,tag=detect_treasure_center,sort=nearest]
+execute as @e[type=marker,tag=detect_treasure_center,sort=nearest,limit=1] at @s rotated 0.0 0.0 run function magick_reborn:spell/cast/detect_treasure/loop_blocks with storage magick:data detect_treasure
+kill @e[type=marker,tag=detect_treasure_center]
