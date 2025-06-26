@@ -36,7 +36,9 @@ scoreboard objectives add wandCooldown dummy
 scoreboard objectives add dropedItem dropped:clock
 scoreboard objectives add freezeTicks dummy
 scoreboard objectives add burnTicks dummy
+scoreboard objectives add baseMaxActiveSummons dummy
 scoreboard objectives add activeSummons dummy
+scoreboard objectives add maxActiveSummonsMod dummy
 scoreboard objectives add maxActiveSummons dummy
 scoreboard objectives add summonCheckTimer dummy
 scoreboard objectives add giantEffectDuration dummy
@@ -88,6 +90,9 @@ execute as @e unless entity @s[scores={baseMaxMagick=1..}] run scoreboard player
 execute as @e unless entity @s[scores={mageLevel=1..}] run scoreboard players set @s mageLevel 1
 execute as @e unless entity @s[scores={maxMagickMod=1..}] run scoreboard players set @s maxMagickMod 0
 execute as @e unless entity @s[scores={magickRegenMod=1..}] run scoreboard players set @s magickRegenMod 0
+execute as @e unless entity @s[scores={baseMaxActiveSummons=1..}] run scoreboard players set @s baseMaxActiveSummons 10
+execute as @e unless entity @s[scores={maxActiveSummons=1..}] run scoreboard players set @s maxActiveSummons 10
+execute as @e unless entity @s[scores={maxActiveSummonsMod=1..}] run scoreboard players set @s maxActiveSummonsMod 0
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 scoreboard objectives setdisplay list mageLevel
 

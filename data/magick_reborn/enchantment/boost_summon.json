@@ -1,0 +1,21 @@
+{
+    "exclusive_set": [],
+    "anvil_cost": 4,
+    "description": "Boost Summon",
+    "effects": {},
+    "max_cost": {
+      "base": 41,
+      "per_level_above_first": 2
+    },
+    "max_level": 3,
+    "min_cost": {
+      "base": 1,
+      "per_level_above_first": 2
+    },
+    "slots": [
+      "armor"
+    ],
+    "supported_items": "#minecraft:enchantable/armor",
+    "weight": 2
+  }
+  
