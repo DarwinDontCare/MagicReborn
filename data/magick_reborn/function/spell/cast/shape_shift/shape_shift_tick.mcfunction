@@ -1,6 +1,6 @@
 $execute unless score @s ShapeShiftEffectDuration matches 1.. run return run function magick_reborn:spell/cast/shape_shift/remove_shape_shift {uuid: $(uuid)}
 $execute if entity @s[predicate=magick_reborn:is_sneaking] run return run function magick_reborn:spell/cast/shape_shift/remove_shape_shift {uuid: $(uuid)}
-$execute if score @s ShapeShiftEffectDuration matches 1.. run spectate @e[tag=shape_shifted_$(uuid),limit=1] @s
+$execute if score @s ShapeShiftEffectDuration matches 1.. run ride @s mount @e[tag=shape_shifted_$(uuid),limit=1]
 
 $execute unless entity @e[tag=shape_shifted_$(uuid)] run function magick_reborn:spell/cast/shape_shift/remove_shape_shift {uuid: $(uuid)}
 

@@ -222,7 +222,7 @@ data modify storage magick:data effectComparer set value "minecraft:shape_shift"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @e[predicate=!magick_reborn:ignore_entity,distance=..$(area),tag=!magick_projectile] unless data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
 $execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
-$execute as @e[tag=magick_projectile,sort=nearest,limit=1] if data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @e[tag=!magick_projectile,distance=1.5,sort=nearest,limit=1] if data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shape_shift/shape_shift {duration: $(duration), amplifier: $(amplifier), uuid: $(caster_id)}
 
 #Illusion
 data modify storage magick:data effectComparer set value "minecraft:detect_treasure"
