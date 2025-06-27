@@ -1,7 +1,11 @@
-$execute positioned 0.0 0.0 0.0 rotated as @s run summon armor_stand ^ ^$(y) ^$(z) {Invisible:true, Invulnerable:true, NoGravity:true, Tags:["motion_direction"], data: {caster_id: $(uuid)}}
+$execute positioned 0.0 0.0 0.0 rotated as @s run summon armor_stand ^$(x) ^$(y) ^$(z) {Invisible:true, Invulnerable:true, NoGravity:true, Tags:["motion_direction"], data: {caster_id: $(uuid)}}
 
 execute store result score @s speed run attribute @s movement_speed get 1000
 execute store result score @s jump_strenght run attribute @s jump_strength get 1000
+
+data modify entity @s[type=!#magick_reborn:flying_mobs] Motion[0] set value 0.0
+data modify entity @s[type=!#magick_reborn:flying_mobs] Motion[2] set value 0.0
+data modify entity @s[type=#magick_reborn:flying_mobs] Motion set value [0.0, 0.0, 0.0]
 
 $data modify entity @s Rotation set from entity @a[scores={uuid=$(uuid)},limit=1] Rotation
 
