@@ -1,0 +1,2 @@
+execute unless score @s ticksCount matches 1.. at @s rotated 0.0 0.0 run function magick_reborn:spell/cast/detect_treasure/loop_blocks with entity @s data.detect_treasure
+execute if score @s ticksCount matches 1.. run scoreboard players remove @s ticksCount 1

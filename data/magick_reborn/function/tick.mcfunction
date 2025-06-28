@@ -50,8 +50,11 @@ execute as @e[tag=treasure_marker] run function magick_reborn:spell/cast/detect_
 execute as @e[tag=web_placer] at @s run function magick_reborn:spell/cast/web/web_tick
 
 execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
+execute as @e[type=marker, tag=detect_treasure_center] run function magick_reborn:spell/cast/detect_treasure/detect_treasure_center_tick with entity @s data
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer
 execute as @a[scores={magickDrainTick=1..}] run scoreboard players remove @s magickDrainTick 1
 scoreboard players add #global summonCheckTimer 1
+
+execute as @a[advancements={magick_reborn:use_wand=true}] unless score @s wandCooldown matches 1.. run advancement revoke @s only magick_reborn:use_wand
