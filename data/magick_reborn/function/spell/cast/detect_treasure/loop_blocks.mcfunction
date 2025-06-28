@@ -1,6 +1,6 @@
 $scoreboard players set @s index $(index)
 
-execute if score @s index matches 7.. run return run kill @s
+execute if score @s index matches 6.. run return run kill @s
 
 data modify entity @s data.detect_treasure.freeze_coordenate set value "x"
 $data modify entity @s data.detect_treasure.x set value $(index)
