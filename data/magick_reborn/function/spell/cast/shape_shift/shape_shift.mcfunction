@@ -1,3 +1,12 @@
+$scoreboard players set #ShapeShift calculationValues $(amplifier)
+scoreboard players set #ShapeShift calculationValues2 10
+
+scoreboard players operation #ShapeShift calculationValues2 *= #ShapeShift calculationValues
+scoreboard players operation #ShapeShift calculationValues *= #ShapeShift calculationValues2
+
+execute store result score #ShapeShift calculationResults run data get entity @s Health
+$execute if score #ShapeShift calculationValues < #ShapeShift calculationResults run return run tell @a[scores={uuid=$(uuid)},limit=1] "This entity is too strong :("
+
 bossbar add minecraft:shape_shift "Shape Shift Effect"
 $bossbar set minecraft:shape_shift players @a[scores={uuid=$(uuid)}, limit=1]
 $bossbar set minecraft:shape_shift max $(duration)
