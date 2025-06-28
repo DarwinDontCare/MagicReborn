@@ -1,0 +1,12 @@
+{
+    "values": [
+        "lapis_block",
+        "#lapis_ores",
+        "gold_block",
+        "#gold_ores",
+        "redstone_block",
+        "#redstone_ores",
+        "diamond_block",
+        "#diamond_ores"
+    ]
+}

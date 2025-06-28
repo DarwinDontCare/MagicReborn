@@ -1,0 +1,27 @@
+{
+    "values": [
+        "elytra",
+        "dragon_egg",
+        "nether_star",
+        "enchanted_golden_apple",
+        "beacon",
+        "ancient_debris",
+        "#netherite_tool_materials",
+        "#magick_reborn:netherite_armor",
+        "#magick_reborn:netherite_tools",
+        "end_crystal",
+        "dragon_head",
+        "shulker_shell",
+        "shulker_box",
+        "heart_of_the_sea",
+        "nautilus_shell",
+        "tipped_arrow",
+        "firework_rocket",
+        "dragon_breath",
+        "chorus_fruit",
+        "ender_pearl",
+        "ender_eye",
+        "totem_of_undying",
+        "wither_skeleton_skull"
+    ]
+}

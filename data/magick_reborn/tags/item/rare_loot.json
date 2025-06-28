@@ -1,0 +1,42 @@
+{
+    "values": [
+        "#gold_ores",
+        "#gold_tool_materials",
+        "#repairs_gold_armor",
+        "#magick_reborn:golden_armor",
+        "#magick_reborn:golden_tools",
+
+        "#magick_reborn:diamond_tools",
+        "#magick_reborn:diamond_armor",
+        "diamond",
+        "diamond_block",
+
+        "emerald",
+        "emerald_block",
+
+        "leather_horse_armor",
+        "iron_horse_armor",
+        "golden_horse_armor",
+
+        "heart_of_the_sea",
+        "nautilus_shell",
+        "trident",
+
+        "enchanted_book",
+        "tnt",
+        "experience_bottle",
+
+        "potion",
+        "lingering_potion",
+        "splash_potion",
+        "glowstone_dust",
+        "blaze_powder",
+        "ghast_tear",
+        "phantom_membrane",
+
+        "golden_apple",
+        "clock",
+        "turtle_helmet",
+        "dragon_breath"
+    ]
+}
