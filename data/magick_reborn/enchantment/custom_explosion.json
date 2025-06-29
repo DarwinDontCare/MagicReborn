@@ -1,0 +1,47 @@
+{
+    "effects": {
+        "location_changed": [
+            {
+                "effect": {
+                    "type": "all_of",
+                    "effects": [
+                        {
+                            "type": "explode",
+                            "block_interaction": "none",
+                            "radius": 0,
+                            "attribute_to_user": false,
+                            "create_fire": false,
+                            "sound": "entity.breeze.charge",
+                            "knockback_multiplier": 2,
+                            "small_particle": {"type": "cloud"},
+                            "large_particle": {"type": "cloud"}
+                        },
+                        {
+                            "type": "run_function",
+                            "function": "magick_reborn:data/kill_explosion_entity"
+                        }
+                    ]
+                },
+                "requirements": {
+                    "condition": "enchantment_active_check",
+                    "active": false
+                }
+            }
+        ]
+    },
+    "description": "",
+    "max_level": 1,
+    "slots": ["feet"],
+    "supported_items": [],
+    "weight": 1,
+    "anvil_cost": 0,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    }
+}
+  
