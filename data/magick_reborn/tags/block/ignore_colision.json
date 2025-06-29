@@ -11,6 +11,14 @@
       "minecraft:water",
       "minecraft:lava",
       "light",
-      "structure_void"
+      "structure_void",
+      "torch",
+      "soul_torch",
+      "wall_torch",
+      "redstone_torch",
+      "redstone_wall_torch",
+      "redstone_wire",
+      "#cave_vines",
+      "sculk_vein"
     ]
   }

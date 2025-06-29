@@ -51,6 +51,7 @@ execute as @e[tag=web_placer] at @s run function magick_reborn:spell/cast/web/we
 
 execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
 execute as @e[type=marker, tag=detect_treasure_center] run function magick_reborn:spell/cast/detect_treasure/detect_treasure_center_tick with entity @s data
+execute as @e[type=armor_stand, tag=fangs_start] at @s run function magick_reborn:spell/cast/fangs/fangs_tick with entity @s data
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer

@@ -87,8 +87,13 @@ $execute as @e[tag=magick_projectile,sort=nearest,limit=1] if data storage magic
 data modify storage magick:data effectComparer set value "minecraft:web"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
 $execute as @e[predicate=!magick_reborn:ignore_entity,distance=..$(area)] unless data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/web/web {duration: $(duration), amplifier: $(amplifier)}
-$execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/web/web {duration: $(duration), amplifier: $(amplifier)}
+$execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/web/web {duration: $(duration), amplifier: $(amplifier)}
 $execute as @e[tag=magick_projectile,sort=nearest,limit=1] if data storage magick {$(caster_id): {cast_effect: {single_target: true}}} if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/web/web {duration: $(duration), amplifier: $(amplifier)}
+
+data modify storage magick:data effectComparer set value "minecraft:fangs"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/fangs/fangs {area: $(area), amplifier: $(amplifier), uuid: $(caster_id)}
+$execute as @e[tag=magick_projectile,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/fangs/fangs {area: $(area), amplifier: $(amplifier), uuid: $(caster_id)}
 
 #Summon Entities
 data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
