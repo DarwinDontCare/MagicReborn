@@ -1,6 +1,8 @@
 scoreboard players add #global ticksCount 1
 execute as @a unless score @s uuid matches -999999999..999999999 run function magick_reborn:data/set_uuid
 execute as @a unless score @s maxActiveSummons matches 1.. run scoreboard players set @s maxActiveSummons 10
+execute as @a[tag=!visited_the_end] if dimension minecraft:the_end run tag @s add visited_the_end
+execute as @a[tag=recentily_plane_shifted] run function magick_reborn:data/get_uuid {function: "magick_reborn:spell/cast/plane_shift/create_plataform", params: {}}
 
 execute as @a[tag=!savedName] run function magick_reborn:data/get_uuid {function: "magick_reborn:data/store_player_name", params: {}}
 
@@ -52,6 +54,7 @@ execute as @e[tag=web_placer] at @s run function magick_reborn:spell/cast/web/we
 execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
 execute as @e[type=marker, tag=detect_treasure_center] run function magick_reborn:spell/cast/detect_treasure/detect_treasure_center_tick with entity @s data
 execute as @e[type=armor_stand, tag=fangs_start] at @s run function magick_reborn:spell/cast/fangs/fangs_tick with entity @s data
+execute as @e[type=item_display,tag=plane_shift] at @s run function magick_reborn:spell/cast/plane_shift/plane_shift_tick
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer

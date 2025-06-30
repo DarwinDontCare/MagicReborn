@@ -1,0 +1,2 @@
+$execute as @a[nbt={UUID:$(player)}] run function magick_reborn:spell/cast/plane_shift/shift with entity @e[type=item_display,tag=plane_shift,sort=nearest,limit=1] data
+data modify entity @s interaction set value {}
