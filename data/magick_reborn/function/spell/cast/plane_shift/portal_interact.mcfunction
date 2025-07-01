@@ -1,2 +1,2 @@
-$execute as @a[nbt={UUID:$(player)}] run function magick_reborn:spell/cast/plane_shift/shift with entity @e[type=item_display,tag=plane_shift,sort=nearest,limit=1] data
-data modify entity @s interaction set value {}
+$execute if entity @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{effects:[{effect: "minecraft:plane_shift"}]}}},UUID:$(player)}] as @e[type=item_display,tag=plane_shift,sort=nearest,limit=1,distance=..1.5] run return run function magick_reborn:spell/cast/plane_shift/change_target_plain with entity @s data
+$execute as @a[nbt={UUID:$(player)}] run return run function magick_reborn:spell/cast/plane_shift/shift with entity @e[type=item_display,tag=plane_shift,sort=nearest,limit=1,distance=..1.5] data
