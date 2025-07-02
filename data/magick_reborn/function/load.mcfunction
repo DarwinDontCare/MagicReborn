@@ -111,3 +111,15 @@ team modify rare_loot collisionRule never
 team add epic_loot "Epic Loot"
 team modify epic_loot color dark_purple
 team modify epic_loot collisionRule never
+
+team add destruction "Destruction"
+team modify destruction color dark_red
+
+team add illusion "Illusion"
+team modify illusion color dark_green
+
+team add alteration "Alteration"
+team modify alteration color yellow
+
+team add conjuration "Conjuration"
+team modify conjuration color dark_purple

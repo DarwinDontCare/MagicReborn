@@ -1,4 +1,8 @@
-execute rotated as @s positioned 0.0 -64.0 0.0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
+$data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 1}
+data modify storage magick:data magick_circle.rotation set from entity @s Rotation
+execute at @s anchored eyes positioned ^ ^-1 ^.2 run function magick_reborn:magick/magick_circle/summon_magick_circle with storage magick:data magick_circle
+
+execute rotated as @s positioned 0 0 0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
 $execute at @s anchored eyes positioned ^ ^ ^ run $(summon_cmd)
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.effects set value $(effects)
 $execute at @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run tp @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] ^ ^ ^ facing entity @s feet
@@ -11,9 +15,9 @@ $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}
 
 $execute at @s as @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run scoreboard players set @s projectileHealth $(health)
 
-execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 -64 0 store result score @s MotionX run data get entity @e[tag=aim,limit=1] Pos[0] 1000
-execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 -64 0 store result score @s MotionY run data get entity @e[tag=aim,limit=1] Pos[1] 1000
-execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 -64 0 store result score @s MotionZ run data get entity @e[tag=aim,limit=1] Pos[2] 1000 
+execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 0 0 store result score @s MotionX run data get entity @e[tag=aim,limit=1] Pos[0] 1000
+execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 0 0 store result score @s MotionY run data get entity @e[tag=aim,limit=1] Pos[1] 1000
+execute at @s positioned ~ ~1.5 ~ as @e[sort=nearest,tag=magick_projectile] positioned 0 0 0 store result score @s MotionZ run data get entity @e[tag=aim,limit=1] Pos[2] 1000 
 
 kill @e[tag=aim]
 
