@@ -1,0 +1,4 @@
+$execute if entity @s[scores={projectileHealth=$(second_quarter_duration)}] run data merge entity @s {start_interpolation:0,interpolation_duration:$(half_duration),transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,180f,1f]}}
+$execute if entity @s[scores={projectileHealth=$(first_quarter_duration)}] run data merge entity @s {start_interpolation:0,interpolation_duration:$(first_quarter_duration),transformation:{left_rotation:[0f,0f,180f,1f],right_rotation:[0f,0f,240f,1f],scale:[0f,0f,0f]}}
+execute if entity @s[scores={projectileHealth=..0}] run kill @s
+execute if score @s projectileHealth matches 1.. run scoreboard players remove @s projectileHealth 1

@@ -2,7 +2,7 @@ execute unless entity @s[gamemode=creative] unless score @s magickDrainTick matc
 execute unless entity @s[gamemode=creative] unless score @s magickDrainTick matches 1.. run function magick_reborn:spell/cast/damage_wand
 
 $data modify storage magick:data spell.effects set value $(effects)
-$execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effect_comparer"], data: {effects: $(effects), caster_id: $(caster_id)}}
+$execute positioned 0.0 -64.0 0.0 run summon area_effect_cloud ~ ~ ~ {Tags:["effect_comparer"], data: {effects: $(effects), caster_id: $(caster_id)}}
 
 $execute if entity @e[tag=effect_comparer,nbt={data:{caster_id: $(caster_id)}},predicate=magick_reborn:is_continuous_cast] run data modify storage magick:data spell.is_burst set value 1
 

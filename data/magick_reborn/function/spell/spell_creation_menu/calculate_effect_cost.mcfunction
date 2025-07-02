@@ -8,7 +8,7 @@ execute if score @s spell_duration matches 0 run scoreboard players set @s spell
 scoreboard players set @s spellCost 0
 scoreboard players set @s xpCost 0
 
-$execute positioned 0.0 0.0 0.0 run summon area_effect_cloud ~ ~ ~ {data:{effect: "$(effect)"}, Tags:["cost_calc$(uuid)"]}
+$execute positioned 0.0 -64.0 0.0 run summon area_effect_cloud ~ ~ ~ {data:{effect: "$(effect)"}, Tags:["cost_calc$(uuid)"]}
 
 scoreboard players set @s baseCost 1
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_5] run scoreboard players set @s baseCost 5
