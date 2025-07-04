@@ -1,6 +1,7 @@
 $scoreboard players set #IterateEffects index $(index)
 
-$execute if score #IterateEffects index matches 0 run data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 2}
+$execute if score #IterateEffects index matches 0 run data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 2, is_burst: $(is_burst), caster_id: $(caster_id)}
+$execute if score #IterateEffects index matches 0 run data modify storage magick:data magick_circle.effects set from $(nbt_path)
 execute if score #IterateEffects index matches 0 run data modify storage magick:data magick_circle.rotation set value [0f, 90f]
 execute if score #IterateEffects index matches 0 at @s positioned ~ ~-.8 ~ run function magick_reborn:magick/magick_circle/summon_magick_circle with storage magick:data magick_circle
 

@@ -10,6 +10,7 @@
             "minecraft:experience_bottle",
             "minecraft:experience_orb",
             "minecraft:item_display",
+            "block_display",
             "minecraft:item_frame",
             "minecraft:glow_item_frame",
             "minecraft:ominous_item_spawner"

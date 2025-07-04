@@ -19,6 +19,14 @@
       "redstone_wall_torch",
       "redstone_wire",
       "#cave_vines",
-      "sculk_vein"
+      "sculk_vein",
+      "tall_grass",
+      "tall_dry_grass",
+      "short_grass",
+      "short_dry_grass",
+      "tall_seagrass",
+      "seagrass",
+      "sea_pickle",
+      "snow"
     ]
   }

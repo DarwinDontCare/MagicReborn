@@ -1,4 +1,4 @@
-$data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 1}
+$data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 1, caster_id: $(caster_id), is_burst: $(is_burst), effects: $(effects)}
 data modify storage magick:data magick_circle.rotation set from entity @s Rotation
 execute at @s anchored eyes positioned ^ ^-1 ^.2 run function magick_reborn:magick/magick_circle/summon_magick_circle with storage magick:data magick_circle
 
@@ -15,6 +15,7 @@ $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.hit_sound set value "$(hit_sound)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.particle set value "$(particle)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.magick_circle set value "$(magick_circle)"
+$data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.is_burst set value "$(is_burst)"
 
 $execute at @s as @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run scoreboard players set @s projectileHealth $(health)
 

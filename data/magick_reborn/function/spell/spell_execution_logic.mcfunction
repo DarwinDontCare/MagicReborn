@@ -17,6 +17,7 @@ $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "
 
 data modify storage magick:data effectIterator.index set value 0
 $data modify storage magick:data effectIterator.caster_id set value $(caster_id)
+data modify storage magick:data effectIterator.is_burst set from storage magick:data spell.is_burst
 data modify storage magick:data effectIterator.nbt_path set value "entity @s SelectedItem.components.\"minecraft:custom_data\".effects"
 data modify storage magick:data effectIterator.subject set value "@s"
 $data modify storage magick:data effectIterator.magick_circle set value "$(magick_circle)"

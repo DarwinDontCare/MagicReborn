@@ -13,6 +13,7 @@ execute store result storage magick:data spell.caster_id int 1 run scoreboard pl
 
 data modify storage magick:data spell.speed set value 0.001
 data modify storage magick:data spell.health set value 200
+data modify storage magick:data spell.is_burst set value 0
 
 # Executa a função apply_effect com os dados
 execute as @s unless score @s wandCooldown matches 1.. run function magick_reborn:spell/check_magick with storage magick:data spell

@@ -9,6 +9,7 @@ function magick_reborn:spell/spell_explosion with storage magick:data spellHit
 
 data modify storage magick:data effectIterator.index set value 0
 $data modify storage magick:data effectIterator.caster_id set value $(caster_id)
+$data modify storage magick:data effectIterator.is_burst set value $(is_burst)
 $data modify storage magick:data effectIterator.nbt_path set value "entity @e[tag=magick_projectile, sort=nearest, limit=1, nbt={data: {caster_id: $(caster_id)}}] data.effects"
 data modify storage magick:data effectIterator.subject set value "@s"
 
