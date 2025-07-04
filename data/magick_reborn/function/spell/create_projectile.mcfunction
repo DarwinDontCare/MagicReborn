@@ -3,7 +3,9 @@ data modify storage magick:data magick_circle.rotation set from entity @s Rotati
 execute at @s anchored eyes positioned ^ ^-1 ^.2 run function magick_reborn:magick/magick_circle/summon_magick_circle with storage magick:data magick_circle
 
 execute rotated as @s positioned 0 0 0 align xyz run summon minecraft:armor_stand ^ ^ ^1 {Invisible: true, Invulnerable:1b,NoGravity:1b,Tags:["aim"]}
-$execute at @s anchored eyes positioned ^ ^ ^ run $(summon_cmd)
+
+$function magick_reborn:spell/summon_projectile {caster_id: $(caster_id)}
+
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.effects set value $(effects)
 $execute at @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run tp @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] ^ ^ ^ facing entity @s feet
 $function magick_reborn:spell/cast/apply_fireball_amplifier {caster_id: $(caster_id), index: 0}
@@ -12,6 +14,7 @@ $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.idle_sound set value "$(idle_sound)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.hit_sound set value "$(hit_sound)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.particle set value "$(particle)"
+$data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.magick_circle set value "$(magick_circle)"
 
 $execute at @s as @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}}] run scoreboard players set @s projectileHealth $(health)
 

@@ -11,6 +11,7 @@ execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] if data 
 execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] if data entity @s {data:{magick_circle: "magick_reborn:illusion_magick_circle"}} run team join illusion
 execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] if data entity @s {data:{magick_circle: "magick_reborn:alteration_magick_circle"}} run team join alteration
 execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] if data entity @s {data:{magick_circle: "magick_reborn:conjuration_magick_circle"}} run team join conjuration
+execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] if data entity @s {data:{magick_circle: "magick_reborn:restoration_magick_circle"}} run team join restoration
 
 #execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] store result entity @s transformation.scale[0] double 1 run data get entity @s data.scale 0.95
 #execute as @e[type=item_display,tag=magick_circle,sort=nearest,limit=1] store result entity @s transformation.scale[1] double 1 run data get entity @s data.scale 0.95

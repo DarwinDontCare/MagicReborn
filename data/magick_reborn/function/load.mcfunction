@@ -123,3 +123,6 @@ team modify alteration color yellow
 
 team add conjuration "Conjuration"
 team modify conjuration color dark_purple
+
+team add restoration "Restoration"
+team modify restoration color gold

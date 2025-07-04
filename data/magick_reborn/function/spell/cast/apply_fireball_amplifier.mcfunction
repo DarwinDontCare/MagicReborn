@@ -4,8 +4,6 @@ $execute if score #Compare index matches 3.. run scoreboard players set #Compare
 
 data modify storage magick:data spell.fireballId set value "minecraft:fireball"
 
-
-
 $execute store result score #Compare boolean run data modify storage magick:data spell.fireballId set from entity @e[type=fireball,nbt={data:{caster_id: $(caster_id)}},limit=1,sort=nearest] data.effects[$(index)].effect
 $execute as @e[type=fireball,nbt={data:{caster_id: $(caster_id)}},limit=1,sort=nearest] if score #Compare boolean matches 0 run data modify entity @s ExplosionPower set from entity @s data.effects[$(index)].amplifier
 $execute if score #Compare boolean matches 0 run data modify entity @e[type=fireball,nbt={data:{caster_id: $(caster_id)}},limit=1,sort=nearest] Owner set from entity @s UUID
