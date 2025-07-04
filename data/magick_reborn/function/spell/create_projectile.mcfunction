@@ -1,4 +1,4 @@
-$data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 1, caster_id: $(caster_id), is_burst: $(is_burst), effects: $(effects)}
+$data modify storage magick:data magick_circle set value {magick_circle: "$(magick_circle)", duration: 15, scale: 1.5, caster_id: $(caster_id), is_burst: $(is_burst), effects: $(effects)}
 data modify storage magick:data magick_circle.rotation set from entity @s Rotation
 execute at @s anchored eyes positioned ^ ^-1 ^.2 run function magick_reborn:magick/magick_circle/summon_magick_circle with storage magick:data magick_circle
 

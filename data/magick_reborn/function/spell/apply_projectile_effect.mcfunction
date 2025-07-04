@@ -16,4 +16,5 @@ data modify storage magick:data effectIterator.subject set value "@s"
 execute unless entity @s[nbt={Invisible:true,NoGravity:true}] run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute if score #BlockDetect boolean matches 0 as @e[tag=magick_projectile, tag=!fireball, sort=nearest, nbt={data: {caster_id: $(caster_id)}}] if entity @s[tag=!freeze] run kill
 execute if score #BlockDetect boolean matches 1 run kill @s
+$execute as @e[tag=magick_projectile, sort=nearest, nbt={data: {caster_id: $(caster_id)}},scores={projectileHealth=..0}] run kill @s
 scoreboard players reset #BlockDetect boolean

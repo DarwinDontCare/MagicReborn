@@ -1,8 +1,6 @@
 $execute as @e[type=item_display,tag=magick_circle,nbt={data: {caster_id: $(caster_id), effects: $(effects)}},distance=..1.5,sort=nearest,limit=1] run return run function magick_reborn:magick/magick_circle/reposition_magick_circle {rotation: $(rotation), caster_id: $(caster_id)}
 
-say magick circle
-
-$summon item_display ~ ~1 ~ {item:{id:item_frame,components:{item_model:"$(magick_circle)"}}, data: {caster_id: $(caster_id), is_burst: $(is_burst), effects: $(effects)}, Tags:["magick_circle"],Glowing:true,transformation:{scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
+$summon item_display ~ ~1 ~ {item_display:"gui", item:{id:item_frame,components:{item_model:"$(magick_circle)"}}, data: {caster_id: $(caster_id), is_burst: $(is_burst), effects: $(effects)}, Tags:["magick_circle"],Glowing:true,transformation:{scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f]}}
 
 $execute as @e[type=item_display,tag=magick_circle,nbt={data: {caster_id: $(caster_id), effects: $(effects)}},sort=nearest,limit=1] run scoreboard players set @s calculationValues $(duration)
 $execute as @e[type=item_display,tag=magick_circle,nbt={data: {caster_id: $(caster_id), effects: $(effects)}},sort=nearest,limit=1] if data entity @s {data:{is_burst: 1}} store result entity @s data.duration int 1.4 run scoreboard players get @s calculationValues
