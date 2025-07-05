@@ -51,6 +51,7 @@ execute as @e[type=magma_cube,tag=treasure_marker] run function magick_reborn:sp
 
 execute as @e[type=armor_stand,tag=web_placer] at @s run function magick_reborn:spell/cast/web/web_tick
 execute as @e[type=item_display,tag=magick_circle] at @s run function magick_reborn:magick/magick_circle/magick_circle_tick with entity @s data
+execute as @e[type=armor_stand,tag=meteor_ride] at @s run function magick_reborn:spell/cast/meteor/meteor_tick with entity @s data
 
 execute as @a run function magick_reborn:data/get_uuid {function: "magick_reborn:data/key_press/reset_direction", params: {}}
 execute as @e[type=marker, tag=detect_treasure_center] run function magick_reborn:spell/cast/detect_treasure/detect_treasure_center_tick with entity @s data
