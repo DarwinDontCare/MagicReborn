@@ -1,3 +1,5 @@
 $summon minecraft:item_display ~ ~1.5 ~ {item_display:"gui",item:{id:"item_frame",components:{item_model:"magick_reborn:shield"}},data:{caster_id:$(uuid),position:"$(position)"},Tags:["shield"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],scale:[0f,0f,0f],translation:[0f,0f,0f]}}
-$execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}}] run data modify entity @s data.caster_uuid set from entity @a[scores={uuid=$(uuid)},limit=1]
-$execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}}] run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{scale:[1f,1f,1f]}}
+$summon armor_stand ~ ~ ~ {Small:true,NoGravity:true,Invisible:true,Invulnerable:true,Tags:["shield_ride"],data:{caster_id:$(uuid),position:"$(position)"}}
+$execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] run ride @s mount @e[type=armor_stand,distance=..2,sort=nearest,tag=shield_ride,nbt={data:{caster_id:$(uuid)}},limit=1]
+$execute as @e[type=armor_stand,distance=..2,sort=nearest,tag=shield_ride,nbt={data:{caster_id:$(uuid)}},limit=1] run data modify entity @s data.caster_uuid set from entity @a[scores={uuid=$(uuid)},limit=1]
+$execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{scale:[1f,1f,1f]}}

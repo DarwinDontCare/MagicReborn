@@ -1,4 +1,4 @@
-$execute as @e[type=item_display,nbt={data:{caster_id:$(uuid)}},tag=shield] at @s run function magick_reborn:spell/cast/shield/shield_logic with entity @s data
+$execute as @e[type=armor_stand,nbt={data:{caster_id:$(uuid)}},tag=shield_ride] at @s run function magick_reborn:spell/cast/shield/shield_logic with entity @s data
 $execute at @s anchored eyes as @e[type=marker,nbt={data:{caster_id:$(uuid)}},tag=shield_center] rotated as @s run tp @s ~ ~ ~ facing ^.1 ^ ^1
 
 $execute if score #global summonCheckTimer matches 20.. if score @s shieldEffectDuration matches ..0 run function magick_reborn:spell/cast/shield/remove_shield {uuid: $(uuid)}
