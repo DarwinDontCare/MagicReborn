@@ -1,0 +1,3 @@
+$execute at @e[type=marker,tag=shield_center,nbt={data:{caster_id:$(caster_id)}},sort=nearest,limit=1] rotated as @e[type=marker,tag=shield_center,nbt={data:{caster_id:$(caster_id)}},sort=nearest,limit=1] positioned ~ ~1.5 ~ run tp @s $(position) facing entity @a[scores={uuid=$(caster_id)},limit=1] eyes
+
+$execute as @e[type=#magick_reborn:projectiles, distance=..3] unless data entity @s {Owner: $(caster_uuid)} run function magick_reborn:spell/cast/shield/deflect_projectile with entity @e[type=item_display,nbt={data:{caster_id:$(caster_id)}},tag=shield,distance=..1,sort=nearest,limit=1] data
