@@ -1,6 +1,7 @@
 $execute at @s unless block ^ ^ ^1 #magick_reborn:ignore_colision run return run function magick_reborn:spell/cast/meteor/explode {uuid: $(caster_id), amplifier: $(amplifier)}
 $execute at @s unless block ^ ^-1 ^1 #magick_reborn:ignore_colision run return run function magick_reborn:spell/cast/meteor/explode {uuid: $(caster_id), amplifier: $(amplifier)}
 $execute at @s unless block ^ ^1 ^1 #magick_reborn:ignore_colision run return run function magick_reborn:spell/cast/meteor/explode {uuid: $(caster_id), amplifier: $(amplifier)}
+$execute at @s if entity @e[distance=..2, sort=nearest, tag=!magick_projectile, predicate=!magick_reborn:ignore_entity] unless entity @s[scores={uuid=$(caster_id)}] run return run function magick_reborn:spell/cast/meteor/explode {uuid: $(caster_id), amplifier: $(amplifier)}
 execute if score @s ticksCount matches ..0 on passengers run function magick_reborn:spell/cast/meteor/rotate
 
 particle flame ~ ~ ~ 1 1 1 0.1 10 force @a

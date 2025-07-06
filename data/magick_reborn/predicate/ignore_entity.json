@@ -16,6 +16,41 @@
             "minecraft:ominous_item_spawner"
           ]
         }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"magick_circle\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"magick_projectile\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"meteor\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"meteor_ride\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Invisible:true,Invincible:true}"
+        }
       }
     ]
   }

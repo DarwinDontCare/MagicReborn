@@ -8,7 +8,12 @@ function magick_reborn:magick/magick_circle/summon_magick_circle with storage ma
 $summon item_display ~ ~ ~ {item_display:"gui",Tags:["meteor"],data:{caster_id:$(uuid)},item:{id:item_frame,components:{item_model:"magick_reborn:meteor"}},transformation:{scale:[0f,0f,0f],left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-1f,0f]}}
 $summon armor_stand ~ ~ ~ {Tags:["meteor_ride"],data:{caster_id:$(uuid), amplifier: $(amplifier), motion: [0,0,0]},Invisible:true,Invulnerable:true}
 
+$scoreboard players set @s calculationValues $(amplifier)
+execute if score @s calculationValues matches ..3 run data modify entity @e[type=armor_stand,tag=meteor_ride,distance=..3,sort=nearest,limit=1] data.amplifier set value 3
+
 rotate @e[type=armor_stand,tag=meteor_ride,distance=..3,sort=nearest,limit=1] facing entity @s
+
+$execute at @s run tp @s ~$(x) ~ ~$(z)
 
 execute as @e[type=armor_stand,tag=meteor_ride,distance=..3,sort=nearest,limit=1] run attribute @s gravity base set 0
 execute as @e[type=armor_stand,tag=meteor_ride,distance=..3,sort=nearest,limit=1] run scoreboard players set @s ticksCount 20

@@ -22,6 +22,7 @@ data modify storage magick:data effectIterator.nbt_path set value "entity @s Sel
 data modify storage magick:data effectIterator.subject set value "@s"
 $data modify storage magick:data effectIterator.magick_circle set value "$(magick_circle)"
 
+$execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:conjure_meteor"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:fangs"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:detect_treasure"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator
 $execute at @s if entity @e[tag=effect_comparer, nbt={data:{effects: [{effect: "minecraft:teleknesis"}], caster_id: $(caster_id)}}] run return run function magick_reborn:spell/cast/handle_effects with storage magick:data effectIterator

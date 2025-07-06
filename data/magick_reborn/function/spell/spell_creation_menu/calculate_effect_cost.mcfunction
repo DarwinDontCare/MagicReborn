@@ -20,6 +20,9 @@ $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_30]
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_35] run scoreboard players set @s baseCost 35
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_40] run scoreboard players set @s baseCost 40
 $execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_45] run scoreboard players set @s baseCost 45
+$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_50] run scoreboard players set @s baseCost 50
+#$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_55] run scoreboard players set @s baseCost 55
+#$execute if entity @e[tag=cost_calc$(uuid),predicate=magick_reborn:cost_base_60] run scoreboard players set @s baseCost 60
 
 scoreboard players set #Calculation calculationValues 40
 scoreboard players set #Calculation calculationValues2 10
