@@ -9,10 +9,11 @@ $execute at @s anchored eyes positioned ^ ^ ^ run function magick_reborn:spell/c
 
 $data remove storage magick $(uuid).raycast
 
-$execute as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~ ~15 ~10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
-$execute if score @s calculationValues matches 4.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~10 ~15 ~10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
-$execute if score @s calculationValues matches 8.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~10 ~15 ~-10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
-$execute if score @s calculationValues matches 10.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~-10 ~15 ~-10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
+$execute as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~ ~30 ~10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
+$execute if score @s calculationValues matches 2.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~ ~30 ~-10 run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
+$execute if score @s calculationValues matches 3.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~10 ~30 ~ run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
+$execute if score @s calculationValues matches 4.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~-10 ~30 ~ run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
+$execute if score @s calculationValues matches 5.. as @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}},sort=nearest,limit=1] at @s positioned ~ ~32 ~ run function magick_reborn:spell/cast/meteor/summon_meteor {uuid: $(uuid), amplifier: $(amplifier)}
 
 
 $kill @e[tag=raycast_hit_meteor,nbt={data:{caster_id: $(uuid)}}]
