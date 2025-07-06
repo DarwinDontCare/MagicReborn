@@ -50,6 +50,7 @@ scoreboard objectives add TkLaunchEffect dummy
 scoreboard objectives add webHealth dummy
 scoreboard objectives add magickDrainTick dummy
 scoreboard objectives add shieldEffectDuration dummy
+scoreboard objectives add deflectCooldown dummy
 
 scoreboard objectives add x dummy
 scoreboard objectives add y dummy

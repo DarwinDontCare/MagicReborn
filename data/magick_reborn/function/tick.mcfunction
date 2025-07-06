@@ -67,3 +67,4 @@ execute as @a[scores={magickDrainTick=1..}] run scoreboard players remove @s mag
 scoreboard players add #global summonCheckTimer 1
 
 execute as @a[advancements={magick_reborn:use_wand=true}] unless score @s wandCooldown matches 1.. run advancement revoke @s only magick_reborn:use_wand
+execute as @e[type=#magick_reborn:projectiles,scores={deflectCooldown=1..}] run scoreboard players remove @s deflectCooldown 1
