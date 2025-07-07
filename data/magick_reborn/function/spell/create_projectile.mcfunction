@@ -16,6 +16,7 @@ $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.particle set value "$(particle)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.magick_circle set value "$(magick_circle)"
 $data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.is_burst set value "$(is_burst)"
+$data modify entity @e[tag=magick_projectile,nbt={data:{caster_id: $(caster_id)}}, limit=1, sort=nearest] data.amplifier set value "$(amplifier)"
 
 $execute at @s as @e[tag=magick_projectile,sort=nearest,nbt={data:{caster_id:$(caster_id)}},limit=1] run scoreboard players set @s projectileHealth $(health)
 

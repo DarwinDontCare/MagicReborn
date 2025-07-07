@@ -1,4 +1,4 @@
-function magick_reborn:spell/cast/dwarf/remove_dwarf
+$function magick_reborn:spell/cast/shield/remove_shield {uuid: $(uuid)}
 
 bossbar add minecraft:shield "Shield Effect"
 bossbar set minecraft:shield players @s
@@ -21,6 +21,6 @@ $function magick_reborn:spell/cast/shield/add_modifiers with storage magick $(uu
 $execute anchored eyes run summon marker ~ ~ ~ {Tags:["shield_center"],data:{caster_id:$(uuid)}}
 
 $execute positioned ~ ~ ~1 run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^ ^ ^1"}
-$execute if score @s calculationValues matches 4.. positioned ~1 ~ ~ run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^1 ^ ^"}
-$execute if score @s calculationValues matches 8.. positioned ~ ~ ~-1 run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^ ^ ^-1"}
+$execute if score @s calculationValues matches 4.. positioned ~ ~ ~-1 run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^ ^ ^-1"}
+$execute if score @s calculationValues matches 8.. positioned ~1 ~ ~ run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^1 ^ ^"}
 $execute if score @s calculationValues matches 10.. positioned ~-1 ~ ~ run function magick_reborn:spell/cast/shield/summon_shield {uuid: $(uuid), amplifier: $(amplifier), position: "^-1 ^ ^"}

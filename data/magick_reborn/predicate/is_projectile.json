@@ -1,0 +1,19 @@
+{
+    "condition": "any_of",
+    "terms": [
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "type": "#magick_reborn:projectiles"
+            }
+        },
+        {
+            "condition": "entity_properties",
+            "entity": "this",
+            "predicate": {
+                "nbt": "{Tags:[\"magick_projectile\"]}"
+            }
+        }
+    ]
+}

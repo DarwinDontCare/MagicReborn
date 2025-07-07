@@ -105,6 +105,11 @@ $execute store success score #Compare boolean run data modify storage magick:dat
 $execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/meteor/meteor {amplifier: $(amplifier), uuid: $(caster_id)}
 $execute as @e[tag=magick_projectile,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/meteor/meteor {amplifier: $(amplifier), uuid: $(caster_id)}
 
+data modify storage magick:data effectComparer set value "minecraft:conjure_shield"
+$execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
+$execute unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shield/shield {amplifier: $(amplifier), duration: $(duration), uuid: $(caster_id)}
+$execute as @e[tag=magick_projectile,sort=nearest,limit=1] if score #Compare boolean matches 0 run return run function magick_reborn:spell/cast/shield/shield {amplifier: $(amplifier), duration: $(duration), uuid: $(caster_id)}
+
 #Summon Entities
 data modify storage magick:data effectComparer set value "minecraft:summon_skeleton"
 $execute store success score #Compare boolean run data modify storage magick:data effectComparer set value "$(effect)"
