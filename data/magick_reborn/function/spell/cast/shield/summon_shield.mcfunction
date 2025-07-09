@@ -3,5 +3,7 @@ $summon armor_stand ~ ~ ~ {Small:true,NoGravity:true,Invisible:true,Invulnerable
 $execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] run attribute @s scale modifier add size -0.9 add_multiplied_base
 
 $execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] run ride @s mount @e[type=armor_stand,distance=..2,sort=nearest,tag=shield_ride,nbt={data:{caster_id:$(uuid)}},limit=1]
-$execute as @e[type=armor_stand,distance=..2,sort=nearest,tag=shield_ride,nbt={data:{caster_id:$(uuid)}},limit=1] run data modify entity @s data.caster_uuid set from entity @a[scores={uuid=$(uuid)},limit=1] UUID
 $execute as @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] run data merge entity @s {start_interpolation:0,interpolation_duration:10,transformation:{scale:[1f,1f,1f]}}
+
+$data modify entity @e[type=item_display,distance=..2,sort=nearest,limit=1,nbt={data:{caster_id:$(uuid)}},tag=shield] data.target_uuid set from entity @s UUID
+$data modify entity @e[type=armor_stand,distance=..2,sort=nearest,tag=shield_ride,nbt={data:{caster_id:$(uuid)}},limit=1] data.target_uuid set from entity @s UUID
