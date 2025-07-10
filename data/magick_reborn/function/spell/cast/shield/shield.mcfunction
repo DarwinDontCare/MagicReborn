@@ -11,6 +11,14 @@ execute anchored eyes positioned ^ ^ ^ run particle dust{color:[66, 203, 245],sc
 
 $scoreboard players set @s shieldEffectDuration $(duration)
 $scoreboard players set @s calculationValues $(amplifier)
+data modify storage magick:data shieldEffect set value {}
+execute store result storage magick:data shieldEffect.value int 1 run scoreboard players get @s shieldEffectDuration
+execute if score #global summonCheckTimer matches 20.. run function magick_reborn:data/stringify_uuid
+
+execute run data modify storage magick:data bossbarId set value {}
+execute run data modify storage magick:data bossbarId.str1 set value "minecraft:shield"
+execute run data modify storage magick:data bossbarId.str2 set string storage magick:data uuid_string
+execute run function magick_reborn:data/concatenate_string with storage magick:data bossbarId
 
 $execute if entity @s[type=player] run data modify storage magick $(uuid).shield.amplifier set value $(amplifier)
 $execute if entity @s[type=player] store result storage magick $(uuid).shield.knockback_resistance double 0.1 run scoreboard players get @s calculationValues
@@ -18,6 +26,7 @@ $execute if entity @s[type=player] store result storage magick $(uuid).shield.ar
 $execute if entity @s[type=player] store result storage magick $(uuid).shield.armor_toughness double 1.5 run scoreboard players get @s calculationValues
 
 $execute unless entity @s[type=player] run data modify entity @s data.shield.amplifier set value $(amplifier)
+execute unless entity @s[type=player] run data modify entity @s data.shield.bossbar set string storage magick:data concatenated_string
 execute unless entity @s[type=player] store result entity @s data.shield.knockback_resistance double 0.1 run scoreboard players get @s calculationValues
 execute unless entity @s[type=player] store result entity @s data.shield.armor double 2 run scoreboard players get @s calculationValues
 execute unless entity @s[type=player] store result entity @s data.shield.armor_toughness double 1.5 run scoreboard players get @s calculationValues

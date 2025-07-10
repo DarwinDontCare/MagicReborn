@@ -1,5 +1,5 @@
 scoreboard players reset @s shieldEffectDuration
-$bossbar remove minecraft:shield$(UUID)
+$bossbar remove $(bossbar)
 
 playsound item.shield.break ambient @a[distance=..20] ~ ~ ~ 1 1 0.5
 execute anchored eyes positioned ^ ^ ^ run particle dust{color:[66, 203, 245],scale:1} ~ ~ ~ 0.5 1 0.5 0.1 20 force

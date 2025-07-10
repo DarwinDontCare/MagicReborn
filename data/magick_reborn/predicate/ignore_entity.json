@@ -49,6 +49,21 @@
         "condition": "entity_properties",
         "entity": "this",
         "predicate": {
+          "nbt": "{Tags:[\"shield\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "nbt": "{Tags:[\"shield_ride\"]}"
+        }
+      },
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "armor_stand",
           "nbt": "{Invisible:true,Invincible:true}"
         }
       }
