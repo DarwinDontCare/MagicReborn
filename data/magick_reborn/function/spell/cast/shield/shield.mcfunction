@@ -1,7 +1,11 @@
-function magick_reborn:spell/cast/shield/remove_shield with entity @s
+execute if entity @s[type=player] run function magick_reborn:data/stringify_uuid
+execute if entity @s[type=player] run data modify storage magick:data shieldEffect.bossbarId set string storage magick:data uuid_string
+execute unless entity @s[type=player] run data modify storage magick:data shieldEffect.bossbarId set value ""
+data modify storage magick:data shieldEffect.UUID set from entity @s UUID
+
+function magick_reborn:spell/cast/shield/remove_shield with storage magick:data shieldEffect
 
 $execute if entity @s[type=player] run data modify storage magick:data createBossbar set value {name: "Shield Effect", id: "minecraft:shield", target: "@s", max_value: $(duration), value: $(duration)}
-execute if entity @s[type=player] run function magick_reborn:data/stringify_uuid
 execute if entity @s[type=player] run data modify storage magick:data createBossbar.target_uuid set from storage magick:data uuid_string
 
 execute if entity @s[type=player] run function magick_reborn:data/create_bossbar with storage magick:data createBossbar
@@ -11,14 +15,6 @@ execute anchored eyes positioned ^ ^ ^ run particle dust{color:[66, 203, 245],sc
 
 $scoreboard players set @s shieldEffectDuration $(duration)
 $scoreboard players set @s calculationValues $(amplifier)
-data modify storage magick:data shieldEffect set value {}
-execute store result storage magick:data shieldEffect.value int 1 run scoreboard players get @s shieldEffectDuration
-execute if score #global summonCheckTimer matches 20.. run function magick_reborn:data/stringify_uuid
-
-execute run data modify storage magick:data bossbarId set value {}
-execute run data modify storage magick:data bossbarId.str1 set value "minecraft:shield"
-execute run data modify storage magick:data bossbarId.str2 set string storage magick:data uuid_string
-execute run function magick_reborn:data/concatenate_string with storage magick:data bossbarId
 
 $execute if entity @s[type=player] run data modify storage magick $(uuid).shield.amplifier set value $(amplifier)
 $execute if entity @s[type=player] store result storage magick $(uuid).shield.knockback_resistance double 0.1 run scoreboard players get @s calculationValues
