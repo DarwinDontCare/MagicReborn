@@ -169,6 +169,7 @@ $execute if data storage magick {$(caster_id):{cast_effect:{effect:"minecraft:sp
 #Restoration
 $execute if data storage magick {$(caster_id):{cast_effect:{effect:"minecraft:plant_growth"}}} as @e[predicate=!magick_reborn:ignore_entity,distance=..$(area),tag=!magick_projectile] unless data storage magick {$(caster_id):{cast_effect:{area:0}}} run return run function magick_reborn:spell/cast/plant_growth/plant_growth {amplifier: $(amplifier)}
 $execute if data storage magick {$(caster_id):{cast_effect:{effect:"minecraft:plant_growth"}}} unless score #BlockDetect boolean matches 1 as @e[predicate=!magick_reborn:ignore_entity,sort=nearest,limit=1] if data storage magick {$(caster_id):{cast_effect:{area:0}}} run return run function magick_reborn:spell/cast/plant_growth/plant_growth {amplifier: $(amplifier)}
+$execute if data storage magick {$(caster_id):{cast_effect:{effect:"minecraft:plant_growth"}}} if score #BlockDetect boolean matches 1 as @s run return run function magick_reborn:spell/cast/plant_growth/plant_growth {amplifier: $(amplifier)}
 $execute if data storage magick {$(caster_id):{cast_effect:{effect:"minecraft:plant_growth"}}} as @e[tag=!magick_projectile,distance=1.5,sort=nearest,limit=1] if data storage magick {$(caster_id):{cast_effect:{area:0}}} run return run function magick_reborn:spell/cast/plant_growth/plant_growth {amplifier: $(amplifier)}
 
 #Illusion
