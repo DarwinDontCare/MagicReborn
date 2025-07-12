@@ -1,0 +1,22 @@
+{
+    "values": [
+        "#underwater_bonemeals",
+        "#crops",
+        "short_grass",
+        "tall_grass",
+        "tall_dry_grass",
+        "short_dry_grass",
+        "#flowers",
+        "#small_flowers",
+        "#cave_vines",
+        "warped_fungus",
+        "warped_roots",
+        "nether_sprouts",
+        "crimson_fungus",
+        "crimson_roots",
+        "#saplings",
+        "sugar_cane",
+        "cactus",
+        "bamboo"
+    ]
+}
