@@ -64,7 +64,7 @@ execute as @e[type=marker, tag=detect_treasure_center] run function magick_rebor
 execute as @e[type=armor_stand, tag=fangs_start] at @s run function magick_reborn:spell/cast/fangs/fangs_tick with entity @s data
 execute as @e[type=item_display,tag=plane_shift] at @s run function magick_reborn:spell/cast/plane_shift/plane_shift_tick
 
-execute as @e[type=armor_stand,tag=tower_beam] at @s run function magick_reborn:magick/beam
+execute as @e[type=armor_stand,tag=tower_beam] at @s run function magick_reborn:magick/beam with entity @s data
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer

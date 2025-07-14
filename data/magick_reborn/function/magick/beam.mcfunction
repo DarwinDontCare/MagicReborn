@@ -1,1 +1,1 @@
-particle enchant ~ ~ ~ 0.2 10.0 0.2 0.01 15 force @a
+$particle enchant ~ ~ ~ 0.2 $(y) 0.2 0.01 20 force @a
