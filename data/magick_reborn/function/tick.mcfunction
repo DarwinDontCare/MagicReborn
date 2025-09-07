@@ -65,8 +65,8 @@ execute as @e[type=armor_stand, tag=fangs_start] at @s run function magick_rebor
 execute as @e[type=item_display,tag=plane_shift] at @s run function magick_reborn:spell/cast/plane_shift/plane_shift_tick
 
 execute as @e[type=armor_stand,tag=tower_beam] at @s run function magick_reborn:magick/beam with entity @s data
-execute as @e[type=armor_stand,tag=tower_library_floor] at @s run function magick_reborn:magick/check_in_tower_library
 execute as @e[type=block_display,tag=power_crystal] at @s run function magick_reborn:magick/power_crystal
+execute as @e[type=iron_golem,tag=tower_library_guardian] at @s run function magick_reborn:magick/tower_guardian
 
 execute if score #global ticksCount matches 120.. run scoreboard players reset #global ticksCount
 execute if score #global summonCheckTimer matches 20.. run scoreboard players reset #global summonCheckTimer

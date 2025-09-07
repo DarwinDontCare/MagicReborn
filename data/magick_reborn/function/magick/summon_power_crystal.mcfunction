@@ -1,0 +1,1 @@
+summon block_display ~ ~ ~ {start_interpolation:-1,interpolation_duration:1200,brightness:{sky:10,block:10},transformation:{right_rotation:[0f,0f,0f,1f],left_rotation:[0f,0f,0f,1f],scale:[1,1,1],translation:[-.5f,0f,-.5f]},block_state:{Name:"minecraft:amethyst_cluster"},Tags:["power_crystal"]}

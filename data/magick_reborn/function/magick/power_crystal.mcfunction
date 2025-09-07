@@ -11,3 +11,7 @@ scoreboard players operation @s calculationValues -= @s calculationValues2
 
 execute if score @s calculationValues matches 500.. run data modify entity @s data.move_up set value true
 execute if score @s calculationValues matches ..-500 run data modify entity @s data.move_up set value false
+
+particle portal ~ ~ ~ .1 .1 .1 .3 2 force @a
+
+function magick_reborn:magick/check_in_tower_library

@@ -1,0 +1,1 @@
+execute unless data entity @s AngryAt run damage @s 0 cramming by @a[tag=in_tower_library,sort=nearest,distance=..10,limit=1]
