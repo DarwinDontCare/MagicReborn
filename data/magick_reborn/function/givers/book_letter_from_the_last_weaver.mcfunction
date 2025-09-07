@@ -1,0 +1,11 @@
+give @p written_book[written_book_content={title:"Letter from the Last Weaver",author:"Erethis",generation:0,resolved:true,pages:[\
+'To the one who stands where we once stood — You have slain the Witness, broken the seal of silence, and stepped beyond the reach of gods.',\
+'Few ever dared, fewer still survived. I wonder, as I write these final words: Will you make the same mistakes as ours?',\
+'We built worlds from whispers, sculpted rivers from breath, forged life from hunger. We thought the Flow was ours to command.',\
+'But the Flow never obeyed — it only reflected. Our fears birthed monsters. Our pride forged chains. Our mercy turned to decay.',\
+'Now you hold what we once held: the truth. You have seen the hollow sky and the endless fire, felt the hum of the core beneath all things.',\
+'Does it hurt? Or is it comforting to know the world is no accident — that it was shaped, fought over, loved and broken by hands like yours?',\
+'What you carry now is heavier than any crown, sharper than any blade. You may bind the Flow again, weave a world free of our shadows — or twist it, as we did, until it screams.',\
+'This is not prophecy. It is not warning. It is a mirror. Look into it, and choose.',\
+'— Erethis, last of the Weavers. Creation is a wound. We decide whether it heals, or festers.'\
+]}] 1
